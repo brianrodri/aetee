@@ -2,7 +2,7 @@
 #define HEADER_AETEE_TYPE_C_H_INCLUDED
 #include <type_traits>
 #include <experimental/type_traits>
-#include <aetee/integer_c.h>
+#include <aetee/int_c.h>
 
 namespace aetee {
 

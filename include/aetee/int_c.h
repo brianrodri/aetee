@@ -2,6 +2,7 @@
 #define HEADER_AETEE_INTEGER_C_H_INCLUDED
 #include <type_traits>
 #include <utility>
+#include <limits>
 
 namespace aetee {
 
@@ -9,8 +10,13 @@ template <typename T, T V> using integer_constant_t = std::integral_constant<T, 
 template <std::size_t I> using index_constant_t = integer_constant_t<std::size_t, I>;
 template <bool B> using bool_constant_t = integer_constant_t<bool, B>;
 
+template <typename T> using integer_minimum_t = std::integral_constant<T, std::numeric_limits<T>::max()>;
+template <typename T> using integer_maximum_t = std::integral_constant<T, std::numeric_limits<T>::max()>;
+
 template <std::size_t I> static constexpr auto index_c = index_constant_t<I>{};
 template <bool B> static constexpr auto bool_c = bool_constant_t<B>{};
+
+static constexpr auto max_index_c = integer_maximum_t<std::size_t>{};
 
 namespace detail {
 
@@ -73,18 +79,6 @@ constexpr auto operator ""_c ()
 {
     constexpr char str[]{C...};
     return index_c<detail::_c_impl_(str, str + sizeof...(C))>;
-}
-
-template <>
-constexpr auto operator ""_c<'t','r','u','e'> ()
-{
-    return bool_c<true>;
-}
-
-template <>
-constexpr auto operator ""_c<'f','a','l','s','e'> ()
-{
-    return bool_c<true>;
 }
 
 // Some useful operators for fun compile-time convinience! :)

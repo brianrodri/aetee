@@ -5,8 +5,27 @@ test/CMakeFiles/aetee-unittests.dir/aetee-tests.cc.o
  /Users/brian/Dropbox/projects/cpp/aetee/test/aetee-tests.cc
  include/aetee/aetee.h
  include/aetee/axioms.h
- include/aetee/corollaries.h
- include/aetee/integer_c.h
+ include/aetee/axioms/alignof.h
+ include/aetee/axioms/append.h
+ include/aetee/axioms/concat.h
+ include/aetee/axioms/identity.h
+ include/aetee/axioms/length.h
+ include/aetee/axioms/prepend.h
+ include/aetee/axioms/replicate.h
+ include/aetee/axioms/sizeof.h
+ include/aetee/axioms/zip.h
+ include/aetee/hof.h
+ include/aetee/hof/apply.h
+ include/aetee/hof/choice.h
+ include/aetee/hof/compose.h
+ include/aetee/hof/curry.h
+ include/aetee/hof/filter.h
+ include/aetee/hof/fold.h
+ include/aetee/hof/for_each.h
+ include/aetee/hof/transform.h
+ include/aetee/int_c.h
+ include/aetee/mathsugar.h
+ include/aetee/objects.h
  include/aetee/type_c.h
  include/aetee/version.h
  thirdparty/gmock-1.7.0/gtest/include/gtest/gtest-death-test.h
