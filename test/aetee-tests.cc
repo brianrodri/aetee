@@ -43,5 +43,12 @@ TEST(Aetee, Zip)
     auto expected = std::make_tuple(std::make_tuple(1, 2), std::make_tuple(3, 4), std::make_tuple(5, 6));
     auto actual = aetee::zip(std::make_tuple(1, 3, 5), std::make_tuple(2, 4, 6));
     ASSERT_EQ(aetee::length(expected), aetee::length(actual));
-    //EXPECT_EQ(expected, actual);
+    EXPECT_EQ(expected, actual);
+}
+
+TEST(Aetee, Reverse)
+{
+    auto expected = std::make_tuple(5, 4, 3, 2, 1);
+    auto actual = aetee::reverse(std::make_tuple(1, 2, 3, 4, 5));
+    EXPECT_EQ(expected, actual);
 }

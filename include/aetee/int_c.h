@@ -17,12 +17,14 @@ template <bool B> using bool_constant_t = integer_constant_t<bool, B>;
 using true_constant_t = bool_constant_t<true>;
 using false_constant_t = bool_constant_t<false>;
 
+//! Sequence types
+template <std::size_t... I> using index_sequence_t = std::tuple<index_constant_t<I>...>;
+
 //! Helper variables
 template <std::size_t I> static constexpr auto index_c = index_constant_t<I>{};
 template <bool B> static constexpr auto bool_c = bool_constant_t<B>{};
 static constexpr auto true_c = bool_c<true>;
 static constexpr auto false_c = bool_c<false>;
-
 static constexpr auto max_index_c = integer_maximum_t<std::size_t>{};
 
 namespace detail {
@@ -50,7 +52,7 @@ static constexpr auto to_index_sequence_impl(IntSeq&& seq, std::index_sequence<I
     return std::index_sequence<std::get<I>(std::forward<IntSeq>(seq))...>{};
 }
 
-};
+} /*namespace detail*/;
 
 template <std::size_t N>
 static constexpr auto index_sequence_c = detail::integralSequenceMakerFunctor<std::size_t>{}.make(index_c<N>);
@@ -79,7 +81,7 @@ constexpr bool isdigit(char c)
     return val >= 0 && val < 10;
 }
 
-}; // namespace detail
+} /*namespace detail*/;
 
 template <char... C>
 constexpr auto operator ""_c ()

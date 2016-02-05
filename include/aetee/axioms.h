@@ -8,6 +8,7 @@
 #include <aetee/axioms/length.h>
 #include <aetee/axioms/prepend.h>
 #include <aetee/axioms/replicate.h>
+#include <aetee/axioms/reverse.h>
 #include <aetee/axioms/sizeof.h>
 #include <aetee/axioms/zip.h>
 

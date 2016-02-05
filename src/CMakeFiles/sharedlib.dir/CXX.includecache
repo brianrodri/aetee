@@ -37,6 +37,8 @@ aetee/axioms/prepend.h
 -
 aetee/axioms/replicate.h
 -
+aetee/axioms/reverse.h
+-
 aetee/axioms/sizeof.h
 -
 aetee/axioms/zip.h
@@ -82,6 +84,12 @@ tuple
 type_traits
 -
 utility
+-
+
+include/aetee/axioms/reverse.h
+aetee/int_c.h
+-
+aetee/axioms/length.h
 -
 
 include/aetee/axioms/sizeof.h
