@@ -2,146 +2,82 @@
 #define HEADER_AETEE_AXIOMS_FOLD_H_INCLUDED
 #include <tuple>
 #include <utility>
+#include <aetee/axioms/length.h>
 
 namespace aetee {
 
 namespace detail {
 
-template <bool Leftness>
-struct foldFunctor {
-    //! With an initial value
+//! Fold left implementation
+struct foldLeftFunctor {
     template <typename Tup, typename Init, typename F>
-    constexpr decltype(auto) operator()(Tup&& tup, Init&& i, F&& f) const
+    constexpr decltype(auto) operator()(Tup&& tup, Init&& init, F&& f) const
     {
         return impl(
-            std::integral_constant<bool, Leftness>{}
-          , std::forward<Tup>(tup)
-          , std::forward<Init>(i)
+            std::forward<Tup>(tup)
+          , std::forward<Init>(init)
           , std::forward<F>(f)
-          , index_c<std::tuple_size<std::decay_t<Tup>>::value>
+          , index_c<length(type_c<Tup>)>
             );
     }
-
-    //! Without an initial value
-    template <typename Tup, typename F>
-    constexpr decltype(auto) operator()(Tup&& tup, F&& f) const
-    {
-        static_assert(std::tuple_size<std::decay_t<Tup>>::value > 0);
-        return impl(
-            std::integral_constant<bool, Leftness>{}
-          , std::forward<Tup>(tup)
-          , std::forward<F>(f)
-          , index_c<std::tuple_size<std::decay_t<Tup>>::value>
-            );
-    }
-
 private:
-    //! FOLDING TUPLES W/ AN INITIAL VALUE
-
-    //! Step case for left folding: Return recursively
-    template <typename Tup, typename Init, typename F, size_t N>
-    constexpr decltype(auto) impl(std::integral_constant<bool, true> leftness, Tup&& tup, Init&& i, F&& f, std::integral_constant<size_t, N>) const
+    template <typename Tup, typename Init, typename F, size_t I>
+    constexpr decltype(auto) impl(Tup&& tup, Init&& init, F&& f, index_constant_t<I>) const
     {
         return f(
             impl(
-                leftness
-              , std::forward<Tup>(tup)
-              , std::forward<Init>(i)
+                std::forward<Tup>(tup)
+              , std::forward<Init>(init)
               , std::forward<F>(f)
-              , std::integral_constant<size_t, N-1>{}
+              , index_c<I - 1>
                 )
-          , std::get<N-1>(std::forward<Tup>(tup))
+          , std::get<I - 1>(std::forward<Tup>(tup))
             );
     }
-
-    //! Step case for right folding: Return recursively
-    template <typename Tup, typename Init, typename F, size_t N>
-    constexpr decltype(auto) impl(std::integral_constant<bool, false> leftness, Tup&& tup, Init&& i, F&& f, std::integral_constant<size_t, N>) const
-    {
-        return f(
-            std::get<std::tuple_size<std::decay_t<Tup>>::value - N>(std::forward<Tup>(tup))
-          , impl(
-                leftness
-              , std::forward<Tup>(tup)
-              , std::forward<Init>(i)
-              , std::forward<F>(f)
-              , std::integral_constant<size_t, N-1>{}
-                )
-            );
-    }
-
-    //! Base case: Return initial value
     template <typename Tup, typename Init, typename F>
-    constexpr decltype(auto) impl(std::integral_constant<bool, true>, Tup&& tup, Init&& i, F&& f, std::integral_constant<size_t, 0>) const
+    constexpr decltype(auto) impl(Tup&& tup, Init&& init, F&& f, index_constant_t<0>) const
     {
-        return std::forward<Init>(i);
+        return std::forward<Init>(init);
     }
+};
 
-    //! Base case: Return initial value
+//! Fold right implementation
+struct foldRightFunctor {
     template <typename Tup, typename Init, typename F>
-    constexpr decltype(auto) impl(std::integral_constant<bool, false>, Tup&& tup, Init&& i, F&& f, std::integral_constant<size_t, 0>) const
+    constexpr decltype(auto) operator()(Tup&& tup, Init&& init, F&& f) const
     {
-        return std::forward<Init>(i);
-    }
-
-    //! FOLDING TUPLES WITHOUT AN INITIAL VALUE
-
-    //! Step case for left fold: Return recursively
-    template <typename Tup, typename F, size_t N>
-    constexpr decltype(auto) impl(std::integral_constant<bool, true> leftness, Tup&& tup, F&& f, std::integral_constant<size_t, N>) const
-    {
-        return f(
-            impl(
-                leftness
-              , std::forward<Tup>(tup)
-              , std::forward<F>(f)
-              , std::integral_constant<size_t, N-1>{}
-                )
-          , std::get<N>(std::forward<Tup>(tup))
+        return impl(
+            std::forward<Tup>(tup)
+          , std::forward<Init>(init)
+          , std::forward<F>(f)
+          , index_c<length(type_c<Tup>)>
             );
     }
-
-    //! Step case for right fold: Return recursively
-    template <typename Tup, typename F, size_t N>
-    constexpr decltype(auto) impl(std::integral_constant<bool, false> leftness, Tup&& tup, F&& f, std::integral_constant<size_t, N>) const
+private:
+    template <typename Tup, typename Init, typename F, size_t I>
+    constexpr decltype(auto) impl(Tup&& tup, Init&& init, F&& f, index_constant_t<I>) const
     {
         return f(
-            std::get<std::tuple_size<std::decay_t<Tup>>::value - N>(std::forward<Tup>(tup))
+            std::get<length(type_c<tup>) - I>(std::forward<Tup>(tup))
           , impl(
-                leftness
-              , std::forward<Tup>(tup)
+                std::forward<Tup>(tup)
+              , std::forward<Init>(init)
               , std::forward<F>(f)
-              , std::integral_constant<size_t, N-1>{}
+              , index_c<I - 1>
                 )
             );
-    }
-
-    //! Base case for initial-less fold: Return relevant element of tuple
-    template <bool L, typename Tup, typename F>
-    constexpr decltype(auto) impl(std::integral_constant<bool, L>, Tup&& tup, F&& f, std::integral_constant<size_t, 0>) const
+    };
+    template <typename Tup, typename Init, typename F>
+    constexpr decltype(auto) impl(Tup&& tup, Init&& init, F&& f, index_constant_t<0>) const
     {
-        // no-op
-    }
-
-    //! Base case for initial-less fold: Return relevant element of tuple
-    template <typename Tup, typename F>
-    constexpr decltype(auto) impl(std::integral_constant<bool, true>, Tup&& tup, F&& f, std::integral_constant<size_t, 1>) const
-    {
-        return std::get<0>(std::forward<Tup>(tup));
-    }
-
-    //! Base case for initial-less fold: Return relevant element of tuple
-    template <typename Tup, typename F>
-    constexpr decltype(auto) impl(std::integral_constant<bool, false>, Tup&& tup, F&& f, std::integral_constant<size_t, 1>) const
-    {
-        return std::get<std::tuple_size<std::decay_t<Tup>>::value - 1>(std::forward<Tup>(tup));
+        return std::forward<Init>(init);
     }
 };
 
 } /*namespace detail*/;
 
-static constexpr auto fold = detail::foldFunctor<true>{};
-static constexpr auto foldr = detail::foldFunctor<false>{};
+static constexpr auto fold = detail::foldLeftFunctor{};
+static constexpr auto foldr = detail::foldRightFunctor{};
 
 } /*namespace aetee*/;
 

@@ -1,6 +1,8 @@
 #ifndef HEADER_AETEE_HOF_ZIP_H_INCLUDED
 #define HEADER_AETEE_HOF_ZIP_H_INCLUDED
 #include <aetee/mathsugar.h>
+#include <aetee/type_c.h>
+#include <aetee/objects.h>
 
 namespace aetee {
 
@@ -10,7 +12,7 @@ struct zipFunctor {
     template <typename... Tup>
     constexpr auto operator()(Tup&&... tup) const
     {
-        constexpr auto minLen = min_(length(type_c<Tup>)...);
+        constexpr auto minLen = std::min({length(tup)...});
         return impl(std::make_index_sequence<minLen>{}, std::forward<Tup>(tup)...);
     }
 

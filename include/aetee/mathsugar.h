@@ -52,7 +52,7 @@ struct maxFunctor {
     template <typename... T>
     constexpr auto operator()(T&&... t) const
     {
-        return fold(std::make_tuple(std::forward<T>(t)...), greaterFunctor{});
+        return fold(std::make_tuple(std::forward<T>(t)...), 0_c, greaterFunctor{});
     }
 } /*struct maxFunctor*/;
 

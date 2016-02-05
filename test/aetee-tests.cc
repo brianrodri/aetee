@@ -19,7 +19,6 @@ TEST(Aetee, TypeConstant)
 
 TEST(Aetee, Append)
 {
-    using aetee::operator<<;
     auto expected = std::make_tuple(1, 2, 3);
     auto actual = aetee::append(std::make_tuple(1, 2), 3);
     EXPECT_EQ(expected, actual);
@@ -34,11 +33,11 @@ TEST(Aetee, Prepend)
 
 TEST(Aetee, Fold)
 {
-    auto expected = 10;
-    auto actual = aetee::fold(std::make_tuple(1, 2, 3, 4), 0, std::plus<>{});
+    auto expected = 15;
+    auto actual = aetee::fold(std::make_tuple(1, 2, 3, 4, 5), 0, std::plus<>{});
     EXPECT_EQ(expected, actual);
 }
-/*
+
 TEST(Aetee, Zip)
 {
     auto expected = std::make_tuple(std::make_tuple(1, 2), std::make_tuple(3, 4), std::make_tuple(5, 6));
@@ -46,4 +45,3 @@ TEST(Aetee, Zip)
     ASSERT_EQ(aetee::length(expected), aetee::length(actual));
     //EXPECT_EQ(expected, actual);
 }
-*/

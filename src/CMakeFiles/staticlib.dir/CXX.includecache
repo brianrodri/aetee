@@ -93,6 +93,10 @@ type_traits
 include/aetee/axioms/zip.h
 aetee/mathsugar.h
 -
+aetee/type_c.h
+-
+aetee/objects.h
+-
 
 include/aetee/hof.h
 aetee/hof/apply.h
@@ -152,6 +156,8 @@ include/aetee/hof/fold.h
 tuple
 -
 utility
+-
+aetee/axioms/length.h
 -
 
 include/aetee/hof/for_each.h

@@ -6,15 +6,22 @@
 
 namespace aetee {
 
+//! Overarching types
 template <typename T, T V> using integer_constant_t = std::integral_constant<T, V>;
-template <std::size_t I> using index_constant_t = integer_constant_t<std::size_t, I>;
-template <bool B> using bool_constant_t = integer_constant_t<bool, B>;
-
 template <typename T> using integer_minimum_t = std::integral_constant<T, std::numeric_limits<T>::max()>;
 template <typename T> using integer_maximum_t = std::integral_constant<T, std::numeric_limits<T>::max()>;
 
+//! Helper types
+template <std::size_t I> using index_constant_t = integer_constant_t<std::size_t, I>;
+template <bool B> using bool_constant_t = integer_constant_t<bool, B>;
+using true_constant_t = bool_constant_t<true>;
+using false_constant_t = bool_constant_t<false>;
+
+//! Helper variables
 template <std::size_t I> static constexpr auto index_c = index_constant_t<I>{};
 template <bool B> static constexpr auto bool_c = bool_constant_t<B>{};
+static constexpr auto true_c = bool_c<true>;
+static constexpr auto false_c = bool_c<false>;
 
 static constexpr auto max_index_c = integer_maximum_t<std::size_t>{};
 
