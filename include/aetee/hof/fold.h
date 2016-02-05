@@ -20,6 +20,7 @@ struct foldLeftFunctor {
           , index_c<length(type_c<Tup>)>
             );
     }
+
 private:
     template <typename Tup, typename Init, typename F, size_t I>
     constexpr decltype(auto) impl(Tup&& tup, Init&& init, F&& f, index_constant_t<I>) const
