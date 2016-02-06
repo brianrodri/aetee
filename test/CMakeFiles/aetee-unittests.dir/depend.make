@@ -7,12 +7,15 @@ test/CMakeFiles/aetee-unittests.dir/aetee-tests.cc.o: include/aetee/axioms.h
 test/CMakeFiles/aetee-unittests.dir/aetee-tests.cc.o: include/aetee/axioms/alignof.h
 test/CMakeFiles/aetee-unittests.dir/aetee-tests.cc.o: include/aetee/axioms/append.h
 test/CMakeFiles/aetee-unittests.dir/aetee-tests.cc.o: include/aetee/axioms/concat.h
+test/CMakeFiles/aetee-unittests.dir/aetee-tests.cc.o: include/aetee/axioms/drop.h
 test/CMakeFiles/aetee-unittests.dir/aetee-tests.cc.o: include/aetee/axioms/identity.h
 test/CMakeFiles/aetee-unittests.dir/aetee-tests.cc.o: include/aetee/axioms/length.h
 test/CMakeFiles/aetee-unittests.dir/aetee-tests.cc.o: include/aetee/axioms/prepend.h
 test/CMakeFiles/aetee-unittests.dir/aetee-tests.cc.o: include/aetee/axioms/replicate.h
 test/CMakeFiles/aetee-unittests.dir/aetee-tests.cc.o: include/aetee/axioms/reverse.h
+test/CMakeFiles/aetee-unittests.dir/aetee-tests.cc.o: include/aetee/axioms/select.h
 test/CMakeFiles/aetee-unittests.dir/aetee-tests.cc.o: include/aetee/axioms/sizeof.h
+test/CMakeFiles/aetee-unittests.dir/aetee-tests.cc.o: include/aetee/axioms/take.h
 test/CMakeFiles/aetee-unittests.dir/aetee-tests.cc.o: include/aetee/axioms/zip.h
 test/CMakeFiles/aetee-unittests.dir/aetee-tests.cc.o: include/aetee/hof.h
 test/CMakeFiles/aetee-unittests.dir/aetee-tests.cc.o: include/aetee/hof/apply.h

@@ -6,6 +6,9 @@
 #include <experimental/tuple>
 #include <functional>
 
+using aetee::operator""_c;
+
+
 TEST(Aetee, TypeConstant)
 {
     auto int_ct = aetee::type_c<int>;
@@ -51,4 +54,36 @@ TEST(Aetee, Reverse)
     auto expected = std::make_tuple(5, 4, 3, 2, 1);
     auto actual = aetee::reverse(std::make_tuple(1, 2, 3, 4, 5));
     EXPECT_EQ(expected, actual);
+}
+
+TEST(Aetee, Take)
+{
+    { // takeFront
+        auto expected = std::make_tuple(1, 2);
+        auto actual = aetee::take(std::make_tuple(1, 2, 3, 4, 5), 2_c);
+        ASSERT_EQ(aetee::length(expected), aetee::length(actual));
+        EXPECT_EQ(expected, actual);
+    }
+    { // takeBack
+        auto expected = std::make_tuple(4, 5);
+        auto actual = aetee::takeBack(std::make_tuple(1, 2, 3, 4, 5), 2_c);
+        ASSERT_EQ(aetee::length(expected), aetee::length(actual));
+        EXPECT_EQ(expected, actual);
+    }
+}
+
+TEST(Aetee, Drop)
+{
+    { // dropFront
+        auto expected = std::make_tuple(3, 4, 5);
+        auto actual = aetee::drop(std::make_tuple(1, 2, 3, 4, 5), 2_c);
+        ASSERT_EQ(aetee::length(expected), aetee::length(actual));
+        EXPECT_EQ(expected, actual);
+    }
+    { // dropBack
+        auto expected = std::make_tuple(1, 2, 3);
+        auto actual = aetee::dropBack(std::make_tuple(1, 2, 3, 4, 5), 2_c);
+        ASSERT_EQ(aetee::length(expected), aetee::length(actual));
+        EXPECT_EQ(expected, actual);
+    }
 }

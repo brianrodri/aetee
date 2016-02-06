@@ -29,6 +29,8 @@ aetee/axioms/append.h
 -
 aetee/axioms/concat.h
 -
+aetee/axioms/drop.h
+-
 aetee/axioms/identity.h
 -
 aetee/axioms/length.h
@@ -39,7 +41,11 @@ aetee/axioms/replicate.h
 -
 aetee/axioms/reverse.h
 -
+aetee/axioms/select.h
+-
 aetee/axioms/sizeof.h
+-
+aetee/axioms/take.h
 -
 aetee/axioms/zip.h
 -
@@ -62,6 +68,14 @@ aetee/hof/fold.h
 tuple
 -
 utility
+-
+
+include/aetee/axioms/drop.h
+aetee/axioms/length.h
+-
+aetee/hof/fold.h
+-
+aetee/mathsugar.h
 -
 
 include/aetee/axioms/identity.h
@@ -92,10 +106,22 @@ aetee/int_c.h
 aetee/axioms/length.h
 -
 
+include/aetee/axioms/select.h
+aetee/int_c.h
+-
+
 include/aetee/axioms/sizeof.h
 aetee/type_c.h
 -
 type_traits
+-
+
+include/aetee/axioms/take.h
+aetee/axioms/length.h
+-
+aetee/hof/fold.h
+-
+aetee/mathsugar.h
 -
 
 include/aetee/axioms/zip.h
@@ -192,6 +218,8 @@ limits
 
 include/aetee/mathsugar.h
 aetee/aetee.h
+-
+aetee/axioms/select.h
 -
 functional
 -
