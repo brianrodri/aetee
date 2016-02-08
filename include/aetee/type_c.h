@@ -1,5 +1,6 @@
 #ifndef HEADER_AETEE_TYPE_C_H_INCLUDED
 #define HEADER_AETEE_TYPE_C_H_INCLUDED
+#include <tuple>
 #include <type_traits>
 #include <experimental/type_traits>
 #include <aetee/int_c.h>
@@ -12,6 +13,12 @@ template <typename T> constexpr auto type_c = type_constant_t<std::decay_t<T>>{}
 
 template <typename... T> using type_sequence_t = std::tuple<type_constant_t<std::decay_t<T>>...>;
 template <typename... T> constexpr auto type_sequence_c = type_sequence_t<T...>{};
+
+//! type_at_t
+template <size_t I, typename... T> using type_at_t = std::tuple_element_t<I, std::tuple<T...>>;
+
+template <size_t I, typename... T>
+static constexpr auto type_at_c = type_c<type_at_t<I, T...>>;
 
 //! type_exists
 template <typename H, typename... T>
@@ -41,7 +48,7 @@ template <typename T, typename... L>
 using type_index = detail::type_index_impl<T, L...>;
 
 template <typename T, typename... L>
-static constexpr auto type_index_v = type_index<T, L...>{};
+static constexpr auto type_index_c = type_index<T, L...>{};
 
 template <typename T>
 static constexpr auto sizeof_c(type_constant_t<T>) {

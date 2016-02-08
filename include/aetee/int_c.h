@@ -26,6 +26,7 @@ template <bool B> static constexpr auto bool_c = bool_constant_t<B>{};
 static constexpr auto true_c = bool_c<true>;
 static constexpr auto false_c = bool_c<false>;
 static constexpr auto max_index_c = integer_maximum_t<std::size_t>{};
+template <typename... T> static constexpr auto arity_c = index_c<sizeof...(T)>;
 
 namespace detail {
 

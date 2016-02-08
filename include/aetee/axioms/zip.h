@@ -12,7 +12,7 @@ struct zipFunctor {
     template <typename... Tup>
     constexpr auto operator()(Tup&&... tup) const
     {
-        constexpr auto minLen = std::min({length(tup)...});
+        constexpr auto minLen = min_(length(type_c<Tup>)...);
         return impl(std::make_index_sequence<minLen>{}, std::forward<Tup>(tup)...);
     }
 
@@ -25,7 +25,7 @@ private:
             );
     }
 
-    template <size_t X, size_t... I, typename... Tup>
+    template <size_t X, typename... Tup>
     constexpr auto extractElement(index_constant_t<X>, Tup&&... tup) const
     {
         return std::make_tuple(std::get<X>(std::forward<Tup>(tup))...);

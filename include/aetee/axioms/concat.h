@@ -20,16 +20,9 @@ struct concatFunctor {
             );
     }
 
-    template <typename... Tup>
-    constexpr auto operator()(Tup&&... tup) const
-    {
-        //TODO: Generalize better...
-        return fold(std::make_tuple(std::forward<Tup>(tup)...), std::make_tuple(), concatFunctor{});
-    }
-
 private:
     template <typename ATup, typename BTup, size_t... I, size_t... J>
-    constexpr auto impl(ATup&& a, BTup&& b, std::index_sequence<I...>, std::index_sequence<J...>)
+    static constexpr auto impl(ATup&& a, BTup&& b, std::index_sequence<I...>, std::index_sequence<J...>)
     {
         return std::make_tuple(
             std::get<I>(std::forward<ATup>(a))...

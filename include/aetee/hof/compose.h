@@ -8,32 +8,31 @@ namespace aetee {
 
 namespace detail {
 
+template <typename F, typename G>
+struct compositionFunctor {
+    template <typename... A>
+    constexpr auto operator()(A&&... a)
+    {
+        return f(g(std::forward<A>(a)...));
+    }
+
+    template <typename... A>
+    constexpr auto operator()(A&&... a) const
+    {
+        return f(g(std::forward<A>(a)...));
+    }
+
+private:
+    F f;
+    G g;
+} /*struct compositionFunctor*/;
+
 struct composeFunctor {
     template <typename F, typename G>
     constexpr auto operator()(F&& f, G&& g) const
     {
-        return composition<F, G>{std::forward<F>(f), std::forward<G>(g)};
+        return compositionFunctor<F, G>{std::forward<F>(f), std::forward<G>(g)};
     }
-
-    template <typename... F>
-    constexpr auto operator()(F&&... f) const
-    {
-        return fold(std::make_tuple(std::forward<F>(f)...), identity, composeFunctor{});
-    }
-
-private:
-    template <typename F, typename G>
-    struct composition {
-        template <typename... A>
-        constexpr auto operator()(A&&... a) const
-        {
-            return f(g(std::forward<A>(a)...));
-        }
-
-    private:
-        F f;
-        G g;
-    } /*struct composition*/;
 } /*struct composeFunctor*/;
 
 } /*namespace detail*/;

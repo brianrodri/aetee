@@ -35,12 +35,12 @@ struct valueFunctor {
     template <typename T>
     constexpr decltype(auto) operator()(T&& t) const
     {
-        return T::value;
+        return std::decay_t<T>::value;
     }
     template <typename T>
     constexpr decltype(auto) operator()(type_constant_t<T>) const
     {
-        return T::value;
+        return std::decay_t<T>::value;
     }
 } /*struct valueFunctor*/;
 

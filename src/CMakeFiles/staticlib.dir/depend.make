@@ -9,6 +9,7 @@ src/CMakeFiles/staticlib.dir/main.cpp.o: include/aetee/axioms/append.h
 src/CMakeFiles/staticlib.dir/main.cpp.o: include/aetee/axioms/concat.h
 src/CMakeFiles/staticlib.dir/main.cpp.o: include/aetee/axioms/drop.h
 src/CMakeFiles/staticlib.dir/main.cpp.o: include/aetee/axioms/identity.h
+src/CMakeFiles/staticlib.dir/main.cpp.o: include/aetee/axioms/invoke.h
 src/CMakeFiles/staticlib.dir/main.cpp.o: include/aetee/axioms/length.h
 src/CMakeFiles/staticlib.dir/main.cpp.o: include/aetee/axioms/prepend.h
 src/CMakeFiles/staticlib.dir/main.cpp.o: include/aetee/axioms/replicate.h

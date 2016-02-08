@@ -6,6 +6,24 @@ namespace aetee {
 
 namespace detail {
 
+template <typename T>
+struct bindFunctor {
+    constexpr bindFunctor(T&& t_) : t{std::forward<T>(t_)} {};
+
+    constexpr auto& operator()()
+    {
+        return t;
+    }
+
+    constexpr const auto& operator()() const
+    {
+        return t;
+    }
+
+private:
+    T t;
+};
+
 struct identityFunctor {
     template <typename T>
     constexpr auto operator()(T&& t) const
@@ -18,19 +36,6 @@ struct identityFunctor {
     {
         return bindFunctor<T>{std::forward<T>(t)};
     }
-
-private:
-    template <typename T>
-    struct bindFunctor {
-        constexpr bindFunctor(T&& t_) : t{std::forward<T>(t_)} {};
-        constexpr auto operator()() const
-        {
-            return t;
-        }
-
-    private:
-        T t;
-    };
 } /*struct identityFunctor*/;
 
 } /*namespace detail*/;

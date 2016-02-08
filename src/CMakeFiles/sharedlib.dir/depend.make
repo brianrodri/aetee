@@ -9,6 +9,7 @@ src/CMakeFiles/sharedlib.dir/main.cpp.o: include/aetee/axioms/append.h
 src/CMakeFiles/sharedlib.dir/main.cpp.o: include/aetee/axioms/concat.h
 src/CMakeFiles/sharedlib.dir/main.cpp.o: include/aetee/axioms/drop.h
 src/CMakeFiles/sharedlib.dir/main.cpp.o: include/aetee/axioms/identity.h
+src/CMakeFiles/sharedlib.dir/main.cpp.o: include/aetee/axioms/invoke.h
 src/CMakeFiles/sharedlib.dir/main.cpp.o: include/aetee/axioms/length.h
 src/CMakeFiles/sharedlib.dir/main.cpp.o: include/aetee/axioms/prepend.h
 src/CMakeFiles/sharedlib.dir/main.cpp.o: include/aetee/axioms/replicate.h

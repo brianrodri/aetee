@@ -13,9 +13,9 @@ template <typename F> struct applyWrapperFunctor;
 //! Used as a passable object that makes wrapped apply functions
 struct applyWrapperMakerFunctor {
     template <typename F>
-    constexpr auto operator()(F&& f) const
+    constexpr decltype(auto) operator()(F&& f) const
     {
-        return applyWrapperFunctor<F>(std::forward<F>(f));
+        return applyWrapperFunctor<F>{std::forward<F>(f)};
     }
 } /*applyWrapperMakerFunctor*/;
 
@@ -32,20 +32,26 @@ struct applyFunctor {
             );
     }
 
-    static constexpr auto wrap = applyWrapperMakerFunctor{};
+    static constexpr auto wrapper = applyWrapperMakerFunctor{};
 
 private:
     template <typename Tup, typename F, size_t... I>
-    constexpr decltype(auto) impl(Tup&& tup, F&& f, std::index_sequence<I...>) const
+    static constexpr decltype(auto) impl(Tup&& tup, F&& f, std::index_sequence<I...>)
     {
-        return f(std::get<I>(std::forward<F>(f))...);
+        return f(std::get<I>(std::forward<Tup>(tup))...);
     }
 } /*struct applyFunctor*/;
 
 //!
 template <typename F>
 struct applyWrapperFunctor {
-    applyWrapperFunctor(F&& f) : f{std::forward<F>(f)} {};
+    constexpr applyWrapperFunctor(F&& f_) : f{std::forward<F>(f_)} {};
+
+    template <typename Tup>
+    constexpr decltype(auto) operator()(Tup&& tup)
+    {
+        return applyFunctor{}(std::forward<Tup>(tup), f);
+    }
 
     template <typename Tup>
     constexpr decltype(auto) operator()(Tup&& tup) const

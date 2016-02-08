@@ -17,7 +17,7 @@ struct prependFunctor {
 
 private:
     template <typename Tup, typename X, size_t... I>
-    constexpr auto impl(Tup&& tup, X&& x, std::index_sequence<I...>) const
+    static constexpr auto impl(Tup&& tup, X&& x, std::index_sequence<I...>)
     {
         return std::make_tuple(std::forward<X>(x), std::get<I>(std::forward<Tup>(tup))...);
     }

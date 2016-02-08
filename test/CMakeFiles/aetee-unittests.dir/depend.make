@@ -9,6 +9,7 @@ test/CMakeFiles/aetee-unittests.dir/aetee-tests.cc.o: include/aetee/axioms/appen
 test/CMakeFiles/aetee-unittests.dir/aetee-tests.cc.o: include/aetee/axioms/concat.h
 test/CMakeFiles/aetee-unittests.dir/aetee-tests.cc.o: include/aetee/axioms/drop.h
 test/CMakeFiles/aetee-unittests.dir/aetee-tests.cc.o: include/aetee/axioms/identity.h
+test/CMakeFiles/aetee-unittests.dir/aetee-tests.cc.o: include/aetee/axioms/invoke.h
 test/CMakeFiles/aetee-unittests.dir/aetee-tests.cc.o: include/aetee/axioms/length.h
 test/CMakeFiles/aetee-unittests.dir/aetee-tests.cc.o: include/aetee/axioms/prepend.h
 test/CMakeFiles/aetee-unittests.dir/aetee-tests.cc.o: include/aetee/axioms/replicate.h

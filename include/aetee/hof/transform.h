@@ -21,7 +21,7 @@ struct transformFunctor {
 
 private:
     template <typename Tup, typename F, size_t... I>
-    constexpr auto impl(Tup&& tup, F&& f, std::index_sequence<I...>) const
+    static constexpr auto impl(Tup&& tup, F&& f, std::index_sequence<I...>)
     {
         return std::make_tuple(f(std::get<I>(std::forward<Tup>(tup)))...);
     }

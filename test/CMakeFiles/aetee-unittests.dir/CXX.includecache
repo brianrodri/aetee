@@ -45,6 +45,8 @@ aetee/axioms/drop.h
 -
 aetee/axioms/identity.h
 -
+aetee/axioms/invoke.h
+-
 aetee/axioms/length.h
 -
 aetee/axioms/prepend.h
@@ -93,6 +95,8 @@ aetee/mathsugar.h
 include/aetee/axioms/identity.h
 utility
 -
+
+include/aetee/axioms/invoke.h
 
 include/aetee/axioms/length.h
 aetee/type_c.h
@@ -173,6 +177,8 @@ aetee/int_c.h
 -
 aetee/hof/curry.h
 -
+aetee/objects.h
+-
 
 include/aetee/hof/compose.h
 aetee/objects.h
@@ -231,6 +237,8 @@ limits
 include/aetee/mathsugar.h
 aetee/aetee.h
 -
+aetee/objects.h
+-
 aetee/axioms/select.h
 -
 functional
@@ -247,6 +255,8 @@ aetee/type_c.h
 -
 
 include/aetee/type_c.h
+tuple
+-
 type_traits
 -
 experimental/type_traits

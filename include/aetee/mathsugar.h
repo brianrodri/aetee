@@ -1,6 +1,7 @@
 #ifndef HEADER_AETEE_MATH_SUGAR_H_INCLUDED
 #define HEADER_AETEE_MATH_SUGAR_H_INCLUDED
 #include <aetee/aetee.h>
+#include <aetee/objects.h>
 #include <aetee/axioms/select.h>
 #include <functional>
 #include <utility>
@@ -45,7 +46,13 @@ struct minFunctor {
     template <typename... T>
     constexpr auto operator()(T&&... t) const
     {
-        return fold(std::make_tuple(std::forward<T>(t)...), max_index_c, lessFunctor{});
+        return std::min({ std::forward<T>(t)... });
+    }
+
+    template <typename... T>
+    constexpr auto operator()(type_constant_t<T>...) const
+    {
+        return std::min({ T::value... });
     }
 } /*struct minFunctor*/;
 
@@ -53,7 +60,13 @@ struct maxFunctor {
     template <typename... T>
     constexpr auto operator()(T&&... t) const
     {
-        return fold(std::make_tuple(std::forward<T>(t)...), 0_c, greaterFunctor{});
+        return std::max({ std::forward<T>(t)... });
+    }
+
+    template <typename... T>
+    constexpr auto operator()(type_constant_t<T>...) const
+    {
+        return std::max({ T::value... });
     }
 } /*struct maxFunctor*/;
 
