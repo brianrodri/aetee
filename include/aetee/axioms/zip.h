@@ -10,10 +10,15 @@ namespace aetee {
 namespace detail {
 
 struct zipFunctor {
+    constexpr auto operator()() const
+    {
+        return std::make_tuple();
+    }
+
     template <typename... Tup>
     constexpr auto operator()(Tup&&... tup) const
     {
-        constexpr auto minLen = min_(0_c, length(type_c<Tup>)...);
+        constexpr auto minLen = min_(length(type_c<Tup>)...);
         return impl(
             std::make_index_sequence<minLen>{}, std::forward<Tup>(tup)...
             );
