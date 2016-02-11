@@ -10,33 +10,34 @@ namespace detail {
 
 struct choiceFunctor {
     template <typename Conditional, typename ABranch, typename BBranch>
-    constexpr decltype(auto) operator()(Conditional c, ABranch a, BBranch b) const
+    constexpr decltype(auto) operator()(Conditional c, ABranch&& a, BBranch&& b) const
     {
-        return operator()(bool_c<c>, a, b);
+        return operator()(bool_c<c>, std::forward<ABranch>(a), std::forward<BBranch>(b));
     }
 
-    template <typename BranchTaken, typename _>
-    constexpr decltype(auto) operator()(bool_constant_t<true>, BranchTaken f, _) const
+    template <typename BranchTaken, typename BranchNotTaken>
+    constexpr decltype(auto) operator()(bool_constant_t<true>, BranchTaken&& f, BranchNotTaken&&) const
     {
         return f();
     }
 
-    template <typename _, typename BranchTaken>
-    constexpr decltype(auto) operator()(bool_constant_t<false>, _, BranchTaken f) const
+    template <typename BranchNotTaken, typename BranchTaken>
+    constexpr decltype(auto) operator()(bool_constant_t<false>, BranchNotTaken&&, BranchTaken&& f) const
     {
         return f();
     }
 
     template <typename F, typename A, typename B>
-    static constexpr decltype(auto) transform(F f, A a, B b)
+    static constexpr decltype(auto) transform(F&& f, A&& a, B&& b)
     {
-        return transformer<F, A, B>{f, a, b};
+        return transformer<F, A, B>{std::forward<F>(f), std::forward<A>(a), std::forward<B>(b)};
     }
 
 private:
-    template <typename F, typename A = identityFunctor, typename B = identityFunctor>
+    template <typename F, typename A, typename B>
     struct transformer {
-        constexpr transformer(F f_, A a_ = {}, B b_ = {}) : f{f_}, a{a_}, b{b_} {};
+        constexpr transformer(F&& f_, A&& a_ = {}, B&& b_ = {})
+            : f{std::forward<F>(f_)}, a{std::forward<A>(a_)}, b{std::forward<B>(b_)} {};
 
         template <typename T>
         constexpr decltype(auto) operator()(T&& t)

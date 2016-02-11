@@ -23,6 +23,7 @@ test/CMakeFiles/aetee-unittests.dir/aetee-tests.cc.o: include/aetee/hof/apply.h
 test/CMakeFiles/aetee-unittests.dir/aetee-tests.cc.o: include/aetee/hof/choice.h
 test/CMakeFiles/aetee-unittests.dir/aetee-tests.cc.o: include/aetee/hof/compose.h
 test/CMakeFiles/aetee-unittests.dir/aetee-tests.cc.o: include/aetee/hof/curry.h
+test/CMakeFiles/aetee-unittests.dir/aetee-tests.cc.o: include/aetee/hof/explode.h
 test/CMakeFiles/aetee-unittests.dir/aetee-tests.cc.o: include/aetee/hof/filter.h
 test/CMakeFiles/aetee-unittests.dir/aetee-tests.cc.o: include/aetee/hof/fold.h
 test/CMakeFiles/aetee-unittests.dir/aetee-tests.cc.o: include/aetee/hof/for_each.h

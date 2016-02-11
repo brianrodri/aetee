@@ -31,7 +31,7 @@ template <typename... T> static constexpr auto arity_c = index_c<sizeof...(T)>;
 namespace detail {
 
 template <typename T>
-struct integralSequenceMakerFunctor {
+struct integerSequenceMaker {
     template <typename _> struct expander;
 
     template <T... I>
@@ -56,9 +56,11 @@ static constexpr auto to_index_sequence_impl(IntSeq&& seq, std::index_sequence<I
 } /*namespace detail*/;
 
 template <std::size_t N>
-static constexpr auto index_sequence_c = detail::integralSequenceMakerFunctor<std::size_t>{}.make(index_c<N>);
+static constexpr auto index_sequence_c = detail::integerSequenceMaker<std::size_t>{}.make(index_c<N>);
 template <typename... C>
-static constexpr auto index_sequence_c_for = detail::integralSequenceMakerFunctor<std::size_t>{}.make(index_c<sizeof...(C)>);
+static constexpr auto index_sequence_c_for = detail::integerSequenceMaker<std::size_t>{}.make(index_c<sizeof...(C)>);
+template <typename Tup>
+static constexpr auto indices_of_c = detail::integerSequenceMaker<std::size_t>{}.make(std::tuple_size<std::decay_t<Tup>>{});
 
 template <typename IntSeq>
 static constexpr auto to_index_sequence(IntSeq&& seq)

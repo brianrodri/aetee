@@ -10,6 +10,8 @@ namespace detail {
 
 template <typename F, typename G>
 struct compositionFunctor {
+    constexpr compositionFunctor(F&& f_, G&& g_) : f{std::forward<F>(f_)}, g{std::forward<G>(g_)} {};
+
     template <typename... A>
     constexpr auto operator()(A&&... a)
     {
@@ -37,7 +39,7 @@ struct composeFunctor {
 
 } /*namespace detail*/;
 
-static constexpr auto composition = detail::composeFunctor{};
+static constexpr auto compose = detail::composeFunctor{};
 
 } /*namespace aetee*/;
 

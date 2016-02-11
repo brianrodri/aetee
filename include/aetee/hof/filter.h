@@ -9,15 +9,47 @@ namespace aetee {
 
 namespace detail {
 
+template <typename F>
+struct transformingFunctor {
+    transformingFunctor(F&& f_) : pred{std::forward<F>(f_)}
+    {
+    }
+
+    template <typename X>
+    constexpr auto operator()(X&& x)
+    {
+        return impl(pred(std::forward<X>(x)), std::forward<X>(x));
+    }
+
+    template <typename X>
+    constexpr auto operator()(X&& x) const
+    {
+        return impl(pred(std::forward<X>(x)), std::forward<X>(x));
+    }
+
+private:
+    template <typename X>
+    constexpr auto impl(true_constant_t, X&& x) const
+    {
+        return std::make_tuple(std::forward<X>(x));
+    }
+
+    template <typename X>
+    constexpr auto impl(false_constant_t, X&& x) const
+    {
+        return std::make_tuple();
+    }
+
+private:
+    F pred;
+} /*struct transformingFunctor*/;
+
 struct filterFunctor {
-    template <typename Tup, typename UnaryPredicate>
-    auto operator()(Tup&& tup, UnaryPredicate&& f) const
+    template <typename Tup, typename F>
+    constexpr auto operator()(Tup&& tup, F&& f) const
     {
         return fold(
-            transform(
-                std::forward<Tup>(tup)
-              , choice.transform(std::forward<UnaryPredicate>(f), tupify, nothing)
-                )
+            transform(std::forward<Tup>(tup), transformingFunctor<F>{std::forward<F>(f)})
           , std::make_tuple()
           , concat
             );

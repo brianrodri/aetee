@@ -5,6 +5,7 @@
 #include <aetee/hof/choice.h>
 #include <aetee/hof/compose.h>
 #include <aetee/hof/curry.h>
+#include <aetee/hof/explode.h>
 #include <aetee/hof/filter.h>
 #include <aetee/hof/fold.h>
 #include <aetee/hof/for_each.h>

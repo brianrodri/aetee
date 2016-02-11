@@ -1,0 +1,17 @@
+bin/*
+lib/*
+build/*
+tools/*
+
+CMakeFiles/*
+src/CMakeFiles/*
+test/CMakeFiles/*
+
+docs/*.png
+docs/*.css
+docs/*.js
+docs/search/*
+
+src/appinfo.h
+*.swp
+TODO

@@ -3,6 +3,7 @@
 #include <aetee/mathsugar.h>
 #include <aetee/type_c.h>
 #include <aetee/objects.h>
+#include <aetee/hof/compose.h>
 
 namespace aetee {
 
@@ -12,8 +13,10 @@ struct zipFunctor {
     template <typename... Tup>
     constexpr auto operator()(Tup&&... tup) const
     {
-        constexpr auto minLen = min_(length(type_c<Tup>)...);
-        return impl(std::make_index_sequence<minLen>{}, std::forward<Tup>(tup)...);
+        constexpr auto minLen = min_(0_c, length(type_c<Tup>)...);
+        return impl(
+            std::make_index_sequence<minLen>{}, std::forward<Tup>(tup)...
+            );
     }
 
 private:

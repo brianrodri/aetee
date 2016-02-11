@@ -8,10 +8,10 @@
 namespace aetee {
 
 //! type_constant_t
-template <typename T> struct type_constant_t { using type = T; };
-template <typename T> constexpr auto type_c = type_constant_t<std::decay_t<T>>{};
+template <typename T> struct type_constant_t { using type = std::decay_t<T>; };
+template <typename T> constexpr auto type_c = type_constant_t<T>{};
 
-template <typename... T> using type_sequence_t = std::tuple<type_constant_t<std::decay_t<T>>...>;
+template <typename... T> using type_sequence_t = std::tuple<type_constant_t<T>...>;
 template <typename... T> constexpr auto type_sequence_c = type_sequence_t<T...>{};
 
 //! type_at_t

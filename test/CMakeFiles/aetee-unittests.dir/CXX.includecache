@@ -147,6 +147,8 @@ aetee/type_c.h
 -
 aetee/objects.h
 -
+aetee/hof/compose.h
+-
 
 include/aetee/hof.h
 aetee/hof/apply.h
@@ -156,6 +158,8 @@ aetee/hof/choice.h
 aetee/hof/compose.h
 -
 aetee/hof/curry.h
+-
+aetee/hof/explode.h
 -
 aetee/hof/filter.h
 -
@@ -192,6 +196,14 @@ include/aetee/hof/curry.h
 tuple
 -
 utility
+-
+
+include/aetee/hof/explode.h
+tuple
+-
+aetee/int_c.h
+-
+aetee/axioms/length.h
 -
 
 include/aetee/hof/filter.h
@@ -240,6 +252,8 @@ aetee/aetee.h
 aetee/objects.h
 -
 aetee/axioms/select.h
+-
+algorithm
 -
 functional
 -

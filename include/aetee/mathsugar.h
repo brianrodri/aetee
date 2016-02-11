@@ -3,6 +3,7 @@
 #include <aetee/aetee.h>
 #include <aetee/objects.h>
 #include <aetee/axioms/select.h>
+#include <algorithm>
 #include <functional>
 #include <utility>
 
@@ -46,13 +47,7 @@ struct minFunctor {
     template <typename... T>
     constexpr auto operator()(T&&... t) const
     {
-        return std::min({ std::forward<T>(t)... });
-    }
-
-    template <typename... T>
-    constexpr auto operator()(type_constant_t<T>...) const
-    {
-        return std::min({ T::value... });
+        return std::min({ (std::decay_t<T>::value)... });
     }
 } /*struct minFunctor*/;
 
@@ -60,13 +55,7 @@ struct maxFunctor {
     template <typename... T>
     constexpr auto operator()(T&&... t) const
     {
-        return std::max({ std::forward<T>(t)... });
-    }
-
-    template <typename... T>
-    constexpr auto operator()(type_constant_t<T>...) const
-    {
-        return std::max({ T::value... });
+        return std::min({ (std::decay_t<T>::value)... });
     }
 } /*struct maxFunctor*/;
 
