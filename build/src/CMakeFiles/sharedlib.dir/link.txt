@@ -1,1 +1,0 @@
-/usr/local/bin/g++-6   -std=gnu++1z -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -dynamiclib -Wl,-headerpad_max_install_names -current_version 1.0.0 -o ../../lib/libaetee.1.0.dylib -install_name @rpath/libaetee.1.0.dylib CMakeFiles/sharedlib.dir/main.cpp.o 
