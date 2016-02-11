@@ -12,9 +12,8 @@ struct explodeFunctor {
     template <typename Tup, typename... F>
     constexpr auto operator()(Tup&& tup, F&&... f) const
     {
-        static_assert(length(tup) < arity_c<F...>);
         return impl(
-            index_sequence_c_for<F...>
+            index_sequence_c_for<type_c<Tup>>
           , std::forward<Tup>(tup)
           , std::forward<F>(f)...
             );
@@ -24,7 +23,7 @@ private:
     template <size_t... I, typename Tup, typename... F>
     static constexpr auto impl(index_sequence_t<I...>, Tup&& tup, F&&... f)
     {
-        return std::make_tuple(f(std::get<I>(std::forward<Tup>(tup)))...);
+        return tupify(f(std::get<I>(std::forward<Tup>(tup)))...);
     }
 } /*struct explodeFunctor*/;
 
