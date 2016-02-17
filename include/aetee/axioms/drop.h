@@ -12,7 +12,7 @@ struct dropBackFunctor {
     template <typename Tup, size_t N>
     constexpr auto operator()(Tup&& tup, index_constant_t<N> n) const
     {
-        constexpr size_t l = clamp(0_c, length(type_c<Tup>), n);
+        constexpr auto l = clamp(0_c, length(type_c<Tup>), n);
         return impl(std::forward<Tup>(tup), std::make_index_sequence<length(type_c<Tup>) - l>{});
     }
 
@@ -28,7 +28,7 @@ struct dropFunctor {
     template <typename Tup, size_t N>
     constexpr auto operator()(Tup&& tup, index_constant_t<N> n) const
     {
-        constexpr size_t l = clamp(0_c, length(type_c<Tup>), n);
+        constexpr auto l = clamp(0_c, length(type_c<Tup>), n);
         return impl(std::forward<Tup>(tup), index_c<l>, std::make_index_sequence<length(type_c<Tup>) - l>{});
     }
 

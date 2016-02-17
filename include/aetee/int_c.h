@@ -6,14 +6,16 @@
 
 namespace aetee {
 
+//! int_constant_t
+
 //! Overarching types
-template <typename T, T V> using integer_constant_t = std::integral_constant<T, V>;
-template <typename T> using integer_minimum_t = std::integral_constant<T, std::numeric_limits<T>::max()>;
-template <typename T> using integer_maximum_t = std::integral_constant<T, std::numeric_limits<T>::max()>;
+template <typename T, T V> using int_constant_t = std::integral_constant<T, V>;
+template <typename T> using int_minimum_t = std::integral_constant<T, std::numeric_limits<T>::max()>;
+template <typename T> using int_maximum_t = std::integral_constant<T, std::numeric_limits<T>::max()>;
 
 //! Helper types
-template <std::size_t I> using index_constant_t = integer_constant_t<std::size_t, I>;
-template <bool B> using bool_constant_t = integer_constant_t<bool, B>;
+template <std::size_t I> using index_constant_t = int_constant_t<std::size_t, I>;
+template <bool B> using bool_constant_t = int_constant_t<bool, B>;
 using true_constant_t = bool_constant_t<true>;
 using false_constant_t = bool_constant_t<false>;
 
@@ -25,7 +27,7 @@ template <std::size_t I> static constexpr auto index_c = index_constant_t<I>{};
 template <bool B> static constexpr auto bool_c = bool_constant_t<B>{};
 static constexpr auto true_c = bool_c<true>;
 static constexpr auto false_c = bool_c<false>;
-static constexpr auto max_index_c = integer_maximum_t<std::size_t>{};
+static constexpr auto max_index_c = int_maximum_t<std::size_t>{};
 template <typename... T> static constexpr auto arity_c = index_c<sizeof...(T)>;
 
 namespace detail {
@@ -36,11 +38,11 @@ struct integerSequenceMaker {
 
     template <T... I>
     struct expander<std::integer_sequence<T, I...>> {
-        using type = std::tuple<integer_constant_t<T, I>...>;
+        using type = std::tuple<int_constant_t<T, I>...>;
     };
 
     template <T N>
-    static constexpr auto make(integer_constant_t<T, N>)
+    static constexpr auto make(int_constant_t<T, N>)
     {
         using S = typename expander<decltype(std::make_integer_sequence<T, N>{})>::type;
         return S{};
@@ -94,139 +96,31 @@ constexpr auto operator ""_c ()
 }
 
 // Some useful operators for fun compile-time convinience! :)
+template <typename T, T V> constexpr auto operator++(int_constant_t<T, V>) { return int_constant_t<T, (V + 1)>{}; };
+template <typename T, T V> constexpr auto operator--(int_constant_t<T, V>) { return int_constant_t<T, (V - 1)>{}; };
+template <typename T, T V> constexpr auto operator+(int_constant_t<T, V>) { return int_constant_t<T, (+V)>{}; };
+template <typename T, T V> constexpr auto operator-(int_constant_t<T, V>) { return int_constant_t<T, (-V)>{}; };
+template <typename T, T V> constexpr auto operator~(int_constant_t<T, V>) { return int_constant_t<T, (~V)>{}; };
+template <typename T, T V> constexpr auto operator!(int_constant_t<T, V>) { return int_constant_t<T, (!V)>{}; };
+template <typename T, T V, typename H> constexpr auto operator+(int_constant_t<T, V>, H&& h) { return int_constant_t<T, (V + h)>{}; };
+template <typename T, T V, typename H> constexpr auto operator-(int_constant_t<T, V>, H&& h) { return int_constant_t<T, (V - h)>{}; };
+template <typename T, T V, typename H> constexpr auto operator*(int_constant_t<T, V>, H&& h) { return int_constant_t<T, (V * h)>{}; };
+template <typename T, T V, typename H> constexpr auto operator%(int_constant_t<T, V>, H&& h) { return int_constant_t<T, (V % h)>{}; };
+template <typename T, T V, typename H> constexpr auto operator/(int_constant_t<T, V>, H&& h) { return int_constant_t<T, (V / h)>{}; };
+template <typename T, T V, typename H> constexpr auto operator&(int_constant_t<T, V>, H&& h) { return int_constant_t<T, (V & h)>{}; };
+template <typename T, T V, typename H> constexpr auto operator|(int_constant_t<T, V>, H&& h) { return int_constant_t<T, (V | h)>{}; };
+template <typename T, T V, typename H> constexpr auto operator^(int_constant_t<T, V>, H&& h) { return int_constant_t<T, (V ^ h)>{}; };
+template <typename T, T V, typename H> constexpr auto operator<<(int_constant_t<T, V>, H&& h) { return int_constant_t<T, (V << h)>{}; };
+template <typename T, T V, typename H> constexpr auto operator>>(int_constant_t<T, V>, H&& h) { return int_constant_t<T, (V >> h)>{}; };
+template <typename T, T V, typename H> constexpr auto operator&&(int_constant_t<T, V>, H&& h) { return bool_c<(V && h)>; };
+template <typename T, T V, typename H> constexpr auto operator||(int_constant_t<T, V>, H&& h) { return bool_c<(V || h)>; };
+template <typename T, T V, typename H> constexpr auto operator==(int_constant_t<T, V>, H&& h) { return bool_c<(V == h)>; };
+template <typename T, T V, typename H> constexpr auto operator!=(int_constant_t<T, V>, H&& h) { return bool_c<(V != h)>; };
+template <typename T, T V, typename H> constexpr auto operator<(int_constant_t<T, V>, H&& h) { return bool_c<(V < h)>; };
+template <typename T, T V, typename H> constexpr auto operator>(int_constant_t<T, V>, H&& h) { return bool_c<(V > h)>; };
+template <typename T, T V, typename H> constexpr auto operator<=(int_constant_t<T, V>, H&& h) { return bool_c<(V <= h)>; };
+template <typename T, T V, typename H> constexpr auto operator>=(int_constant_t<T, V>, H&& h) { return bool_c<(V >= h)>; };
 
-//! PLUS
-template <typename T, T V, typename U, U W>
-constexpr integer_constant_t<std::common_type_t<T, U>, (V + W)>
-operator+(integer_constant_t<T, V>, integer_constant_t<U, W>)
-{ return {}; }
-
-//! MINUS
-template <typename T, T V, typename U, U W>
-constexpr integer_constant_t<std::common_type_t<T, U>, (V - W)>
-operator-(integer_constant_t<T, V>, integer_constant_t<U, W>)
-{ return {}; }
-
-//! TIMES
-template <typename T, T V, typename U, U W>
-constexpr integer_constant_t<std::common_type_t<T, U>, (V * W)>
-operator*(integer_constant_t<T, V>, integer_constant_t<U, W>)
-{ return {}; }
-
-//! DIVIDE
-template <typename T, T V, typename U, U W>
-constexpr integer_constant_t<std::common_type_t<T, U>, (V / W)>
-operator/(integer_constant_t<T, V>, integer_constant_t<U, W>)
-{ return {}; }
-
-//! MODULO
-template <typename T, T V, typename U, U W>
-constexpr integer_constant_t<std::common_type_t<T, U>, (V % W)>
-operator%(integer_constant_t<T, V>, integer_constant_t<U, W>)
-{ return {}; }
-
-//! PRE-INCREMENT
-template <typename T, T V>
-constexpr integer_constant_t<T, (V + 1)>
-operator++(integer_constant_t<T, V>)
-{ return {}; }
-
-//! PRE-DECREMENT
-template <typename T, T V>
-constexpr integer_constant_t<T, (V - 1)>
-operator--(integer_constant_t<T, V>)
-{ return {}; }
-
-//! EQUALITY COMPARISON
-template <typename T, T V, typename U, U W>
-constexpr bool_constant_t<(V == W)>
-operator==(integer_constant_t<T, V>, integer_constant_t<U, W>)
-{ return {}; }
-
-//! INEQUALITY COMPARISON
-template <typename T, T V, typename U, U W>
-constexpr bool_constant_t<(V != W)>
-operator!=(integer_constant_t<T, V>, integer_constant_t<U, W>)
-{ return {}; }
-
-//! LESS-THAN COMPARISON
-template <typename T, T V, typename U, U W>
-constexpr bool_constant_t<(V < W)>
-operator<(integer_constant_t<T, V>, integer_constant_t<U, W>)
-{ return {}; }
-
-//! GREATER-THAN COMPARISON
-template <typename T, T V, typename U, U W>
-constexpr bool_constant_t<(V > W)>
-operator>(integer_constant_t<T, V>, integer_constant_t<U, W>)
-{ return {}; }
-
-//! LESS-THAN-EQUAL COMPARISON
-template <typename T, T V, typename U, U W>
-constexpr bool_constant_t<(V <= W)>
-operator<=(integer_constant_t<T, V>, integer_constant_t<U, W>)
-{ return {}; }
-
-//! GREATER-THAN-EQUAL COMPARISON
-template <typename T, T V, typename U, U W>
-constexpr bool_constant_t<(V >= W)>
-operator>=(integer_constant_t<T, V>, integer_constant_t<U, W>)
-{ return {}; }
-
-//! LOGICAL NOT
-template <typename T, T V>
-constexpr integer_constant_t<T, (!V)>
-operator!(integer_constant_t<T, V>)
-{ return {}; }
-
-//! LOGICAL AND
-template <typename T, T V, typename U, U W>
-constexpr bool_constant_t<(V && W)>
-operator&&(integer_constant_t<T, V>, integer_constant_t<U, W>)
-{ return {}; }
-
-//! LOGICAL OR
-template <typename T, T V, typename U, U W>
-constexpr bool_constant_t<(V || W)>
-operator||(integer_constant_t<T, V>, integer_constant_t<U, W>)
-{ return {}; }
-
-//! BITWISE AND
-template <typename T, T V, typename U, U W>
-constexpr integer_constant_t<std::common_type_t<T, U>, (V & W)>
-operator&(integer_constant_t<T, V>, integer_constant_t<U, W>)
-{ return {}; }
-
-//! BITWISE OR
-template <typename T, T V, typename U, U W>
-constexpr integer_constant_t<std::common_type_t<T, U>, (V | W)>
-operator|(integer_constant_t<T, V>, integer_constant_t<U, W>)
-{ return {}; }
-
-//! BITWISE XOR
-template <typename T, T V, typename U, U W>
-constexpr integer_constant_t<std::common_type_t<T, U>, (V ^ W)>
-operator^(integer_constant_t<T, V>, integer_constant_t<U, W>)
-{ return {}; }
-
-//! BITWISE COMPLEMENT
-template <typename T, T V>
-constexpr integer_constant_t<T, (~V)>
-operator~(integer_constant_t<T, V>)
-{ return {}; }
-
-//! SHIFT LEFT
-template <typename T, T V, typename U, U W>
-constexpr integer_constant_t<std::common_type_t<T, U>, (V << W)>
-operator<<(integer_constant_t<T, V>, integer_constant_t<U, W>)
-{ return {}; }
-
-//! SHIFT RIGHT
-template <typename T, T V, typename U, U W>
-constexpr integer_constant_t<std::common_type_t<T, U>, (V >> W)>
-operator>>(integer_constant_t<T, V>, integer_constant_t<U, W>)
-{ return {}; }
-
-}; // namespace aetee
+} /*namespace aetee*/;
 
 #endif

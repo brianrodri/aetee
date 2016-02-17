@@ -1,8 +1,6 @@
 #ifndef HEADER_AETEE_MATH_SUGAR_H_INCLUDED
 #define HEADER_AETEE_MATH_SUGAR_H_INCLUDED
-#include <aetee/aetee.h>
-#include <aetee/objects.h>
-#include <aetee/axioms/select.h>
+#include <aetee/int_c.h>
 #include <algorithm>
 #include <functional>
 #include <utility>
@@ -31,7 +29,7 @@ struct sumFunctor {
     template <typename... T>
     constexpr auto operator()(T&&... t) const
     {
-        (std::forward<T>(t) + ...);
+        return (std::forward<T>(t) + ...);
     }
 } /*struct sumFunctor*/;
 
@@ -39,7 +37,7 @@ struct productFunctor {
     template <typename... T>
     constexpr auto operator()(T&&... t) const
     {
-        (std::forward<T>(t) * ...);
+        return (std::forward<T>(t) * ...);
     }
 } /*struct productFunctor*/;
 
@@ -60,14 +58,64 @@ struct maxFunctor {
 } /*struct maxFunctor*/;
 
 struct clampFunctor {
-    template <typename T, T L, typename U, U H, typename V, V C>
-    constexpr auto operator()(integer_constant_t<T, L> lo, integer_constant_t<U, H> hi, integer_constant_t<V, C> clampee) const
+    template <typename L, typename H, typename C>
+    constexpr decltype(auto) operator()(L lo, H hi, C clampee) const
     {
-        return aetee::select(index_c<((C < H) << 1) | (L < C)>, 0_c, hi, lo, clampee);
+        return impl((lo < clampee), (clampee < hi), lo, hi, clampee);
+    }
+
+    template <typename L, typename H, typename C, typename F>
+    constexpr decltype(auto) operator()(L lo, H hi, C clampee, F&& relation)
+    {
+        return impl(relation(lo, clampee), relation(clampee, hi), lo, hi, clampee);
+    }
+
+private:
+    template <typename L, typename H, typename C>
+    static constexpr decltype(auto) impl(true_constant_t, true_constant_t, L, H, C&& c)
+    {
+        return std::forward<C>(c);
+    }
+
+    template <typename L, typename H, typename C>
+    static constexpr decltype(auto) impl(false_constant_t, true_constant_t, L&& l, H, C)
+    {
+        return std::forward<L>(l);
+    }
+
+    template <typename L, typename H, typename C>
+    static constexpr decltype(auto) impl(true_constant_t, false_constant_t, L, H&& h, C)
+    {
+        return std::forward<H>(h);
     }
 } /*struct clampFunctor*/;
 
+template <typename F>
+class fixedFunctor {
+    constexpr fixedFunctor(F&& f) : f{std::forward<F>(f)} {};
+
+    template <typename... A>
+    constexpr decltype(auto) operator()(A&&... a)
+    {
+        return f(std::forward<A>(a)...);
+    }
+
+    template <typename... A>
+    constexpr decltype(auto) operator()(A&&... a) const
+    {
+        return f(std::forward<A>(a)...);
+    }
+
+private:
+    F f;
+} /*class fixedFunctor*/;
+
+
 } /*namespace detail*/;
+
+auto fix = [](auto f) {
+    return [=](auto&&... a) { return f(f, a...); };
+};
 
 static constexpr auto less_ = detail::lessFunctor{};
 static constexpr auto greater_ = detail::greaterFunctor{};

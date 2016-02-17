@@ -18,7 +18,7 @@ private:
     template <typename Tup, size_t... I>
     static constexpr auto impl(Tup&& tup, index_sequence_t<I...>)
     {
-        return std::make_tuple(std::get<length(type_c<Tup>) - I - 1>(std::forward<Tup>(tup))...);
+        return std::make_tuple(std::get<length(type_c<Tup>) - index_c<I> - 1_c>(std::forward<Tup>(tup))...);
     }
 };
 

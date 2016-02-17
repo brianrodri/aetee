@@ -1,7 +1,8 @@
-#ifndef HEADER_AETEE_OBJECTS_STRINGIFY_H_INCLUDED
-#define HEADER_AETEE_OBJECTS_STRINGIFY_H_INCLUDED
+#ifndef HEADER_AETEE_OBJECTS_H_INCLUDED
+#define HEADER_AETEE_OBJECTS_H_INCLUDED
 #include <string>
 #include <type_traits>
+#include <utility>
 #include <aetee/type_c.h>
 
 namespace aetee {
@@ -33,12 +34,13 @@ struct nothingFunctor {
 
 struct valueFunctor {
     template <typename T>
-    constexpr decltype(auto) operator()(T&& t) const
+    constexpr auto operator()(T&&) const
     {
         return std::decay_t<T>::value;
     }
+
     template <typename T>
-    constexpr decltype(auto) operator()(type_constant_t<T>) const
+    constexpr auto operator()(type_constant_t<T>) const
     {
         return std::decay_t<T>::value;
     }
