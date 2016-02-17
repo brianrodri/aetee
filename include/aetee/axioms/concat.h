@@ -1,6 +1,5 @@
 #ifndef HEADER_AETEE_AXIOMS_CONCAT_H_INCLUDED
 #define HEADER_AETEE_AXIOMS_CONCAT_H_INCLUDED
-#include <aetee/hof/fold.h>
 #include <tuple>
 #include <utility>
 
@@ -16,13 +15,13 @@ struct concatFunctor {
         constexpr size_t M = std::tuple_size<std::decay_t<BTup>>::value;
         return impl(
             std::forward<ATup>(a), std::forward<BTup>(b)
-          , std::make_index_sequence<N>{}, std::make_index_sequence<M>{}
+          , idx_sequence_c_of<ATup>, idx_sequence_c_of<BTup>
             );
     }
 
 private:
     template <typename ATup, typename BTup, size_t... I, size_t... J>
-    static constexpr auto impl(ATup&& a, BTup&& b, std::index_sequence<I...>, std::index_sequence<J...>)
+    static constexpr auto impl(ATup&& a, BTup&& b, idx_sequence_t<I...>, idx_sequence_t<J...>)
     {
         return std::make_tuple(
             std::get<I>(std::forward<ATup>(a))...

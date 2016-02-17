@@ -11,13 +11,12 @@ struct prependFunctor {
     template <typename Tup, typename X>
     constexpr auto operator()(Tup&& tup, X&& x) const
     {
-        constexpr size_t N = std::tuple_size<std::decay_t<Tup>>::value;
-        return impl(std::forward<Tup>(tup), std::forward<X>(x), std::make_index_sequence<N>{});
+        return impl(std::forward<Tup>(tup), std::forward<X>(x), idx_sequence_c_of<Tup>);
     }
 
 private:
     template <typename Tup, typename X, size_t... I>
-    static constexpr auto impl(Tup&& tup, X&& x, std::index_sequence<I...>)
+    static constexpr auto impl(Tup&& tup, X&& x, idx_sequence_t<I...>)
     {
         return std::make_tuple(std::forward<X>(x), std::get<I>(std::forward<Tup>(tup))...);
     }

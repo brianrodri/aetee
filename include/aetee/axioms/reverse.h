@@ -11,14 +11,14 @@ struct reverseFunctor {
     template <typename Tup>
     constexpr auto operator()(Tup&& tup) const
     {
-        return impl(std::forward<Tup>(tup), index_sequence_c_til<length(type_c<Tup>)>);
+        return impl(std::forward<Tup>(tup), idx_sequence_c_of<Tup>);
     }
 
 private:
     template <typename Tup, size_t... I>
-    static constexpr auto impl(Tup&& tup, index_sequence_t<I...>)
+    static constexpr auto impl(Tup&& tup, idx_sequence_t<I...> idxes)
     {
-        return std::make_tuple(std::get<length(type_c<Tup>) - index_c<I> - 1_c>(std::forward<Tup>(tup))...);
+        return std::make_tuple(std::get<idx_c<sizeof...(I) - I - 1>>(std::forward<Tup>(tup))...);
     }
 };
 

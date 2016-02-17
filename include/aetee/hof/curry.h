@@ -23,13 +23,13 @@ private:
         template <typename... B>
         constexpr decltype(auto) operator()(B&&... b)
         {
-            return impl(std::make_index_sequence<arity_c<A...>>{}, std::forward<B>(b)...);
+            return impl(idx_sequence_c_for<A...>, std::forward<B>(b)...);
         }
 
         template <typename... B>
         constexpr decltype(auto) operator()(B&&... b) const
         {
-            return impl(std::make_index_sequence<arity_c<A...>>{}, std::forward<B>(b)...);
+            return impl(idx_sequence_c_for<A...>, std::forward<B>(b)...);
         }
 
     private:
@@ -37,13 +37,13 @@ private:
         std::tuple<A...> a;
 
         template <size_t... I, typename... B>
-        constexpr decltype(auto) impl(std::index_sequence<I...>, B&&... b)
+        constexpr decltype(auto) impl(idx_sequence_t<I...>, B&&... b)
         {
             return f(std::get<I>(a)..., std::forward<B>(b)...);
         }
 
         template <size_t... I, typename... B>
-        constexpr decltype(auto) impl(std::index_sequence<I...>, B&&... b) const
+        constexpr decltype(auto) impl(idx_sequence_t<I...>, B&&... b) const
         {
             return f(std::get<I>(a)..., std::forward<B>(b)...);
         }

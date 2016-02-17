@@ -10,31 +10,31 @@ namespace detail {
 
 struct takeBackFunctor {
     template <typename Tup, size_t N>
-    constexpr auto operator()(Tup&& tup, index_constant_t<N> n) const
+    constexpr auto operator()(Tup&& tup, idx_constant_t<N> n) const
     {
         constexpr size_t l = clamp(0_c, length(type_c<Tup>), n);
-        return impl(std::forward<Tup>(tup), std::make_index_sequence<l>{});
+        return impl(std::forward<Tup>(tup), idx_sequence_c_til<l>);
     }
 
 private:
     template <typename Tup, size_t... I>
-    static constexpr auto impl(Tup&& tup, std::index_sequence<I...>)
+    static constexpr auto impl(Tup&& tup, idx_sequence_t<I...>)
     {
-        return std::make_tuple(std::get<length(type_c<Tup>) - index_c<sizeof...(I)> + index_c<I>>(std::forward<Tup>(tup))...);
+        return std::make_tuple(std::get<length(type_c<Tup>) - idx_c<sizeof...(I)> + idx_c<I>>(std::forward<Tup>(tup))...);
     }
 } /*takeBackFunctor*/;
 
 struct takeFunctor {
     template <typename Tup, size_t N>
-    constexpr auto operator()(Tup&& tup, index_constant_t<N> n) const
+    constexpr auto operator()(Tup&& tup, idx_constant_t<N> n) const
     {
         constexpr size_t l = clamp(0_c, length(type_c<Tup>), n);
-        return impl(std::forward<Tup>(tup), std::make_index_sequence<l>{});
+        return impl(std::forward<Tup>(tup), idx_sequence_c_til<l>);
     }
 
 private:
     template <typename Tup, size_t... I>
-    static constexpr auto impl(Tup&& tup, std::index_sequence<I...>)
+    static constexpr auto impl(Tup&& tup, idx_sequence_t<I...>)
     {
         return std::make_tuple(std::get<I>(std::forward<Tup>(tup))...);
     }

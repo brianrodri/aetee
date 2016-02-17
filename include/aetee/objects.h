@@ -96,7 +96,7 @@ struct alignToFunctor {
 
 struct offsetOfFunctor {
     template <typename... T, size_t I>
-    constexpr auto operator()(type_constant_t<T>... ts, index_constant_t<I> is) const
+    constexpr auto operator()(type_constant_t<T>... ts, idx_constant_t<I> is) const
     {
         namespace stx = std::experimental;
         constexpr std::array<size_t, sizeof...(T)> szs{sizeof(T)...};
@@ -109,7 +109,7 @@ struct offsetOfFunctor {
     }
 
     template <typename... T, size_t I = sizeof...(T)>
-    constexpr auto operator()(type_sequence_t<T...> ts, index_constant_t<I> is = {}) const
+    constexpr auto operator()(type_sequence_t<T...> ts, idx_constant_t<I> is = {}) const
     {
         namespace stx = std::experimental;
         constexpr std::array<size_t, sizeof...(T)> szs{sizeof(T)...};

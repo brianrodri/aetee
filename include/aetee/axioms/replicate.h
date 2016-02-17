@@ -13,12 +13,12 @@ struct replicateFunctor {
     template <typename T, typename N>
     constexpr auto operator()(T&& val, N&& n) const
     {
-        return impl(std::forward<T>(val), std::make_index_sequence<n>{});
+        return impl(std::forward<T>(val), idx_sequence_c_til<n>);
     }
 
 private:
     template <typename T, size_t... I>
-    static constexpr auto impl(T&& val, std::index_sequence<I...>)
+    static constexpr auto impl(T&& val, idx_sequence_t<I...>)
     {
         return std::make_tuple((I, T{val})...);
     }

@@ -24,19 +24,14 @@ struct applyFunctor {
     template <typename Tup, typename F>
     constexpr decltype(auto) operator()(Tup&& tup, F&& f) const
     {
-        constexpr size_t N = std::tuple_size<std::decay_t<Tup>>::value;
-        return impl(
-            std::forward<Tup>(tup)
-          , std::forward<F>(f)
-          , std::make_index_sequence<N>{}
-            );
+        return impl(std::forward<Tup>(tup), std::forward<F>(f), idx_sequence_c_of<Tup>);
     }
 
     static constexpr auto wrapper = applyWrapperMakerFunctor{};
 
 private:
     template <typename Tup, typename F, size_t... I>
-    static constexpr decltype(auto) impl(Tup&& tup, F&& f, std::index_sequence<I...>)
+    static constexpr decltype(auto) impl(Tup&& tup, F&& f, idx_sequence_t<I...>)
     {
         return f(std::get<I>(std::forward<Tup>(tup))...);
     }

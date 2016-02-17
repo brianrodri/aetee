@@ -2,7 +2,7 @@
 #define HEADER_AETEE_AXIOMS_FOR_EACH_H_INCLUDED
 #include <tuple>
 #include <utility>
-#include <aetee/axioms/length.h>
+#include <aetee/int_c.h>
 
 namespace aetee {
 
@@ -12,13 +12,12 @@ struct forEachFunctor {
     template <typename Tup, typename F>
     constexpr auto operator()(Tup&& tup, F&& fn) const
     {
-        constexpr size_t N = length(type_c<Tup>);
-        return impl(std::forward<Tup>(tup), std::forward<F>(fn), std::make_index_sequence<N>{});
+        return impl(std::forward<Tup>(tup), std::forward<F>(fn), idx_sequence_c_of<Tup>);
     }
 
 private:
     template <typename Tup, size_t... I, typename F>
-    static constexpr auto impl(Tup&& tup, F&& fn, std::index_sequence<I...>)
+    static constexpr auto impl(Tup&& tup, F&& fn, idx_sequence_t<I...>)
     {
         (fn(std::get<I>(std::forward<Tup>(tup))), ...);
         return fn;

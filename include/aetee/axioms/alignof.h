@@ -11,13 +11,13 @@ struct alignOfFunctor {
     template <typename T>
     constexpr auto operator()(type_constant_t<T>) const
     {
-        return index_c<alignof(std::decay_t<T>)>;
+        return idx_c<alignof(std::decay_t<T>)>;
     }
 
     template <typename T>
     constexpr auto operator()(T&&) const
     {
-        return index_c<alignof(std::decay_t<T>)>;
+        return idx_c<alignof(std::decay_t<T>)>;
     }
 
     template <typename... T>

@@ -10,15 +10,15 @@ namespace detail {
 
 struct dropBackFunctor {
     template <typename Tup, size_t N>
-    constexpr auto operator()(Tup&& tup, index_constant_t<N> n) const
+    constexpr auto operator()(Tup&& tup, idx_constant_t<N> n) const
     {
-        constexpr auto l = clamp(0_c, length(type_c<Tup>), n);
-        return impl(std::forward<Tup>(tup), std::make_index_sequence<length(type_c<Tup>) - l>{});
+        constexpr auto l = len_c<Tup> - clamp(0_c, len_c<Tup>, n);
+        return impl(std::forward<Tup>(tup), idx_sequence_c_til<l>);
     }
 
 private:
     template <typename Tup, size_t... I>
-    static constexpr auto impl(Tup&& tup, std::index_sequence<I...>)
+    static constexpr auto impl(Tup&& tup, idx_sequence_t<I...>)
     {
         return std::make_tuple(std::get<I>(std::forward<Tup>(tup))...);
     }
@@ -26,15 +26,15 @@ private:
 
 struct dropFunctor {
     template <typename Tup, size_t N>
-    constexpr auto operator()(Tup&& tup, index_constant_t<N> n) const
+    constexpr auto operator()(Tup&& tup, idx_constant_t<N> n) const
     {
         constexpr auto l = clamp(0_c, length(type_c<Tup>), n);
-        return impl(std::forward<Tup>(tup), index_c<l>, std::make_index_sequence<length(type_c<Tup>) - l>{});
+        return impl(std::forward<Tup>(tup), l, idx_sequence_c_til<len_c<Tup> - l>);
     }
 
 private:
     template <typename Tup, size_t L, size_t... I>
-    static constexpr auto impl(Tup&& tup, index_constant_t<L> l, std::index_sequence<I...>)
+    static constexpr auto impl(Tup&& tup, idx_constant_t<L> l, idx_sequence_t<I...>)
     {
         return std::make_tuple(std::get<L + I>(std::forward<Tup>(tup))...);
     }

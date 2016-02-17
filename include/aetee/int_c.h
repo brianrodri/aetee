@@ -6,96 +6,92 @@
 
 namespace aetee {
 
+// Forward Declarations
+namespace detail {
+template <std::size_t... I>  static constexpr auto indexSequenceFrom(std::index_sequence<I...>);
+template <typename ForwardIt>  static constexpr std::size_t stoull(ForwardIt, ForwardIt);
+static constexpr bool isDigit(char);
+}
+
 //! int_constant_t
+/**
+ *
+ */
+template <typename T, T V>
+using int_constant_t = std::integral_constant<T, V>;
 
-//! Overarching types
-template <typename T, T V> using int_constant_t = std::integral_constant<T, V>;
-template <typename T> using int_minimum_t = std::integral_constant<T, std::numeric_limits<T>::max()>;
-template <typename T> using int_maximum_t = std::integral_constant<T, std::numeric_limits<T>::max()>;
+//! int_constant_t compile-time instance
+template <typename T, T V> static constexpr auto int_constant_c = int_constant_t<T, V>{};
 
-//! Helper types
-template <std::size_t I> using index_constant_t = int_constant_t<std::size_t, I>;
-template <bool B> using bool_constant_t = int_constant_t<bool, B>;
+
+//! bool_constant_t
+/**
+ *
+ */
+template <bool B>
+using bool_constant_t = int_constant_t<bool, B>;
+// Additional aliases
 using true_constant_t = bool_constant_t<true>;
 using false_constant_t = bool_constant_t<false>;
 
-//! Sequence types
-template <std::size_t... I> using index_sequence_t = std::tuple<index_constant_t<I>...>;
-
-//! Helper variables
-template <std::size_t I> static constexpr auto index_c = index_constant_t<I>{};
+//! bool_constant_t compile-time instance
 template <bool B> static constexpr auto bool_c = bool_constant_t<B>{};
-static constexpr auto true_c = bool_c<true>;
-static constexpr auto false_c = bool_c<false>;
-static constexpr auto max_index_c = int_maximum_t<std::size_t>{};
-template <typename... T> static constexpr auto arity_c = index_c<sizeof...(T)>;
+static constexpr auto true_c = true_constant_t{};
+static constexpr auto false_c = false_constant_t{};
 
-namespace detail {
 
-template <typename T>
-struct integerSequenceMaker {
-    template <typename _> struct expander;
+//! idx_constant_t
+/**
+ *
+ */
+template <std::size_t I>
+using idx_constant_t = int_constant_t<std::size_t, I>;
 
-    template <T... I>
-    struct expander<std::integer_sequence<T, I...>> {
-        using type = std::tuple<int_constant_t<T, I>...>;
-    };
+//! idx_constant_t compile-time instance
+template <std::size_t I> static constexpr auto idx_c = idx_constant_t<I>{};
+template <typename... T> static constexpr auto arity_c = idx_constant_t<sizeof...(T)>{};
+template <typename Tup> static constexpr auto len_c = idx_constant_t<std::tuple_size<std::decay_t<Tup>>::value>{};
 
-    template <T N>
-    static constexpr auto make(int_constant_t<T, N>)
-    {
-        using S = typename expander<decltype(std::make_integer_sequence<T, N>{})>::type;
-        return S{};
-    }
-};
 
-template <typename IntSeq, std::size_t... I>
-static constexpr auto to_index_sequence_impl(IntSeq&& seq, std::index_sequence<I...>)
-{
-    return std::index_sequence<std::get<I>(std::forward<IntSeq>(seq))...>{};
-}
-
-} /*namespace detail*/;
-
+//! idx_sequence_t
+/**
+ *
+ */
+template <std::size_t... I>
+using idx_sequence_t = std::tuple<idx_constant_t<I>...>;
 template <std::size_t N>
-static constexpr auto index_sequence_c_til = detail::integerSequenceMaker<std::size_t>{}.make(index_c<N>);
+using idx_sequence_t_til = decltype(detail::indexSequenceFrom(std::make_index_sequence<N>{}));
 template <typename... C>
-static constexpr auto index_sequence_c_for = detail::integerSequenceMaker<std::size_t>{}.make(arity_c<C...>);
-template <typename... C>
-static constexpr auto index_sequence_c_for<std::tuple<C...>> = detail::integerSequenceMaker<std::size_t>{}.make(arity_c<C...>);
+using idx_sequence_t_for = decltype(detail::indexSequenceFrom(std::index_sequence_for<C...>{}));
+template <typename Tup>
+using idx_sequence_t_of = decltype(detail::indexSequenceFrom(std::make_index_sequence<std::tuple_size<std::decay_t<Tup>>::value>{}));
 
-template <typename IntSeq>
-static constexpr auto to_index_sequence(IntSeq&& seq)
-{
-    return detail::to_index_sequence_impl(seq, std::make_index_sequence<std::tuple_size<IntSeq>::value>{});
-}
+//! idx_sequence_t compile-time instances
+template <std::size_t... I>  static constexpr auto idx_sequence_c = idx_sequence_t<I...>{};
+template <std::size_t N>   constexpr auto idx_sequence_c_til = idx_sequence_t_til<N>{};
+template <typename... C>   constexpr auto idx_sequence_c_for = idx_sequence_t_for<C...>{};
+template <typename Tup>   constexpr auto idx_sequence_c_of = idx_sequence_t_of<Tup>{};
 
-namespace detail {
 
-template <typename ForwardIt>
-constexpr std::size_t _c_impl_(ForwardIt first, ForwardIt last)
-{
-    std::size_t ret{0};
-    for (auto it = first; it != last; ++it) { ret = (ret * 10) + (*it - '0'); }
-    return ret;
-}
-
-constexpr bool isdigit(char c)
-{
-    auto val = c - '0';
-    return val >= 0 && val < 10;
-}
-
-} /*namespace detail*/;
-
+//! operator""_c
+/**
+ * Allows treatment of compile-time strings that look like "dddd_c" (d in ['0',
+ * '9')) into idx_constants
+ */
 template <char... C>
 constexpr auto operator ""_c ()
 {
-    constexpr char str[]{C...};
-    return index_c<detail::_c_impl_(str, str + sizeof...(C))>;
+    static_assert((detail::isDigit(C) && ...));
+    constexpr char str[]{(C - '0')...};
+    return idx_c<detail::stoull(str, str + sizeof...(C))>;
 }
 
-// Some useful operators for fun compile-time convinience! :)
+
+//! int_constant_t -- operators
+/**
+ * Allows intuitive usage of the compile-time instances for more expressive
+ * programming.
+ */
 template <typename T, T V> constexpr auto operator++(int_constant_t<T, V>) { return int_constant_t<T, (V + 1)>{}; };
 template <typename T, T V> constexpr auto operator--(int_constant_t<T, V>) { return int_constant_t<T, (V - 1)>{}; };
 template <typename T, T V> constexpr auto operator+(int_constant_t<T, V>) { return int_constant_t<T, (+V)>{}; };
@@ -120,6 +116,32 @@ template <typename T, T V, typename H> constexpr auto operator<(int_constant_t<T
 template <typename T, T V, typename H> constexpr auto operator>(int_constant_t<T, V>, H&& h) { return bool_c<(V > h)>; };
 template <typename T, T V, typename H> constexpr auto operator<=(int_constant_t<T, V>, H&& h) { return bool_c<(V <= h)>; };
 template <typename T, T V, typename H> constexpr auto operator>=(int_constant_t<T, V>, H&& h) { return bool_c<(V >= h)>; };
+
+
+namespace detail {
+
+template <std::size_t... I>
+static constexpr auto indexSequenceFrom(std::index_sequence<I...>)
+{
+    return idx_sequence_c<I...>;
+}
+
+static constexpr bool isDigit(char c)
+{
+    return '0' <= c && c < '9';
+}
+
+template <typename ForwardIt>
+static constexpr std::size_t stoull(ForwardIt first, ForwardIt last)
+{
+    std::size_t retval = 0;
+    while (first != last) {
+        retval = (retval * 10) + *first++;
+    }
+    return retval;
+}
+
+} /*namespace detail*/;
 
 } /*namespace aetee*/;
 

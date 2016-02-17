@@ -1,7 +1,6 @@
 #ifndef HEADER_AETEE_COROLLARIES_FILTER_H_INCLUDED
 #define HEADER_AETEE_COROLLARIES_FILTER_H_INCLUDED
 #include <aetee/objects.h>
-#include <aetee/hof/choice.h>
 #include <aetee/hof/fold.h>
 #include <aetee/hof/transform.h>
 

@@ -13,7 +13,7 @@ struct explodeFunctor {
     constexpr auto operator()(Tup&& tup, F&&... f) const
     {
         return impl(
-            index_sequence_c_for<type_c<Tup>>
+            idx_sequence_c_for<type_c<Tup>>
           , std::forward<Tup>(tup)
           , std::forward<F>(f)...
             );
@@ -21,7 +21,7 @@ struct explodeFunctor {
 
 private:
     template <size_t... I, typename Tup, typename... F>
-    static constexpr auto impl(index_sequence_t<I...>, Tup&& tup, F&&... f)
+    static constexpr auto impl(idx_sequence_t<I...>, Tup&& tup, F&&... f)
     {
         return tupify(f(std::get<I>(std::forward<Tup>(tup)))...);
     }

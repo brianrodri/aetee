@@ -2,6 +2,7 @@
 #define HEADER_AETEE_AXIOMS_TRANSFORM_H_INCLUDED
 #include <tuple>
 #include <utility>
+#include <aetee/int_c.h>
 
 namespace aetee {
 
@@ -11,17 +12,12 @@ struct transformFunctor {
     template <typename Tup, typename F>
     constexpr auto operator()(Tup&& tup, F&& f) const
     {
-        constexpr size_t N = std::tuple_size<std::decay_t<Tup>>::value;
-        return impl(
-            std::forward<Tup>(tup)
-          , std::forward<F>(f)
-          , std::make_index_sequence<N>{}
-            );
+        return impl(std::forward<Tup>(tup), std::forward<F>(f), idx_sequence_c_of<Tup>);
     }
 
 private:
     template <typename Tup, typename F, size_t... I>
-    static constexpr auto impl(Tup&& tup, F&& f, std::index_sequence<I...>)
+    static constexpr auto impl(Tup&& tup, F&& f, idx_sequence_t<I...>)
     {
         return std::make_tuple(f(std::get<I>(std::forward<Tup>(tup)))...);
     }

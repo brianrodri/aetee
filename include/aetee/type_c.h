@@ -51,7 +51,7 @@ template <size_t I, typename... T> static constexpr auto type_at_c = type_c<type
  * Will resolve to either index of `T` in `L...`, or to `sizeof...(L)`
  */
 template <typename T, typename... L>
-using type_index_t = index_constant_t<detail::type_index_t<T, L...>::value>;
+using type_index_t = idx_constant_t<detail::type_index_t<T, L...>::value>;
 
 //! type_index_t compile-time instance
 template <typename T, typename... L>
@@ -82,11 +82,11 @@ namespace detail {
  * act as another instantiation's recursive step.
  */
     template <typename T>
-    struct type_index_t<T> : index_constant_t<0> {};
+    struct type_index_t<T> : idx_constant_t<0> {};
     template <typename T, typename... L>
-    struct type_index_t<T, T, L...> : index_constant_t<0> {};
+    struct type_index_t<T, T, L...> : idx_constant_t<0> {};
     template <typename T, typename M, typename... L>
-    struct type_index_t<T, M, L...> : index_constant_t<type_index_t<T, L...>::value + 1> {};
+    struct type_index_t<T, M, L...> : idx_constant_t<type_index_t<T, L...>::value + 1> {};
 
     // Specializations for our convinience types
     template <typename T, typename... L>

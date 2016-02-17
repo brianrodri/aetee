@@ -10,13 +10,13 @@ struct lengthFunctor {
     template <typename Tup>
     constexpr auto operator()(Tup&& t) const
     {
-        return index_c<std::tuple_size<std::decay_t<Tup>>::value>;
+        return idx_c<std::tuple_size<std::decay_t<Tup>>::value>;
     }
 
     template <typename Tup>
     constexpr auto operator()(type_constant_t<Tup>) const
     {
-        return index_c<std::tuple_size<std::decay_t<Tup>>::value>;
+        return idx_c<std::tuple_size<std::decay_t<Tup>>::value>;
     }
 };
 

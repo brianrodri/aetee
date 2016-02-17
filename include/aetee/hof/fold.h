@@ -2,7 +2,7 @@
 #define HEADER_AETEE_AXIOMS_FOLD_H_INCLUDED
 #include <tuple>
 #include <utility>
-#include <aetee/axioms/length.h>
+#include <aetee/int_c.h>
 
 namespace aetee {
 
@@ -10,68 +10,68 @@ namespace detail {
 
 //! Fold left implementation
 struct foldLeftFunctor {
-    template <typename Tup, typename Init, typename F>
-    constexpr decltype(auto) operator()(Tup&& tup, Init&& init, F&& f) const
+    template <typename Tup, typename I, typename F>
+    constexpr decltype(auto) operator()(Tup&& tup, I&& init, F&& f) const
     {
         return impl(
             std::forward<Tup>(tup)
-          , std::forward<Init>(init)
+          , std::forward<I>(init)
           , std::forward<F>(f)
-          , index_c<length(type_c<Tup>)>
+          , len_c<Tup>
             );
     }
 
 private:
-    template <typename Tup, typename Init, typename F, size_t I>
-    constexpr decltype(auto) impl(Tup&& tup, Init&& init, F&& f, index_constant_t<I>) const
+    template <typename Tup, typename I, typename F, size_t X>
+    constexpr decltype(auto) impl(Tup&& tup, I&& init, F&& f, idx_constant_t<X>) const
     {
         return f(
             impl(
                 std::forward<Tup>(tup)
-              , std::forward<Init>(init)
+              , std::forward<I>(init)
               , std::forward<F>(f)
-              , index_c<I - 1>
+              , idx_c<X - 1>
                 )
-          , std::get<I - 1>(std::forward<Tup>(tup))
+          , std::get<X - 1>(std::forward<Tup>(tup))
             );
     }
-    template <typename Tup, typename Init, typename F>
-    constexpr decltype(auto) impl(Tup&& tup, Init&& init, F&& f, index_constant_t<0>) const
+    template <typename Tup, typename I, typename F>
+    constexpr decltype(auto) impl(Tup&& tup, I&& init, F&& f, idx_constant_t<0>) const
     {
-        return std::forward<Init>(init);
+        return std::forward<I>(init);
     }
 };
 
 //! Fold right implementation
 struct foldRightFunctor {
-    template <typename Tup, typename Init, typename F>
-    constexpr decltype(auto) operator()(Tup&& tup, Init&& init, F&& f) const
+    template <typename Tup, typename I, typename F>
+    constexpr decltype(auto) operator()(Tup&& tup, I&& init, F&& f) const
     {
         return impl(
             std::forward<Tup>(tup)
-          , std::forward<Init>(init)
+          , std::forward<I>(init)
           , std::forward<F>(f)
-          , index_c<length(type_c<Tup>)>
+          , len_c<Tup>
             );
     }
 private:
-    template <typename Tup, typename Init, typename F, size_t I>
-    constexpr decltype(auto) impl(Tup&& tup, Init&& init, F&& f, index_constant_t<I>) const
+    template <typename Tup, typename I, typename F, size_t X>
+    constexpr decltype(auto) impl(Tup&& tup, I&& init, F&& f, idx_constant_t<X>) const
     {
         return f(
-            std::get<length(type_c<tup>) - I>(std::forward<Tup>(tup))
+            std::get<length(type_c<tup>) - X>(std::forward<Tup>(tup))
           , impl(
                 std::forward<Tup>(tup)
-              , std::forward<Init>(init)
+              , std::forward<I>(init)
               , std::forward<F>(f)
-              , index_c<I - 1>
+              , idx_c<X - 1>
                 )
             );
     };
-    template <typename Tup, typename Init, typename F>
-    constexpr decltype(auto) impl(Tup&& tup, Init&& init, F&& f, index_constant_t<0>) const
+    template <typename Tup, typename I, typename F>
+    constexpr decltype(auto) impl(Tup&& tup, I&& init, F&& f, idx_constant_t<0>) const
     {
-        return std::forward<Init>(init);
+        return std::forward<I>(init);
     }
 };
 
