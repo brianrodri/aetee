@@ -1,5 +1,6 @@
 #ifndef HEADER_AETEE_MATHSUGAR_COMPARISONS_H_INCLUDED
 #define HEADER_AETEE_MATHSUGAR_COMPARISONS_H_INCLUDED
+#include <aetee/int_c.h>
 
 namespace aetee {
 

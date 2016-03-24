@@ -22,12 +22,6 @@ struct clampFunctor {
 
 private:
     template <typename L, typename H, typename C>
-    static constexpr decltype(auto) impl(true_constant_t, true_constant_t, L, H, C&& c)
-    {
-        return std::forward<C>(c);
-    }
-
-    template <typename L, typename H, typename C>
     static constexpr decltype(auto) impl(false_constant_t, true_constant_t, L&& l, H, C)
     {
         return std::forward<L>(l);
@@ -38,6 +32,13 @@ private:
     {
         return std::forward<H>(h);
     }
+
+    template <typename L, typename H, typename C>
+    static constexpr decltype(auto) impl(true_constant_t, true_constant_t, L, H, C&& c)
+    {
+        return std::forward<C>(c);
+    }
+
 } /*struct clampFunctor*/;
 
 } /*namespace detail*/;

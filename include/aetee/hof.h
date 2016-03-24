@@ -9,6 +9,7 @@
 #include <aetee/hof/filter.h>
 #include <aetee/hof/fold.h>
 #include <aetee/hof/for_each.h>
+#include <aetee/hof/invoke.h>
 #include <aetee/hof/transform.h>
 
 #endif

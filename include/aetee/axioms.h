@@ -5,7 +5,6 @@
 #include <aetee/axioms/concat.h>
 #include <aetee/axioms/drop.h>
 #include <aetee/axioms/identity.h>
-#include <aetee/axioms/invoke.h>
 #include <aetee/axioms/just.h>
 #include <aetee/axioms/nothing.h>
 #include <aetee/axioms/prepend.h>
