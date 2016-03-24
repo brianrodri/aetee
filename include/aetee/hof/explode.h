@@ -2,7 +2,7 @@
 #define HEADER_AETEE_HOF_EXPLODE_H_INCLUDED
 #include <tuple>
 #include <aetee/int_c.h>
-#include <aetee/axioms/length.h>
+#include <aetee/axioms/tupify.h>
 
 namespace aetee {
 

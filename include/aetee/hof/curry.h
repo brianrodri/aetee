@@ -1,5 +1,5 @@
-#ifndef HEADER_AETEE_AXIOMS_CURRY_H_INCLUDED
-#define HEADER_AETEE_AXIOMS_CURRY_H_INCLUDED
+#ifndef HEADER_AETEE_HOF_CURRY_H_INCLUDED
+#define HEADER_AETEE_HOF_CURRY_H_INCLUDED
 #include <tuple>
 #include <utility>
 
@@ -34,7 +34,7 @@ private:
 
     private:
         F f;
-        std::tuple<A...> a;
+        std::tuple<A&&...> a;
 
         template <size_t... I, typename... B>
         constexpr decltype(auto) impl(idx_sequence_t<I...>, B&&... b)

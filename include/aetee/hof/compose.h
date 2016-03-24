@@ -1,7 +1,5 @@
-#ifndef HEADER_AETEE_AXIOMS_COMPOSE_H_INCLUDED
-#define HEADER_AETEE_AXIOMS_COMPOSE_H_INCLUDED
-#include <aetee/objects.h>
-#include <aetee/hof/fold.h>
+#ifndef HEADER_AETEE_HOF_COMPOSE_H_INCLUDED
+#define HEADER_AETEE_HOF_COMPOSE_H_INCLUDED
 #include <utility>
 
 namespace aetee {

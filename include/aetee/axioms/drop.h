@@ -1,8 +1,7 @@
 #ifndef HEADER_AETEE_AXIOMS_DROP_H_INCLUDED
 #define HEADER_AETEE_AXIOMS_DROP_H_INCLUDED
-#include <aetee/axioms/length.h>
-#include <aetee/hof/fold.h>
-#include <aetee/mathsugar.h>
+#include <aetee/traits/length.h>
+#include <aetee/mathsugar/clamp.h>
 
 namespace aetee {
 

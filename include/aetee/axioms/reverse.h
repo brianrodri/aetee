@@ -1,7 +1,7 @@
 #ifndef HEADER_AETEE_AXIOMS_REVERSE_H_INCLUDED
 #define HEADER_AETEE_AXIOMS_REVERSE_H_INCLUDED
 #include <aetee/int_c.h>
-#include <aetee/axioms/length.h>
+#include <aetee/traits/length.h>
 
 namespace aetee {
 

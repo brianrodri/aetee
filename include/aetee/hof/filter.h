@@ -1,8 +1,9 @@
-#ifndef HEADER_AETEE_COROLLARIES_FILTER_H_INCLUDED
-#define HEADER_AETEE_COROLLARIES_FILTER_H_INCLUDED
-#include <aetee/objects.h>
+#ifndef HEADER_AETEE_HOF_FILTER_H_INCLUDED
+#define HEADER_AETEE_HOF_FILTER_H_INCLUDED
 #include <aetee/hof/fold.h>
 #include <aetee/hof/transform.h>
+#include <tuple>
+#include <utility>
 
 namespace aetee {
 

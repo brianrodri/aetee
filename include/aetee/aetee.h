@@ -7,5 +7,7 @@
 #include <aetee/type_c.h>
 #include <aetee/axioms.h>
 #include <aetee/hof.h>
+#include <aetee/mathsugar.h>
+#include <aetee/traits.h>
 
 #endif

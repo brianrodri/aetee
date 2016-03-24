@@ -1,8 +1,8 @@
-#ifndef HEADER_AETEE_COROLLARIES_CHOICE_H_INCLUDED
-#define HEADER_AETEE_COROLLARIES_CHOICE_H_INCLUDED
+#ifndef HEADER_AETEE_HOF_CHOICE_H_INCLUDED
+#define HEADER_AETEE_HOF_CHOICE_H_INCLUDED
+#include <utility>
 #include <aetee/int_c.h>
 #include <aetee/hof/curry.h>
-#include <aetee/objects.h>
 
 namespace aetee {
 
@@ -39,16 +39,24 @@ private:
         constexpr transformer(F&& f_, A&& a_ = {}, B&& b_ = {})
             : f{std::forward<F>(f_)}, a{std::forward<A>(a_)}, b{std::forward<B>(b_)} {};
 
-        template <typename T>
-        constexpr decltype(auto) operator()(T&& t)
+        template <typename... T>
+        constexpr decltype(auto) operator()(T&&... t)
         {
-            return choiceFunctor{}(f(std::forward<T>(t)), curry(a, t), curry(b, t));
+            return choiceFunctor{}(
+                f(std::forward<T>(t)...)
+              , curry(a, std::forward<T>(t)...)
+              , curry(b, std::forward<T>(t)...)
+                );
         }
 
-        template <typename T>
-        constexpr decltype(auto) operator()(T&& t) const
+        template <typename... T>
+        constexpr decltype(auto) operator()(T&&... t) const
         {
-            return choiceFunctor{}(f(std::forward<T>(t)), curry(a, t), curry(b, t));
+            return choiceFunctor{}(
+                f(std::forward<T>(t)...)
+              , curry(a, std::forward<T>(t)...)
+              , curry(b, std::forward<T>(t)...)
+                );
         }
 
     private:

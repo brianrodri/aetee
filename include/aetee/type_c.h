@@ -9,8 +9,8 @@ namespace aetee {
 
 //! Forward Declarations
 namespace detail {
-template <typename T, typename... L> struct type_constant_t;
-template <typename T, typename... L> struct type_index_t;
+template <typename T> struct type_constant_t;
+template <typename T, typename... L> struct type_idx_t;
 }
 
 //! type_constant_t
@@ -21,7 +21,7 @@ template <typename T>
 using type_constant_t = typename detail::type_constant_t<std::decay_t<T>>;
 
 //! type_constant_t compile-time instance
-template <typename T> constexpr auto type_c = type_constant_t<std::decay_t<T>>{};
+template <typename T> static constexpr auto type_c = type_constant_t<T>{};
 
 
 //! type_sequence_t
@@ -32,7 +32,7 @@ template <typename... T>
 using type_sequence_t = std::tuple<type_constant_t<T>...>;
 
 //! type_sequence_t compile-time instance
-template <typename... T> constexpr auto type_sequence_c = type_sequence_t<T...>{};
+template <typename... T> static constexpr auto type_sequence_c = type_sequence_t<T...>{};
 
 
 //! type_at_t
@@ -46,16 +46,16 @@ using type_at_t = std::tuple_element_t<I, std::tuple<T...>>;
 template <size_t I, typename... T> static constexpr auto type_at_c = type_c<type_at_t<I, T...>>;
 
 
-//! type_index_t
+//! type_idx_t
 /**
  * Will resolve to either index of `T` in `L...`, or to `sizeof...(L)`
  */
 template <typename T, typename... L>
-using type_index_t = idx_constant_t<detail::type_index_t<T, L...>::value>;
+using type_idx_t = idx_constant_t<detail::type_idx_t<T, L...>::value>;
 
-//! type_index_t compile-time instance
+//! type_idx_t compile-time instance
 template <typename T, typename... L>
-static constexpr auto type_index_c = type_index_t<T, L...>{};
+static constexpr auto type_idx_c = type_idx_t<T, L...>{};
 
 
 //! type_exists_t
@@ -63,7 +63,7 @@ static constexpr auto type_index_c = type_index_t<T, L...>{};
  *
  */
 template <typename T, typename... L>
-using type_exists_t = bool_constant_t<(type_index_c<T, L...> != arity_c<L...>)>;
+using type_exists_t = bool_constant_t<(type_idx_c<T, L...> != arity_c<L...>)>;
 
 //! type_exists_t compile-time instance
 template <typename T, typename... L>
@@ -74,27 +74,27 @@ static constexpr auto type_exists_c = type_exists_t<T, L...>{};
 namespace detail {
 
 // type_constant_t -- implementation
-    template <typename T> struct type_constant_t<T> { using type = T; };
+    template <typename T> struct type_constant_t { using type = T; };
 
-// type_index_t ----- implementation
+// type_idx_t ----- implementation
 /**
- * Chose to use recursion for this implementation b/c each instantiation may
- * act as another instantiation's recursive step.
+ * Chose to use recursion for this implementation b/c each instantiation is
+ * useful for others.
  */
     template <typename T>
-    struct type_index_t<T> : idx_constant_t<0> {};
+    struct type_idx_t<T> : idx_constant_t<0> {};
     template <typename T, typename... L>
-    struct type_index_t<T, T, L...> : idx_constant_t<0> {};
+    struct type_idx_t<T, T, L...> : idx_constant_t<0> {};
     template <typename T, typename M, typename... L>
-    struct type_index_t<T, M, L...> : idx_constant_t<type_index_t<T, L...>::value + 1> {};
+    struct type_idx_t<T, M, L...> : idx_constant_t<type_idx_t<T, L...>::value + 1> {};
 
     // Specializations for our convinience types
     template <typename T, typename... L>
-    struct type_index_t<T, type_sequence_t<L...>> : type_index_t<T, L...> {};
+    struct type_idx_t<T, type_sequence_t<L...>> : type_idx_t<T, L...> {};
     template <typename T, typename... L>
-    struct type_index_t<type_constant_t<T>, L...> : type_index_t<T, L...> {};
+    struct type_idx_t<type_constant_t<T>, L...> : type_idx_t<T, L...> {};
     template <typename T, typename... L>
-    struct type_index_t<type_constant_t<T>, type_sequence_t<L...>> : type_index_t<T, L...> {};
+    struct type_idx_t<type_constant_t<T>, type_sequence_t<L...>> : type_idx_t<T, L...> {};
 
 } /*namespace detail*/;
 

@@ -1,7 +1,8 @@
-#ifndef HEADER_AETEE_AXIOMS_APPLY_H_INCLUDED
-#define HEADER_AETEE_AXIOMS_APPLY_H_INCLUDED
+#ifndef HEADER_AETEE_HOF_APPLY_H_INCLUDED
+#define HEADER_AETEE_HOF_APPLY_H_INCLUDED
 #include <type_traits>
 #include <utility>
+#include <aetee/int_c.h>
 
 namespace aetee {
 

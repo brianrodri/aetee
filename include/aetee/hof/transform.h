@@ -1,5 +1,5 @@
-#ifndef HEADER_AETEE_AXIOMS_TRANSFORM_H_INCLUDED
-#define HEADER_AETEE_AXIOMS_TRANSFORM_H_INCLUDED
+#ifndef HEADER_AETEE_HOF_MAP_H_INCLUDED
+#define HEADER_AETEE_HOF_MAP_H_INCLUDED
 #include <tuple>
 #include <utility>
 #include <aetee/int_c.h>
@@ -8,7 +8,7 @@ namespace aetee {
 
 namespace detail {
 
-struct transformFunctor {
+struct mapFunctor {
     template <typename Tup, typename F>
     constexpr auto operator()(Tup&& tup, F&& f) const
     {
@@ -21,11 +21,11 @@ private:
     {
         return std::make_tuple(f(std::get<I>(std::forward<Tup>(tup)))...);
     }
-} /*struct transformFunctor*/;
+} /*struct mapFunctor*/;
 
 } /*namespace detail*/;
 
-static constexpr auto transform = detail::transformFunctor{};
+static constexpr auto map = detail::mapFunctor{};
 
 } /*namespace aetee*/;
 

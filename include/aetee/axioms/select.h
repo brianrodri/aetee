@@ -1,5 +1,6 @@
 #ifndef HEADER_AETEE_AXIOMS_SELECT_H_INCLUDED
 #define HEADER_AETEE_AXIOMS_SELECT_H_INCLUDED
+#include <utility>
 #include <aetee/int_c.h>
 
 namespace aetee {

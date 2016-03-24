@@ -1,8 +1,8 @@
 #ifndef HEADER_AETEE_AXIOMS_REPLICATE_H_INCLUDED
 #define HEADER_AETEE_AXIOMS_REPLICATE_H_INCLUDED
 #include <tuple>
-#include <type_traits>
 #include <utility>
+#include <aetee/int_c.h>
 
 namespace aetee {
 
