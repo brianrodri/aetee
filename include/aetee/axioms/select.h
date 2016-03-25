@@ -1,6 +1,7 @@
 #ifndef HEADER_AETEE_AXIOMS_SELECT_H_INCLUDED
 #define HEADER_AETEE_AXIOMS_SELECT_H_INCLUDED
 #include <aetee/int_c.h>
+#include <aetee/traits/cast.h>
 #include <utility>
 
 namespace aetee {
@@ -14,6 +15,12 @@ struct selectFunctor {
     {
         static_assert(i < arity_c<A...>);
         return impl(i, std::forward<A>(args)...);
+    }
+
+    template <bool C, typename A, typename B>
+    constexpr decltype(auto) operator()(bool_constant_t<C>, A&& a, B&& b) const
+    {
+        return impl(idx_c<(C? 0 : 1)>, std::forward<A>(a), std::forward<B>(b));
     }
 
 private:

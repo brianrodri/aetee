@@ -1,5 +1,6 @@
 #ifndef HEADER_AETEE_AXIOMS_NOTHING_H_INCLUDED
 #define HEADER_AETEE_AXIOMS_NOTHING_H_INCLUDED
+#include <aetee/int_c.h>
 
 namespace aetee {
 

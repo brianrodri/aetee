@@ -9,6 +9,16 @@ namespace detail {
 
 struct tupifyFunctor {
 
+    template <typename Tup>
+    constexpr auto operator()(Tup&& t)
+    {
+        return select(
+            is_tuple(type_c<Tup>)
+          , std::forward<Tup>(t)
+          , std::make_tuple(std::forward<Tup>(t))
+            );
+    }
+
     template <typename... T>
     constexpr auto operator()(T&&... t) const
     {

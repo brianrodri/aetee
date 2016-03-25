@@ -4,6 +4,7 @@
 #include <aetee/axioms/append.h>
 #include <aetee/axioms/concat.h>
 #include <aetee/axioms/drop.h>
+#include <aetee/axioms/flatten.h>
 #include <aetee/axioms/identity.h>
 #include <aetee/axioms/just.h>
 #include <aetee/axioms/nothing.h>

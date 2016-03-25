@@ -4,6 +4,8 @@
 #include <aetee/axioms/nothing.h>
 #include <aetee/axioms/select.h>
 #include <aetee/traits/cast.h>
+#include <aetee/traits/is_same.h>
+#include <type_traits>
 #include <utility>
 
 namespace aetee {
@@ -15,13 +17,15 @@ struct clampFunctor {
     template <typename L, typename H, typename C>
     constexpr auto operator()(L&& lo, H&& hi, C&& clampee) const
     {
-        return select(
-            cast<size_t>(lo < clampee) + (2_c * cast<size_t>(clampee < hi))
+        auto retval = select(
+            (lo < clampee) + (2_c * (clampee < hi))
           , nothing
           , std::forward<H>(hi)
           , std::forward<L>(lo)
           , std::forward<C>(clampee)
             );
+        static_assert(!is_same(retval, nothing));
+        return retval;
     }
 
 } /*struct clampFunctor*/;

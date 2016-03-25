@@ -1,6 +1,7 @@
 #ifndef HEADER_AETEE_AXIOMS_CONCAT_H_INCLUDED
 #define HEADER_AETEE_AXIOMS_CONCAT_H_INCLUDED
 #include <aetee/int_c.h>
+#include <aetee/hof/fold.h>
 #include <tuple>
 #include <utility>
 

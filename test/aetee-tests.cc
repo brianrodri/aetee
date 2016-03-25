@@ -27,37 +27,37 @@ TEST(Aetee, TypeSequence)
 
 TEST(Aetee, Append)
 {
-    auto expected = std::make_tuple(1, 2, 3);
-    auto actual = append(std::make_tuple(1, 2), 3);
+    auto expected = tupify(1, 2, 3);
+    auto actual = append(tupify(1, 2), 3);
     EXPECT_EQ(expected, actual);
 }
 
 TEST(Aetee, Prepend)
 {
-    auto expected = std::make_tuple(1, 2, 3);
-    auto actual = prepend(std::make_tuple(2, 3), 1);
+    auto expected = tupify(1, 2, 3);
+    auto actual = prepend(tupify(2, 3), 1);
     EXPECT_EQ(expected, actual);
 }
 
 TEST(Aetee, Fold)
 {
     auto expected = 15;
-    auto actual = fold(std::make_tuple(1, 2, 3, 4, 5), 0, std::plus<>{});
+    auto actual = fold(tupify(1, 2, 3, 4, 5), 0, std::plus<>{});
     EXPECT_EQ(expected, actual);
 }
 
 TEST(Aetee, Zip)
 {
-    auto expected = std::make_tuple(std::make_tuple(1, 2), std::make_tuple(3, 4), std::make_tuple(5, 6));
-    auto actual = zip(std::make_tuple(1, 3, 5), std::make_tuple(2, 4, 6));
+    auto expected = tupify(tupify(1, 2), tupify(3, 4), tupify(5, 6));
+    auto actual = zip(tupify(1, 3, 5), tupify(2, 4, 6));
     ASSERT_EQ(length(expected), length(actual));
     EXPECT_EQ(expected, actual);
 }
 
 TEST(Aetee, Reverse)
 {
-    auto expected = std::make_tuple(5, 4, 3, 2, 1);
-    auto actual = reverse(std::make_tuple(1, 2, 3, 4, 5));
+    auto expected = tupify(5, 4, 3, 2, 1);
+    auto actual = reverse(tupify(1, 2, 3, 4, 5));
     EXPECT_EQ(expected, actual);
 }
 
@@ -72,14 +72,14 @@ TEST(Aetee, Clamp)
 TEST(Aetee, Take)
 {
     { // takeFront
-        auto expected = std::make_tuple(1, 2);
-        auto actual = take(std::make_tuple(1, 2, 3, 4, 5), 2_c);
+        auto expected = tupify(1, 2);
+        auto actual = take(tupify(1, 2, 3, 4, 5), 2_c);
         ASSERT_EQ(length(expected), length(actual));
         EXPECT_EQ(expected, actual);
     }
     { // takeBack
-        auto expected = std::make_tuple(4, 5);
-        auto actual = takeBack(std::make_tuple(1, 2, 3, 4, 5), 2_c);
+        auto expected = tupify(4, 5);
+        auto actual = takeBack(tupify(1, 2, 3, 4, 5), 2_c);
         ASSERT_EQ(length(expected), length(actual));
         EXPECT_EQ(expected, actual);
     }
@@ -88,14 +88,14 @@ TEST(Aetee, Take)
 TEST(Aetee, Drop)
 {
     { // dropFront
-        auto expected = std::make_tuple(3, 4, 5);
-        auto actual = drop(std::make_tuple(1, 2, 3, 4, 5), 2_c);
+        auto expected = tupify(3, 4, 5);
+        auto actual = drop(tupify(1, 2, 3, 4, 5), 2_c);
         ASSERT_EQ(length(expected), length(actual));
         EXPECT_EQ(expected, actual);
     }
     { // dropBack
-        auto expected = std::make_tuple(1, 2, 3);
-        auto actual = dropBack(std::make_tuple(1, 2, 3, 4, 5), 2_c);
+        auto expected = tupify(1, 2, 3);
+        auto actual = dropBack(tupify(1, 2, 3, 4, 5), 2_c);
         ASSERT_EQ(length(expected), length(actual));
         EXPECT_EQ(expected, actual);
     }
@@ -104,7 +104,25 @@ TEST(Aetee, Drop)
 TEST(Aetee, Compose)
 {
     auto foo = [](auto f, auto g) { return f + g; };
-    auto bar = [](auto d, auto e) { return std::make_tuple(d % e, d / e); };
-    auto baz = [](auto a, auto b, auto c) { return std::make_tuple(a + b, a - c); };
+    auto bar = [](auto d, auto e) { return tupify(d % e, d / e); };
+    auto baz = [](auto a, auto b, auto c) { return tupify(a + b, a - c); };
     EXPECT_EQ(compose(foo, bar, baz)(3, 2, 1), 3);
+}
+
+TEST(Aetee, Flatten)
+{
+    auto tup = tupify(tupify(tupify(0, tupify(1, 2), 3), tupify(4, 5)), tupify(6));
+    auto expected = tupify(tupify(0, tupify(1, 2), 3), tupify(4, 5), 6);
+    auto actual = flatten(tup);
+
+    EXPECT_EQ(expected, actual);
+}
+
+TEST(Aetee, FlattenRecursive)
+{
+    auto tup = tupify(tupify(tupify(0, tupify(1, 2), 3), tupify(4, 5)), tupify(6));
+    auto expected = tupify(0, 1, 2, 3, 4, 5, 6);
+    auto actual = flatten.recursive(tup);
+
+    EXPECT_EQ(expected, actual);
 }
