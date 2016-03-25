@@ -10,7 +10,7 @@ struct equalToFunctor {
     template <typename A, typename B>
     constexpr auto operator()(A&& a, B&& b) const
     {
-        return bool_c<(a == b)>;
+        return bool_c<(std::forward<A>(a) == std::forward<B>(b))>;
     }
 } /*struct equalToFunctor*/;
 
@@ -18,7 +18,7 @@ struct notEqualToFunctor {
     template <typename A, typename B>
     constexpr auto operator()(A&& a, B&& b) const
     {
-        return bool_c<(a != b)>;
+        return bool_c<(std::forward<A>(a) != std::forward<B>(b))>;
     }
 } /*struct notEqualToFunctor*/;
 
@@ -26,7 +26,7 @@ struct lessFunctor {
     template <typename A, typename B>
     constexpr auto operator()(A&& a, B&& b) const
     {
-        return bool_c<(a < b)>;
+        return bool_c<(std::forward<A>(a) < std::forward<B>(b))>;
     }
 } /*struct lessFunctor*/;
 
@@ -34,7 +34,7 @@ struct greaterFunctor {
     template <typename A, typename B>
     constexpr auto operator()(A&& a, B&& b) const
     {
-        return bool_c<(a > b)>;
+        return bool_c<(std::forward<A>(a) > std::forward<B>(b))>;
     }
 } /*struct greaterFunctor*/;
 
@@ -42,7 +42,7 @@ struct lessEqualFunctor {
     template <typename A, typename B>
     constexpr auto operator()(A&& a, B&& b) const
     {
-        return bool_c<(a <= b)>;
+        return bool_c<(std::forward<A>(a) <= std::forward<B>(b))>;
     }
 } /*struct lessEqualFunctor*/;
 
@@ -50,7 +50,7 @@ struct greaterEqualFunctor {
     template <typename A, typename B>
     constexpr auto operator()(A&& a, B&& b) const
     {
-        return bool_c<(a >= b)>;
+        return bool_c<(std::forward<A>(a) >= std::forward<B>(b))>;
     }
 } /*struct greaterEqualFunctor*/;
 

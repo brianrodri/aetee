@@ -8,6 +8,7 @@ namespace aetee {
 namespace detail {
 
 struct stringifyFunctor {
+
     template <typename T>
     constexpr auto operator()(T&& t) const
     {
@@ -18,6 +19,7 @@ struct stringifyFunctor {
     {
         return "";
     }
+
 } /*struct stringifyFunctor*/;
 
 } /*namespace detail*/;

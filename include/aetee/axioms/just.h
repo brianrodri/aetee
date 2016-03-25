@@ -6,33 +6,49 @@ namespace aetee {
 
 namespace detail {
 
+// Forward Declaration
+template <typename T> struct justImpl;
+
 struct justFunctor {
+
     template <typename T>
-    constexpr auto operator()(T&&) const
+    constexpr auto operator()(T&& t) const
     {
-        return justImpl<T>{std::forward<T>};
+        return justImpl<T>{std::forward<T>(t)};
+    }
+
+} /*struct justFunctor*/;
+
+template <typename T>
+struct justImpl {
+
+    constexpr justImpl(T&& t_) : t{std::forward<T>(t_)} {};
+
+    constexpr operator T()
+    {
+        return t;
+    }
+
+    constexpr T& operator()(...)
+    {
+        return t;
+    }
+
+    constexpr operator T() const
+    {
+        return t;
+    }
+
+    constexpr const T& operator()(...) const
+    {
+        return t;
     }
 
 private:
-    template <typename T>
-    struct justImpl {
-        constexpr justImpl(T&& t_) : t{std::forward<T>(t_)} {};
 
-        constexpr operator T() const
-        {
-            return t;
-        }
+    T t;
 
-        constexpr const T& operator()(...) const
-        {
-            return t;
-        }
-
-    private:
-        T t;
-    } /*struct justImpl*/;
-
-} /*struct justFunctor*/;
+} /*struct justImpl*/;
 
 } /*namespace detail*/;
 

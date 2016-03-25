@@ -1,8 +1,8 @@
 #ifndef HEADER_AETEE_TRAITS_LENGTH_H_INCLUDED
 #define HEADER_AETEE_TRAITS_LENGTH_H_INCLUDED
-#include <tuple>
 #include <aetee/int_c.h>
 #include <aetee/type_c.h>
+#include <tuple>
 
 namespace aetee {
 

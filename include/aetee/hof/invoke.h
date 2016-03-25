@@ -7,11 +7,13 @@ namespace aetee {
 namespace detail {
 
 struct invokeFunctor {
+
     template <typename F, typename... A>
-    constexpr auto operator()(A&&... a, F&& fn) const
+    constexpr auto operator()(F&& f, A&&... a) const
     {
-        return std::forward<F>(fn)(std::forward<A>(a)...);
+        return fn(std::forward<A>(a)...);
     }
+
 } /*struct invokeFunctor*/;
 
 } /*namespace detail*/;

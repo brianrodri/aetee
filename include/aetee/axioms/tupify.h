@@ -8,11 +8,13 @@ namespace aetee {
 namespace detail {
 
 struct tupifyFunctor {
+
     template <typename... T>
     constexpr auto operator()(T&&... t) const
     {
         return std::make_tuple(std::forward<T>(t)...);
     }
+
 } /*struct tupifyFunctor*/;
 
 } /*namespace detail*/;

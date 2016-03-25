@@ -8,18 +8,21 @@ namespace aetee {
 namespace detail {
 
 struct prependFunctor {
-    template <typename Tup, typename X>
-    constexpr auto operator()(Tup&& tup, X&& x) const
+
+    template <typename Tup, typename... X>
+    constexpr auto operator()(Tup&& tup, X&&... x) const
     {
-        return impl(std::forward<Tup>(tup), std::forward<X>(x), idx_sequence_c_of<Tup>);
+        return impl(std::forward<Tup>(tup), idx_sequence_c_of<Tup>, std::forward<X>(x)...);
     }
 
 private:
-    template <typename Tup, typename X, size_t... I>
-    static constexpr auto impl(Tup&& tup, X&& x, idx_sequence_t<I...>)
+
+    template <typename Tup, size_t... I, typename... X>
+    static constexpr auto impl(Tup&& tup, idx_sequence_t<I...>, X&&... x)
     {
-        return std::make_tuple(std::forward<X>(x), std::get<I>(std::forward<Tup>(tup))...);
+        return std::make_tuple(std::forward<X>(x)..., std::get<I>(std::forward<Tup>(tup))...);
     }
+
 } /*struct prependFunctor*/;
 
 } /*namespace detail*/;

@@ -6,10 +6,12 @@ namespace aetee {
 namespace detail {
 
 struct nothingFunctor {
+
     constexpr auto operator()(...) const
     {
         return nothingFunctor{};
     }
+
 } /*struct nothingFunctor*/;
 
 } /*namespace detail*/;

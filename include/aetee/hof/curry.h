@@ -1,5 +1,6 @@
 #ifndef HEADER_AETEE_HOF_CURRY_H_INCLUDED
 #define HEADER_AETEE_HOF_CURRY_H_INCLUDED
+#include <aetee/int_c.h>
 #include <tuple>
 #include <utility>
 
@@ -8,13 +9,15 @@ namespace aetee {
 namespace detail {
 
 struct curryFunctor {
-    template <typename F, typename... Args>
-    constexpr decltype(auto) operator()(F&& f, Args&&... args) const
+
+    template <typename F, typename... A>
+    constexpr decltype(auto) operator()(F&& f, A&&... args) const
     {
-        return curried<F, Args...>{std::forward<F>(f), std::forward<Args>(args)...};
+        return curried<F, A...>{std::forward<F>(f), std::forward<A>(args)...};
     }
 
 private:
+
     //! A modifiable functor
     template <class F, typename... A>
     struct curried {
@@ -33,6 +36,7 @@ private:
         }
 
     private:
+
         F f;
         std::tuple<A&&...> a;
 
@@ -47,6 +51,7 @@ private:
         {
             return f(std::get<I>(a)..., std::forward<B>(b)...);
         }
+
     } /*struct curried*/;
 
 } /*struct curryFunctor*/;

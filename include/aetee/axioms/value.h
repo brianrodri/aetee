@@ -7,6 +7,7 @@ namespace aetee {
 namespace detail {
 
 struct valueFunctor {
+
     template <typename T>
     constexpr auto operator()(T&&) const
     {
@@ -18,6 +19,7 @@ struct valueFunctor {
     {
         return std::decay_t<T>::value;
     }
+
 } /*struct valueFunctor*/;
 
 } /*namespace detail*/;

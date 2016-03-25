@@ -8,6 +8,7 @@ namespace aetee {
 namespace detail {
 
 struct alignOfFunctor {
+
     template <typename T>
     constexpr auto operator()(type_constant_t<T>) const
     {
@@ -31,6 +32,7 @@ struct alignOfFunctor {
     {
         return alignof(std::aligned_union_t<1, H, T...>);
     }
+
 } /*struct alignOfFunctor*/;
 
 } /*namespace detail*/;

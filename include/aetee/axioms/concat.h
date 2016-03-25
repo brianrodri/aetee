@@ -1,5 +1,6 @@
 #ifndef HEADER_AETEE_AXIOMS_CONCAT_H_INCLUDED
 #define HEADER_AETEE_AXIOMS_CONCAT_H_INCLUDED
+#include <aetee/int_c.h>
 #include <tuple>
 #include <utility>
 
@@ -7,27 +8,42 @@ namespace aetee {
 
 namespace detail {
 
-struct concatFunctor {
-    template <typename ATup, typename BTup>
-    constexpr auto operator()(ATup&& a, BTup&& b) const
+struct concatTwoFunctor {
+
+    template <typename A, typename B>
+    constexpr auto operator()(A&& a, B&& b) const
     {
-        constexpr size_t N = std::tuple_size<std::decay_t<ATup>>::value;
-        constexpr size_t M = std::tuple_size<std::decay_t<BTup>>::value;
         return impl(
-            std::forward<ATup>(a), std::forward<BTup>(b)
-          , idx_sequence_c_of<ATup>, idx_sequence_c_of<BTup>
+            std::forward<A>(a), std::forward<B>(b)
+          , idx_sequence_c_of<A>, idx_sequence_c_of<B>
             );
     }
 
 private:
-    template <typename ATup, typename BTup, size_t... I, size_t... J>
-    static constexpr auto impl(ATup&& a, BTup&& b, idx_sequence_t<I...>, idx_sequence_t<J...>)
+
+    template <typename A, typename B, size_t... I, size_t... J>
+    static constexpr auto impl(A&& a, B&& b, idx_sequence_t<I...>, idx_sequence_t<J...>)
     {
         return std::make_tuple(
-            std::get<I>(std::forward<ATup>(a))...
-          , std::get<J>(std::forward<BTup>(b))...
+            std::get<I>(std::forward<A>(a))...
+          , std::get<J>(std::forward<B>(b))...
             );
     }
+
+} /*struct concatTwoFunctor*/;
+
+struct concatFunctor {
+
+    template <typename... T>
+    constexpr auto operator()(T&&... t) const
+    {
+        return fold(
+            std::forward_as_tuple(std::forward<T>(t)...)
+          , std::make_tuple()
+          , concatTwoFunctor{}
+            );
+    }
+
 } /*struct concatFunctor*/;
 
 } /*namespace detail*/;

@@ -1,13 +1,14 @@
 #ifndef HEADER_AETEE_AXIOMS_SELECT_H_INCLUDED
 #define HEADER_AETEE_AXIOMS_SELECT_H_INCLUDED
-#include <utility>
 #include <aetee/int_c.h>
+#include <utility>
 
 namespace aetee {
 
 namespace detail {
 
 struct selectFunctor {
+
     template <size_t I, typename... A>
     constexpr decltype(auto) operator()(idx_constant_t<I> i, A&&... args) const
     {
@@ -16,17 +17,19 @@ struct selectFunctor {
     }
 
 private:
+
+    template <typename H, typename... T>
+    static constexpr decltype(auto) impl(idx_constant_t<0>, H&& head, T&&...)
+    {
+        return std::forward<H>(head);
+    }
+
     template <size_t I, typename H, typename... T>
-    static constexpr decltype(auto) impl(idx_constant_t<I>, H&& head, T&&... tail)
+    static constexpr decltype(auto) impl(idx_constant_t<I>, H&&, T&&... tail)
     {
         return impl(idx_c<I-1>, std::forward<T>(tail)...);
     }
 
-    template <typename H, typename... T>
-    static constexpr decltype(auto) impl(idx_constant_t<0>, H&& head, T&&... tail)
-    {
-        return std::forward<H>(head);
-    }
 } /*struct selectFunctor*/;
 
 } /*namespace detail*/;

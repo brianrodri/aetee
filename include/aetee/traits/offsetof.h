@@ -9,6 +9,7 @@ namespace aetee {
 namespace detail {
 
 struct offsetOfFunctor {
+
     template <typename... T>
     constexpr auto operator()(type_sequence_t<T...> ts) const
     {
@@ -22,6 +23,7 @@ struct offsetOfFunctor {
     }
 
 private:
+
     template <typename... T, size_t I>
     static constexpr size_t impl(type_sequence_t<T...>, idx_constant_t<I>)
     {
@@ -33,6 +35,7 @@ private:
         }
         return result;
     }
+
 } /*struct offsetOfFunctor*/;
 
 } /*namespace detail*/;

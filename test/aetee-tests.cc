@@ -61,6 +61,14 @@ TEST(Aetee, Reverse)
     EXPECT_EQ(expected, actual);
 }
 
+TEST(Aetee, Clamp)
+{
+    //                   lo   hi   clampee
+    EXPECT_EQ(1_c, clamp(1_c, 3_c, 0_c));
+    EXPECT_EQ(2_c, clamp(1_c, 3_c, 2_c));
+    EXPECT_EQ(3_c, clamp(1_c, 3_c, 4_c));
+}
+
 TEST(Aetee, Take)
 {
     { // takeFront
@@ -91,4 +99,12 @@ TEST(Aetee, Drop)
         ASSERT_EQ(length(expected), length(actual));
         EXPECT_EQ(expected, actual);
     }
+}
+
+TEST(Aetee, Compose)
+{
+    auto foo = [](auto f, auto g) { return f + g; };
+    auto bar = [](auto d, auto e) { return std::make_tuple(d % e, d / e); };
+    auto baz = [](auto a, auto b, auto c) { return std::make_tuple(a + b, a - c); };
+    EXPECT_EQ(compose(foo, bar, baz)(3, 2, 1), 3);
 }

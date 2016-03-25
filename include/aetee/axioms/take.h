@@ -1,42 +1,48 @@
 #ifndef HEADER_AETEE_AXIOMS_TAKE_H_INCLUDED
 #define HEADER_AETEE_AXIOMS_TAKE_H_INCLUDED
-#include <aetee/traits/length.h>
-#include <aetee/mathsugar/clamp.h>
+#include <aetee/int_c.h>
+#include <aetee/math_sugar/clamp.h>
 
 namespace aetee {
 
 namespace detail {
 
 struct takeBackFunctor {
+
     template <typename Tup, size_t N>
     constexpr auto operator()(Tup&& tup, idx_constant_t<N> n) const
     {
-        constexpr size_t l = clamp(0_c, length(type_c<Tup>), n);
+        constexpr size_t l = clamp(0_c, len_c<Tup>, n);
         return impl(std::forward<Tup>(tup), idx_sequence_c_til<l>);
     }
 
 private:
+
     template <typename Tup, size_t... I>
     static constexpr auto impl(Tup&& tup, idx_sequence_t<I...>)
     {
-        return std::make_tuple(std::get<length(type_c<Tup>) - idx_c<sizeof...(I)> + idx_c<I>>(std::forward<Tup>(tup))...);
+        return std::make_tuple(std::get<len_c<Tup> - idx_c<sizeof...(I)> + idx_c<I>>(std::forward<Tup>(tup))...);
     }
+
 } /*takeBackFunctor*/;
 
 struct takeFunctor {
+
     template <typename Tup, size_t N>
     constexpr auto operator()(Tup&& tup, idx_constant_t<N> n) const
     {
-        constexpr size_t l = clamp(0_c, length(type_c<Tup>), n);
+        constexpr size_t l = clamp(0_c, len_c<Tup>, n);
         return impl(std::forward<Tup>(tup), idx_sequence_c_til<l>);
     }
 
 private:
+
     template <typename Tup, size_t... I>
     static constexpr auto impl(Tup&& tup, idx_sequence_t<I...>)
     {
         return std::make_tuple(std::get<I>(std::forward<Tup>(tup))...);
     }
+
 } /*takeFunctor*/;
 
 } /*namespace detail*/;
