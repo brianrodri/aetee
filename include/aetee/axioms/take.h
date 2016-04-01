@@ -13,7 +13,7 @@ struct takeBackFunctor {
     constexpr auto operator()(Tup&& tup, idx_constant_t<N> n) const
     {
         constexpr size_t l = clamp(0_c, len_c<Tup>, n);
-        return impl(std::forward<Tup>(tup), idx_sequence_c_til<l>);
+        return impl(std::forward<Tup>(tup), idx_c_sequence_til<l>);
     }
 
 private:
@@ -24,15 +24,15 @@ private:
         return std::make_tuple(std::get<len_c<Tup> - idx_c<sizeof...(I)> + idx_c<I>>(std::forward<Tup>(tup))...);
     }
 
-} /*takeBackFunctor*/;
+} /*struct takeBackFunctor*/;
 
-struct takeFunctor {
+struct takeFrontFunctor {
 
     template <typename Tup, size_t N>
     constexpr auto operator()(Tup&& tup, idx_constant_t<N> n) const
     {
         constexpr size_t l = clamp(0_c, len_c<Tup>, n);
-        return impl(std::forward<Tup>(tup), idx_sequence_c_til<l>);
+        return impl(std::forward<Tup>(tup), idx_c_sequence_til<l>);
     }
 
 private:
@@ -43,11 +43,11 @@ private:
         return std::make_tuple(std::get<I>(std::forward<Tup>(tup))...);
     }
 
-} /*takeFunctor*/;
+} /*struct takeFrontFunctor*/;
 
 } /*namespace detail*/;
 
-static constexpr auto take = detail::takeFunctor{};
+static constexpr auto take = detail::takeFrontFunctor{};
 static constexpr auto& takeFront = take;
 static constexpr auto takeBack = detail::takeBackFunctor{};
 

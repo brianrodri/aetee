@@ -7,7 +7,7 @@ namespace aetee {
 
 namespace detail {
 
-template <typename F, typename G>
+template <typename F, typename G, bool Explicit>
 struct composedFunctor {
 
     constexpr composedFunctor(F&& f_, G&& g_)
@@ -20,13 +20,31 @@ struct composedFunctor {
         return apply(g(std::forward<A>(a)...), f);
     }
 
+private:
+
     template <typename... A>
-    constexpr auto operator()(A&&... a) const
+    constexpr auto impl(true_constant_t, A&&... a)
     {
         return apply(g(std::forward<A>(a)...), f);
     }
 
-private:
+    template <typename... A>
+    constexpr auto impl(true_constant_t, A&&... a) const
+    {
+        return apply(g(std::forward<A>(a)...), f);
+    }
+
+    template <typename... A>
+    constexpr auto impl(false_constant_t, A&&... a)
+    {
+        return f(g(std::forward<A>(a)...));
+    }
+
+    template <typename... A>
+    constexpr auto impl(false_constant_t, A&&... a) const
+    {
+        return f(g(std::forward<A>(a)...));
+    }
 
     F f;
     G g;
@@ -35,10 +53,10 @@ private:
 
 struct composeTwo {
 
-    template <typename F, typename G>
-    constexpr auto operator()(F&& f, G&& g) const
+    template <typename F, typename G, bool E = true>
+    constexpr auto operator()(F&& f, G&& g, bool_constant_t<E> = {}) const
     {
-        return composedFunctor<F, G>(std::forward<F>(f), std::forward<G>(g));
+        return composedFunctor<F, G, E>(std::forward<F>(f), std::forward<G>(g));
     }
 
 } /*struct composeTwo*/;

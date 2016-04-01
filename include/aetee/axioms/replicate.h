@@ -13,7 +13,7 @@ struct replicateFunctor {
     template <typename T, typename N>
     constexpr auto operator()(T&& val, N&& n) const
     {
-        return impl(std::forward<T>(val), idx_sequence_c_til<n>);
+        return impl(std::forward<T>(val), idx_c_sequence_til<n>);
     }
 
 private:

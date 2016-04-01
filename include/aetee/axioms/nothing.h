@@ -17,6 +17,7 @@ struct nothingFunctor {
 
 } /*namespace detail*/;
 
+using nothing_t = detail::nothingFunctor;
 static constexpr auto nothing = detail::nothingFunctor{};
 
 } /*namespace aetee*/;

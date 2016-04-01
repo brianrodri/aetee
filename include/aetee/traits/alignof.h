@@ -9,28 +9,16 @@ namespace detail {
 
 struct alignOfFunctor {
 
-    template <typename T>
-    constexpr auto operator()(type_constant_t<T>) const
+    template <typename... T>
+    constexpr auto operator()(type_constant_t<T>...) const
     {
-        return idx_c<alignof(std::decay_t<T>)>;
-    }
-
-    template <typename T>
-    constexpr auto operator()(T&&) const
-    {
-        return idx_c<alignof(std::decay_t<T>)>;
+        return idx_c<std::max({alignof(T)...})>;
     }
 
     template <typename... T>
     constexpr auto operator()(type_sequence_t<T...>) const
     {
-        return alignof(std::aligned_union_t<1, char, T...>);
-    }
-
-    template <typename H, typename... T>
-    constexpr auto operator()(type_constant_t<H>, type_constant_t<T>...) const
-    {
-        return alignof(std::aligned_union_t<1, H, T...>);
+        return idx_c<std::max({alignof(T)...})>;
     }
 
 } /*struct alignOfFunctor*/;

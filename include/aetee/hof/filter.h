@@ -1,7 +1,14 @@
 #ifndef HEADER_AETEE_HOF_FILTER_H_INCLUDED
 #define HEADER_AETEE_HOF_FILTER_H_INCLUDED
-#include <aetee/hof/fold.h>
+#include <aetee/axioms/flatten.h>
+#include <aetee/axioms/identity.h>
+#include <aetee/axioms/nothing.h>
+#include <aetee/axioms/select.h>
+#include <aetee/axioms/tupify.h>
+#include <aetee/hof/compose.h>
+#include <aetee/hof/curry.h>
 #include <aetee/hof/map.h>
+#include <aetee/traits/cast.h>
 #include <tuple>
 #include <utility>
 
@@ -10,52 +17,34 @@ namespace aetee {
 namespace detail {
 
 template <typename F>
-struct transformingFunctor {
+struct filterMapper {
 
-    transformingFunctor(F&& f_) : pred{std::forward<F>(f_)}
+    constexpr filterMapper(F&& fIn) : f{std::forward<F>(fIn)} { }
+
+    template <typename A>
+    constexpr auto operator()(A&& a)
     {
+        return select(cast<bool>(f(std::forward<A>(a))), tupify(std::forward<A>(a)), tupify());
     }
 
-    template <typename X>
-    constexpr auto operator()(X&& x)
+    template <typename A>
+    constexpr auto operator()(A&& a) const
     {
-        return impl(pred(std::forward<X>(x)), std::forward<X>(x));
-    }
-
-    template <typename X>
-    constexpr auto operator()(X&& x) const
-    {
-        return impl(pred(std::forward<X>(x)), std::forward<X>(x));
+        return select(cast<bool>(f(std::forward<A>(a))), tupify(std::forward<A>(a)), tupify());
     }
 
 private:
 
-    template <typename X>
-    constexpr auto impl(true_constant_t, X&& x) const
-    {
-        return std::make_tuple(std::forward<X>(x));
-    }
+    F f;
 
-    template <typename X>
-    constexpr auto impl(false_constant_t, X&& x) const
-    {
-        return std::make_tuple();
-    }
-
-    F pred;
-
-} /*struct transformingFunctor*/;
+} /*struct filterMapper*/;
 
 struct filterFunctor {
 
     template <typename Tup, typename F>
     constexpr auto operator()(Tup&& tup, F&& f) const
     {
-        return fold(
-            map(std::forward<Tup>(tup), transformingFunctor<F>{std::forward<F>(f)})
-          , std::make_tuple()
-          , concat
-            );
+        return flatten(map(std::forward<Tup>(tup), filterMapper<F>{std::forward<F>(f)}));
     }
 
 } /*struct filterFunctor*/;

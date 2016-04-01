@@ -8,18 +8,21 @@ namespace aetee {
 namespace detail {
 
 struct reverseFunctor {
+
     template <typename Tup>
     constexpr auto operator()(Tup&& tup) const
     {
-        return impl(std::forward<Tup>(tup), idx_sequence_c_of<Tup>);
+        return impl(std::forward<Tup>(tup), idx_c_sequence_of<Tup>);
     }
 
 private:
+
     template <typename Tup, size_t... I>
     static constexpr auto impl(Tup&& tup, idx_sequence_t<I...> idxes)
     {
         return std::make_tuple(std::get<idx_c<sizeof...(I) - I - 1>>(std::forward<Tup>(tup))...);
     }
+
 };
 
 } /*namespace detail*/;

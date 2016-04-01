@@ -19,7 +19,7 @@ struct zipFunctor {
     constexpr auto operator()(Tup&&... tup) const
     {
         constexpr auto minLen = std::min({value(len_c<Tup>)...});
-        return impl(idx_sequence_c_til<minLen>, std::forward<Tup>(tup)...);
+        return impl(idx_c_sequence_til<minLen>, std::forward<Tup>(tup)...);
     }
 
 private:

@@ -24,17 +24,12 @@ struct justImpl {
 
     constexpr justImpl(T&& t_) : t{std::forward<T>(t_)} {};
 
-    constexpr operator T()
+    constexpr operator T() const
     {
         return t;
     }
 
     constexpr T& operator()(...)
-    {
-        return t;
-    }
-
-    constexpr operator T() const
     {
         return t;
     }
@@ -52,6 +47,7 @@ private:
 
 } /*namespace detail*/;
 
+template <typename T> using just_t = detail::justImpl<T>;
 static constexpr auto just = detail::justFunctor{};
 
 } /*namespace aetee*/;

@@ -22,7 +22,7 @@ private:
     template <typename T, typename F>
     static constexpr decltype(auto) impl(T&& t, F&& f, true_constant_t)
     {
-        return impl(std::forward<T>(t), std::forward<F>(f), idx_sequence_c_of<T>);
+        return impl(std::forward<T>(t), std::forward<F>(f), idx_c_sequence_of<T>);
     }
 
     template <typename Arg, typename F>

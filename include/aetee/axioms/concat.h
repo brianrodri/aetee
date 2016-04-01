@@ -16,7 +16,7 @@ struct concatTwoFunctor {
     {
         return impl(
             std::forward<A>(a), std::forward<B>(b)
-          , idx_sequence_c_of<A>, idx_sequence_c_of<B>
+          , idx_c_sequence_of<A>, idx_c_sequence_of<B>
             );
     }
 

@@ -13,7 +13,7 @@ struct mapFunctor {
     template <typename Tup, typename F>
     constexpr auto operator()(Tup&& tup, F&& f) const
     {
-        return impl(std::forward<Tup>(tup), std::forward<F>(f), idx_sequence_c_of<Tup>);
+        return impl(std::forward<Tup>(tup), std::forward<F>(f), idx_c_sequence_of<Tup>);
     }
 
 private:

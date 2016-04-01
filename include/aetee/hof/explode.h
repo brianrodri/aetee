@@ -14,7 +14,7 @@ struct explodeFunctor {
     constexpr auto operator()(Tup&& tup, F&&... f) const
     {
         return impl(
-            idx_sequence_c_for<type_c<Tup>>
+            idx_c_sequence_for<type_c<Tup>>
           , std::forward<Tup>(tup)
           , std::forward<F>(f)...
             );

@@ -67,10 +67,10 @@ template <typename Tup>
 using idx_sequence_t_of = decltype(detail::indexSequenceFrom(std::make_index_sequence<std::tuple_size<std::decay_t<Tup>>::value>{}));
 
 //! idx_sequence_t compile-time instances
-template <std::size_t... I>  static constexpr auto idx_sequence_c = idx_sequence_t<I...>{};
-template <std::size_t N>   constexpr auto idx_sequence_c_til = idx_sequence_t_til<N>{};
-template <typename... C>   constexpr auto idx_sequence_c_for = idx_sequence_t_for<C...>{};
-template <typename Tup>   constexpr auto idx_sequence_c_of = idx_sequence_t_of<Tup>{};
+template <std::size_t... I>  static constexpr auto idx_c_sequence = idx_sequence_t<I...>{};
+template <std::size_t N>   constexpr auto idx_c_sequence_til = idx_sequence_t_til<N>{};
+template <typename... C>   constexpr auto idx_c_sequence_for = idx_sequence_t_for<C...>{};
+template <typename Tup>   constexpr auto idx_c_sequence_of = idx_sequence_t_of<Tup>{};
 
 
 //! operator""_c
@@ -141,7 +141,7 @@ namespace detail {
 template <std::size_t... I>
 static constexpr auto indexSequenceFrom(std::index_sequence<I...>)
 {
-    return idx_sequence_c<I...>;
+    return idx_c_sequence<I...>;
 }
 
 static constexpr bool isDigit(char c)

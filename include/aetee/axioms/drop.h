@@ -13,7 +13,7 @@ struct dropFunctor {
     constexpr auto operator()(Tup&& tup, idx_constant_t<N> n) const
     {
         constexpr auto len = clamp(0_c, len_c<Tup>, n);
-        return impl(std::forward<Tup>(tup), len, idx_sequence_c_til<len_c<Tup> - len>);
+        return impl(std::forward<Tup>(tup), len, idx_c_sequence_til<len_c<Tup> - len>);
     }
 
 private:
@@ -32,7 +32,7 @@ struct dropBackFunctor {
     constexpr auto operator()(Tup&& tup, idx_constant_t<N> n) const
     {
         constexpr auto len = len_c<Tup> - clamp(0_c, len_c<Tup>, n);
-        return impl(std::forward<Tup>(tup), idx_sequence_c_til<len>);
+        return impl(std::forward<Tup>(tup), idx_c_sequence_til<len>);
     }
 
 private:

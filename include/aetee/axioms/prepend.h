@@ -12,7 +12,7 @@ struct prependFunctor {
     template <typename Tup, typename... X>
     constexpr auto operator()(Tup&& tup, X&&... x) const
     {
-        return impl(std::forward<Tup>(tup), idx_sequence_c_of<Tup>, std::forward<X>(x)...);
+        return impl(std::forward<Tup>(tup), idx_c_sequence_of<Tup>, std::forward<X>(x)...);
     }
 
 private:

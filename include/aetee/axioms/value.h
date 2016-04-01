@@ -6,18 +6,42 @@ namespace aetee {
 
 namespace detail {
 
-struct valueFunctor {
+template <typename T, typename = void>
+struct valueResolvingFunctor {
 
-    template <typename T>
-    constexpr auto operator()(T&&) const
+    constexpr decltype(auto) operator()(T&& t) const
+    {
+        return std::forward<T>(t);
+    }
+
+} /*struct valueResolvingFunctor*/;
+
+template <typename T>
+struct valueResolvingFunctor<type_constant_t<T>> {
+
+    constexpr decltype(auto) operator()(type_constant_t<T>) const
+    {
+        return T::value;
+    }
+
+} /*struct valueResolvingFunctor*/;
+
+template <typename T>
+struct valueResolvingFunctor<T, std::void_t<decltype(std::decay_t<T>::value)>> {
+
+    constexpr decltype(auto) operator()(T&& t) const
     {
         return std::decay_t<T>::value;
     }
 
+} /*struct valueResolvingFunctor*/;
+
+struct valueFunctor {
+
     template <typename T>
-    constexpr auto operator()(type_constant_t<T>) const
+    constexpr auto operator()(T&& t) const
     {
-        return std::decay_t<T>::value;
+        return valueResolvingFunctor<T>{}(std::forward<T>(t));
     }
 
 } /*struct valueFunctor*/;

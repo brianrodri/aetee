@@ -13,7 +13,7 @@ struct forEachFunctor {
     template <typename Tup, typename F>
     constexpr auto operator()(Tup&& tup, F&& fn) const
     {
-        return impl(std::forward<Tup>(tup), std::forward<F>(fn), idx_sequence_c_of<Tup>);
+        return impl(std::forward<Tup>(tup), std::forward<F>(fn), idx_c_sequence_of<Tup>);
     }
 
 private:

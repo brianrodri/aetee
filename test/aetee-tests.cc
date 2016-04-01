@@ -126,3 +126,25 @@ TEST(Aetee, FlattenRecursive)
 
     EXPECT_EQ(expected, actual);
 }
+
+TEST(Aetee, Slice)
+{
+    auto tup = tupify(0, 1, 2, 3, 4, 5, 6, 7);
+
+    EXPECT_EQ(tupify(0, 3, 6), slice(tup, 0_c, 8_c, 3_c));
+    EXPECT_EQ(tupify(2, 3), slice(tup, 2_c, 4_c));
+    EXPECT_EQ(tupify(2), slice(tup, 2_c, 4_c, 2_c));
+    EXPECT_EQ(tupify(0, 2, 4, 6), slice(tup, 0_c, 8_c, 2_c));
+    EXPECT_EQ(tupify(1, 3, 5, 7), slice(tup, 1_c, 8_c, 2_c));
+}
+
+TEST(Aetee, Value)
+{
+    auto x = 1_c;
+    auto y = 2_c;
+
+    EXPECT_EQ(1, value(x));
+    EXPECT_EQ(2, value(y));
+    EXPECT_EQ(3, value(x+y));
+    EXPECT_EQ(4, value(4));
+}
