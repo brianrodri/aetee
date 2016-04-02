@@ -22,42 +22,42 @@ TEST(Aetee, TypeConstant)
 TEST(Aetee, TypeSequence)
 {
     auto l = type_sequence_c<int, float, double>;
-    EXPECT_EQ(length(l), 3);
+    EXPECT_EQ(length(l), 3_c);
 }
 
 TEST(Aetee, Append)
 {
-    auto expected = tupify(1, 2, 3);
-    auto actual = append(tupify(1, 2), 3);
+    auto expected = tupify(1_c, 2_c, 3_c);
+    auto actual = append(tupify(1_c, 2_c), 3_c);
     EXPECT_EQ(expected, actual);
 }
 
 TEST(Aetee, Prepend)
 {
-    auto expected = tupify(1, 2, 3);
-    auto actual = prepend(tupify(2, 3), 1);
+    auto expected = tupify(1_c, 2_c, 3_c);
+    auto actual = prepend(tupify(2_c, 3_c), 1_c);
     EXPECT_EQ(expected, actual);
 }
 
 TEST(Aetee, Fold)
 {
-    auto expected = 15;
-    auto actual = fold(tupify(1, 2, 3, 4, 5), 0, std::plus<>{});
+    auto expected = 15_c;
+    auto actual = fold(tupify(1_c, 2_c, 3_c, 4_c, 5_c), 0_c, std::plus<>{});
     EXPECT_EQ(expected, actual);
 }
 
 TEST(Aetee, Zip)
 {
-    auto expected = tupify(tupify(1, 2), tupify(3, 4), tupify(5, 6));
-    auto actual = zip(tupify(1, 3, 5), tupify(2, 4, 6));
+    auto expected = tupify(tupify(1_c, 2_c), tupify(3_c, 4_c), tupify(5_c, 6_c));
+    auto actual = zip(tupify(1_c, 3_c, 5_c), tupify(2_c, 4_c, 6_c));
     ASSERT_EQ(length(expected), length(actual));
     EXPECT_EQ(expected, actual);
 }
 
 TEST(Aetee, Reverse)
 {
-    auto expected = tupify(5, 4, 3, 2, 1);
-    auto actual = reverse(tupify(1, 2, 3, 4, 5));
+    auto expected = tupify(5_c, 4_c, 3_c, 2_c, 1_c);
+    auto actual = reverse(tupify(1_c, 2_c, 3_c, 4_c, 5_c));
     EXPECT_EQ(expected, actual);
 }
 
@@ -72,14 +72,14 @@ TEST(Aetee, Clamp)
 TEST(Aetee, Take)
 {
     { // takeFront
-        auto expected = tupify(1, 2);
-        auto actual = take(tupify(1, 2, 3, 4, 5), 2_c);
+        auto expected = tupify(1_c, 2_c);
+        auto actual = take(tupify(1_c, 2_c, 3_c, 4_c, 5_c), 2_c);
         ASSERT_EQ(length(expected), length(actual));
         EXPECT_EQ(expected, actual);
     }
     { // takeBack
-        auto expected = tupify(4, 5);
-        auto actual = takeBack(tupify(1, 2, 3, 4, 5), 2_c);
+        auto expected = tupify(4_c, 5_c);
+        auto actual = takeBack(tupify(1_c, 2_c, 3_c, 4_c, 5_c), 2_c);
         ASSERT_EQ(length(expected), length(actual));
         EXPECT_EQ(expected, actual);
     }
@@ -88,14 +88,14 @@ TEST(Aetee, Take)
 TEST(Aetee, Drop)
 {
     { // dropFront
-        auto expected = tupify(3, 4, 5);
-        auto actual = drop(tupify(1, 2, 3, 4, 5), 2_c);
+        auto expected = tupify(3_c, 4_c, 5_c);
+        auto actual = drop(tupify(1_c, 2_c, 3_c, 4_c, 5_c), 2_c);
         ASSERT_EQ(length(expected), length(actual));
         EXPECT_EQ(expected, actual);
     }
     { // dropBack
-        auto expected = tupify(1, 2, 3);
-        auto actual = dropBack(tupify(1, 2, 3, 4, 5), 2_c);
+        auto expected = tupify(1_c, 2_c, 3_c);
+        auto actual = dropBack(tupify(1_c, 2_c, 3_c, 4_c, 5_c), 2_c);
         ASSERT_EQ(length(expected), length(actual));
         EXPECT_EQ(expected, actual);
     }
@@ -106,13 +106,13 @@ TEST(Aetee, Compose)
     auto foo = [](auto f, auto g) { return f + g; };
     auto bar = [](auto d, auto e) { return tupify(d % e, d / e); };
     auto baz = [](auto a, auto b, auto c) { return tupify(a + b, a - c); };
-    EXPECT_EQ(compose(foo, bar, baz)(3, 2, 1), 3);
+    EXPECT_EQ(compose(foo, bar, baz)(3_c, 2_c, 1_c), 3_c);
 }
 
 TEST(Aetee, Flatten)
 {
-    auto tup = tupify(tupify(tupify(0, tupify(1, 2), 3), tupify(4, 5)), tupify(6));
-    auto expected = tupify(tupify(0, tupify(1, 2), 3), tupify(4, 5), 6);
+    auto tup = tupify(tupify(tupify(0_c, tupify(1_c, 2_c), 3_c), tupify(4_c, 5_c)), tupify(6_c));
+    auto expected = tupify(tupify(0_c, tupify(1_c, 2_c), 3_c), tupify(4_c, 5_c), 6_c);
     auto actual = flatten(tup);
 
     EXPECT_EQ(expected, actual);
@@ -120,8 +120,8 @@ TEST(Aetee, Flatten)
 
 TEST(Aetee, FlattenRecursive)
 {
-    auto tup = tupify(tupify(tupify(0, tupify(1, 2), 3), tupify(4, 5)), tupify(6));
-    auto expected = tupify(0, 1, 2, 3, 4, 5, 6);
+    auto tup = tupify(tupify(tupify(0_c, tupify(1_c, 2_c), 3_c), tupify(4_c, 5_c)), tupify(6_c));
+    auto expected = tupify(0_c, 1_c, 2_c, 3_c, 4_c, 5_c, 6_c);
     auto actual = flatten.recursive(tup);
 
     EXPECT_EQ(expected, actual);
@@ -129,13 +129,13 @@ TEST(Aetee, FlattenRecursive)
 
 TEST(Aetee, Slice)
 {
-    auto tup = tupify(0, 1, 2, 3, 4, 5, 6, 7);
+    auto tup = tupify(0_c, 1_c, 2_c, 3_c, 4_c, 5_c, 6_c, 7_c);
 
-    EXPECT_EQ(tupify(0, 3, 6), slice(tup, 0_c, 8_c, 3_c));
-    EXPECT_EQ(tupify(2, 3), slice(tup, 2_c, 4_c));
-    EXPECT_EQ(tupify(2), slice(tup, 2_c, 4_c, 2_c));
-    EXPECT_EQ(tupify(0, 2, 4, 6), slice(tup, 0_c, 8_c, 2_c));
-    EXPECT_EQ(tupify(1, 3, 5, 7), slice(tup, 1_c, 8_c, 2_c));
+    EXPECT_EQ(tupify(0_c, 3_c, 6_c), slice(tup, 0_c, 8_c, 3_c));
+    EXPECT_EQ(tupify(2_c, 3_c), slice(tup, 2_c, 4_c));
+    EXPECT_EQ(tupify(2_c), slice(tup, 2_c, 4_c, 2_c));
+    EXPECT_EQ(tupify(0_c, 2_c, 4_c, 6_c), slice(tup, 0_c, 8_c, 2_c));
+    EXPECT_EQ(tupify(1_c, 3_c, 5_c, 7_c), slice(tup, 1_c, 8_c, 2_c));
 }
 
 TEST(Aetee, Value)
@@ -143,8 +143,8 @@ TEST(Aetee, Value)
     auto x = 1_c;
     auto y = 2_c;
 
-    EXPECT_EQ(1, value(x));
-    EXPECT_EQ(2, value(y));
-    EXPECT_EQ(3, value(x+y));
-    EXPECT_EQ(4, value(4));
+    EXPECT_EQ(1_c, value(x));
+    EXPECT_EQ(2_c, value(y));
+    EXPECT_EQ(3_c, value(x+y));
+    EXPECT_EQ(4_c, value(4_c));
 }
