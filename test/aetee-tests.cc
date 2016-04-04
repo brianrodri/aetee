@@ -145,6 +145,5 @@ TEST(Aetee, Value)
 
     EXPECT_EQ(1_c, value(x));
     EXPECT_EQ(2_c, value(y));
-    EXPECT_EQ(3_c, value(x+y));
-    EXPECT_EQ(4_c, value(4_c));
+    EXPECT_EQ(3_c, value(x + y));
 }
