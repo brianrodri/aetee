@@ -23,25 +23,25 @@ struct composedFunctor {
 private:
 
     template <typename... A>
-    constexpr auto impl(true_constant_t, A&&... a)
+    constexpr auto impl(true_t, A&&... a)
     {
         return apply(g(std::forward<A>(a)...), f);
     }
 
     template <typename... A>
-    constexpr auto impl(true_constant_t, A&&... a) const
+    constexpr auto impl(true_t, A&&... a) const
     {
         return apply(g(std::forward<A>(a)...), f);
     }
 
     template <typename... A>
-    constexpr auto impl(false_constant_t, A&&... a)
+    constexpr auto impl(false_t, A&&... a)
     {
         return f(g(std::forward<A>(a)...));
     }
 
     template <typename... A>
-    constexpr auto impl(false_constant_t, A&&... a) const
+    constexpr auto impl(false_t, A&&... a) const
     {
         return f(g(std::forward<A>(a)...));
     }
@@ -54,7 +54,7 @@ private:
 struct composeTwo {
 
     template <typename F, typename G, bool E = true>
-    constexpr auto operator()(F&& f, G&& g, bool_constant_t<E> = {}) const
+    constexpr auto operator()(F&& f, G&& g, bool_t<E> = {}) const
     {
         return composedFunctor<F, G, E>(std::forward<F>(f), std::forward<G>(g));
     }

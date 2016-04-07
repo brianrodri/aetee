@@ -2,6 +2,7 @@
 #define HEADER_AETEE_HOF_H_INCLUDED
 
 #include <aetee/hof/apply.h>
+#include <aetee/hof/as_functor.h>
 #include <aetee/hof/compose.h>
 #include <aetee/hof/curry.h>
 #include <aetee/hof/explode.h>

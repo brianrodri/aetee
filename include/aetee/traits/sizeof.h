@@ -10,7 +10,7 @@ namespace detail {
 //! Returns a compile-time sizeof value for an input type
 struct sizeOfFunctor {
     template <typename T>
-    constexpr auto operator()(type_constant_t<T>) const
+    constexpr auto operator()(type_t<T>) const
     {
         return idx_c<sizeof(std::decay_t<T>)>;
     }

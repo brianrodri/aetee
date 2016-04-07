@@ -19,7 +19,7 @@ struct appendFunctor {
 private:
 
     template <typename Tup, size_t... I, typename... X>
-    constexpr auto impl(Tup&& tup, idx_sequence_t<I...>, X&&... x) const
+    constexpr auto impl(Tup&& tup, idx_c_sequence_t<I...>, X&&... x) const
     {
         return std::make_tuple(std::get<I>(std::forward<Tup>(tup))..., std::forward<X>(x)...);
     }

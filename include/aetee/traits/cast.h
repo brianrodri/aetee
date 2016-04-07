@@ -10,9 +10,9 @@ template <typename U>
 struct castFunctor {
 
     template <typename T, T V>
-    constexpr auto operator()(int_constant_t<T, V>) const
+    constexpr auto operator()(int_t<T, V>) const
     {
-        return int_constant_c<U, static_cast<U>(V)>;
+        return int_c<U, static_cast<U>(V)>;
     }
 
 } /*struct castFunctor*/;

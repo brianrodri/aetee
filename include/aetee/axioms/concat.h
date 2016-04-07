@@ -23,7 +23,7 @@ struct concatTwoFunctor {
 private:
 
     template <typename A, typename B, size_t... I, size_t... J>
-    static constexpr auto impl(A&& a, B&& b, idx_sequence_t<I...>, idx_sequence_t<J...>)
+    static constexpr auto impl(A&& a, B&& b, idx_c_sequence_t<I...>, idx_c_sequence_t<J...>)
     {
         return std::make_tuple(
             std::get<I>(std::forward<A>(a))...

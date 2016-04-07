@@ -10,12 +10,13 @@
 #include <aetee/axioms/nothing.h>
 #include <aetee/axioms/prepend.h>
 #include <aetee/axioms/replicate.h>
-#include <aetee/axioms/rename.h>
+#include <aetee/axioms/rebind.h>
 #include <aetee/axioms/reverse.h>
 #include <aetee/axioms/select.h>
 #include <aetee/axioms/slice.h>
 #include <aetee/axioms/take.h>
 #include <aetee/axioms/tupify.h>
+#include <aetee/axioms/to_c.h>
 #include <aetee/axioms/value.h>
 #include <aetee/axioms/zip.h>
 

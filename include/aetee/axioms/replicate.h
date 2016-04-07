@@ -19,7 +19,7 @@ struct replicateFunctor {
 private:
 
     template <typename T, size_t... I>
-    static constexpr auto impl(T&& val, idx_sequence_t<I...>)
+    static constexpr auto impl(T&& val, idx_c_sequence_t<I...>)
     {
         return std::make_tuple((I, std::forward<T>(val))...);
     }

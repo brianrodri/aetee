@@ -21,7 +21,7 @@ TEST(Aetee, TypeConstant)
 
 TEST(Aetee, TypeSequence)
 {
-    auto l = type_sequence_c<int, float, double>;
+    auto l = type_c_sequence<int, float, double>;
     EXPECT_EQ(length(l), 3_c);
 }
 
@@ -146,4 +146,15 @@ TEST(Aetee, Value)
     EXPECT_EQ(1_c, value(x));
     EXPECT_EQ(2_c, value(y));
     EXPECT_EQ(3_c, value(x + y));
+}
+
+template <typename... A> struct SumFinder {
+    static constexpr auto value = (A::value + ...);
+};
+
+TEST(Aetee, Rename)
+{
+    auto actual = value(rebind<SumFinder>(decltype_(tupify(0_c, 1_c, 2_c, 3_c, 4_c))));
+    
+    EXPECT_EQ(10_c, actual);
 }

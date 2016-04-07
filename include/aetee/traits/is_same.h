@@ -11,7 +11,7 @@ namespace detail {
 struct isSameTypeFunctor {
 
     template <typename T, typename U>
-    constexpr auto operator()(type_constant_t<T>, type_constant_t<U>)
+    constexpr auto operator()(type_t<T>, type_t<U>)
     {
         return bool_c<std::is_same<T, U>::value>;
     }

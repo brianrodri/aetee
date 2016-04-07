@@ -9,10 +9,10 @@ namespace aetee {
 namespace detail {
 
 template <typename T, typename = void>
-struct isTuple : false_constant_t {};
+struct isTuple : false_t {};
 
 template <typename T>
-struct isTuple<T, std::void_t<typename std::tuple_size<T>::type>> : true_constant_t {};
+struct isTuple<T, std::void_t<typename std::tuple_size<T>::type>> : true_t {};
 
 struct isTupleFunctor {
 
@@ -23,7 +23,7 @@ struct isTupleFunctor {
     }
 
     template <typename T>
-    constexpr auto operator()(type_constant_t<T>) const
+    constexpr auto operator()(type_t<T>) const
     {
         return isTuple<std::decay_t<T>>{};
     }

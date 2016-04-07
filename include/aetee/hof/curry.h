@@ -31,25 +31,25 @@ private:
     std::tuple<A&&...> a;
 
     template <size_t... I, typename... B>
-    constexpr decltype(auto) impl(true_constant_t, idx_sequence_t<I...>, B&&... b)
+    constexpr decltype(auto) impl(true_t, idx_c_sequence_t<I...>, B&&... b)
     {
         return f(std::get<I>(a)..., std::forward<B>(b)...);
     }
 
     template <size_t... I, typename... B>
-    constexpr decltype(auto) impl(true_constant_t, idx_sequence_t<I...>, B&&... b) const
+    constexpr decltype(auto) impl(true_t, idx_c_sequence_t<I...>, B&&... b) const
     {
         return f(std::get<I>(a)..., std::forward<B>(b)...);
     }
 
     template <size_t... I, typename... B>
-    constexpr decltype(auto) impl(false_constant_t, idx_sequence_t<I...>, B&&... b)
+    constexpr decltype(auto) impl(false_t, idx_c_sequence_t<I...>, B&&... b)
     {
         return f(std::forward<B>(b)..., std::get<I>(a)...);
     }
 
     template <size_t... I, typename... B>
-    constexpr decltype(auto) impl(false_constant_t, idx_sequence_t<I...>, B&&... b) const
+    constexpr decltype(auto) impl(false_t, idx_c_sequence_t<I...>, B&&... b) const
     {
         return f(std::forward<B>(b)..., std::get<I>(a)...);
     }

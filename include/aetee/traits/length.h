@@ -11,7 +11,7 @@ namespace detail {
 struct lengthFunctor {
 
     template <typename Tup>
-    constexpr auto operator()(type_constant_t<Tup> t) const
+    constexpr auto operator()(type_t<Tup> t) const
     {
         return idx_c<std::tuple_size<Tup>::value>;
     }

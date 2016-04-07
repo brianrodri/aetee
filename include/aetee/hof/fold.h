@@ -36,7 +36,7 @@ struct foldLeftFunctor {
 private:
 
     template <typename Tup, typename I, typename F, size_t X>
-    constexpr decltype(auto) impl(Tup&& tup, I&& init, F&& f, idx_constant_t<X>) const
+    constexpr decltype(auto) impl(Tup&& tup, I&& init, F&& f, idx_t<X>) const
     {
         return f(
             impl(
@@ -50,7 +50,7 @@ private:
     }
 
     template <typename Tup, typename I, typename F>
-    constexpr decltype(auto) impl(Tup&& tup, I&& init, F&& f, idx_constant_t<0>) const
+    constexpr decltype(auto) impl(Tup&& tup, I&& init, F&& f, idx_t<0>) const
     {
         return std::forward<I>(init);
     }
@@ -84,7 +84,7 @@ struct foldRightFunctor {
 private:
 
     template <typename Tup, typename I, typename F, size_t X>
-    constexpr decltype(auto) impl(Tup&& tup, I&& init, F&& f, idx_constant_t<X> x) const
+    constexpr decltype(auto) impl(Tup&& tup, I&& init, F&& f, idx_t<X> x) const
     {
         return f(
             std::get<len_c<Tup> - x>(std::forward<Tup>(tup))
@@ -98,7 +98,7 @@ private:
     };
 
     template <typename Tup, typename I, typename F>
-    constexpr decltype(auto) impl(Tup&& tup, I&& init, F&& f, idx_constant_t<0>) const
+    constexpr decltype(auto) impl(Tup&& tup, I&& init, F&& f, idx_t<0>) const
     {
         return std::forward<I>(init);
     }

@@ -10,16 +10,21 @@ namespace detail {
 
 struct offsetOfFunctor {
 
-    template <typename... T, size_t I = sizeof...(T)>
-    constexpr auto operator()(type_sequence_t<T...> ts, idx_constant_t<I> i = {}) const
+    constexpr auto operator()(std::tuple<>) const
     {
-        return int_constant_c<std::ptrdiff_t, impl(ts, i)>;
+        return int_c<std::ptrdiff_t, 0>;
+    }
+
+    template <typename... T, size_t I = sizeof...(T)>
+    constexpr auto operator()(type_c_sequence_t<T...> ts, idx_t<I> i = {}) const
+    {
+        return int_c<std::ptrdiff_t, impl(ts, i)>;
     }
 
 private:
 
     template <typename... T, size_t I>
-    static constexpr std::ptrdiff_t impl(type_sequence_t<T...>, idx_constant_t<I>)
+    static constexpr std::ptrdiff_t impl(type_c_sequence_t<T...>, idx_t<I>)
     {
         constexpr std::array<size_t, sizeof...(T)> szs{sizeof(T)...};
         constexpr std::array<size_t, sizeof...(T) +1> als{ alignof(T)..., std::max({alignof(T)...}) };
@@ -34,7 +39,7 @@ private:
 
 } /*namespace detail*/;
 
-static constexpr auto offsetof_ = detail::tupifyFunctor{};
+static constexpr auto offsetof_ = detail::offsetOfFunctor{};
 
 } /*namespace aetee*/;
 

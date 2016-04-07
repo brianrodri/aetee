@@ -23,7 +23,7 @@ struct explodeFunctor {
 private:
 
     template <size_t... I, typename Tup, typename... F>
-    static constexpr auto impl(idx_sequence_t<I...>, Tup&& tup, F&&... f)
+    static constexpr auto impl(idx_c_sequence_t<I...>, Tup&& tup, F&&... f)
     {
         return tupify(f(std::get<I>(std::forward<Tup>(tup)))...);
     }

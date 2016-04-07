@@ -18,7 +18,7 @@ struct reverseFunctor {
 private:
 
     template <typename Tup, size_t... I>
-    static constexpr auto impl(Tup&& tup, idx_sequence_t<I...> idxes)
+    static constexpr auto impl(Tup&& tup, idx_c_sequence_t<I...> idxes)
     {
         return std::make_tuple(std::get<idx_c<sizeof...(I) - I - 1>>(std::forward<Tup>(tup))...);
     }

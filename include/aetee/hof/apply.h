@@ -20,19 +20,19 @@ struct applyFunctor {
 private:
 
     template <typename T, typename F>
-    static constexpr decltype(auto) impl(T&& t, F&& f, true_constant_t)
+    static constexpr decltype(auto) impl(T&& t, F&& f, true_t)
     {
         return impl(std::forward<T>(t), std::forward<F>(f), idx_c_sequence_of<T>);
     }
 
     template <typename Arg, typename F>
-    static constexpr decltype(auto) impl(Arg&& a, F&& f, false_constant_t)
+    static constexpr decltype(auto) impl(Arg&& a, F&& f, false_t)
     {
         return f(std::forward<Arg>(a));
     }
 
     template <typename T, typename F, size_t... I>
-    static constexpr decltype(auto) impl(T&& tup, F&& f, idx_sequence_t<I...>)
+    static constexpr decltype(auto) impl(T&& tup, F&& f, idx_c_sequence_t<I...>)
     {
         return f(std::get<I>(std::forward<T>(tup))...);
     }

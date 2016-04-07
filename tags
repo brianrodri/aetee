@@ -1,0 +1,967 @@
+!_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+a	/usr/local/include/aetee/include/aetee/hof/curry.h	/^    std::tuple<A&&...> a;$/;"	m	language:C++	struct:aetee::detail::curried
+aetee	/usr/local/include/aetee/include/aetee/axioms/append.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/axioms/concat.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/axioms/drop.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/axioms/flatten.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/axioms/identity.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/axioms/just.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/axioms/nothing.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/axioms/prepend.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/axioms/rebind.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/axioms/replicate.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/axioms/reverse.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/axioms/select.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/axioms/slice.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/axioms/take.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/axioms/to_c.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/axioms/tupify.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/axioms/value.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/axioms/zip.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/hof/apply.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/hof/as_functor.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/hof/compose.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/hof/curry.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/hof/explode.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/hof/filter.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/hof/fold.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/hof/for_each.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/hof/invoke.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/hof/map.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/int_c/int_c.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/int_c/int_c_sequence.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/math_sugar/allof.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/math_sugar/anyof.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/math_sugar/clamp.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/math_sugar/noneof.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/math_sugar/operator_c.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/traits/alignof.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/traits/cast.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/traits/decltype.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/traits/is_same.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/traits/is_tuple.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/traits/length.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/traits/offsetof.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/traits/sizeof.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/type/type_at.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/type/type_c.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/type/type_c_sequence.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/type/type_exists.h	/^namespace aetee {$/;"	n	language:C++
+aetee	/usr/local/include/aetee/include/aetee/type/type_idx.h	/^namespace aetee {$/;"	n	language:C++
+aetee::alignof_	/usr/local/include/aetee/include/aetee/traits/alignof.h	/^static constexpr auto alignof_ = detail::alignOfFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::allof	/usr/local/include/aetee/include/aetee/math_sugar/allof.h	/^static constexpr auto allof = detail::allOfFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::anyof	/usr/local/include/aetee/include/aetee/math_sugar/anyof.h	/^static constexpr auto anyof = detail::anyOfFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::append	/usr/local/include/aetee/include/aetee/axioms/append.h	/^static constexpr auto append = detail::appendFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::apply	/usr/local/include/aetee/include/aetee/hof/apply.h	/^static constexpr auto apply = detail::applyFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::arity_c	/usr/local/include/aetee/include/aetee/int_c/int_c.h	/^static constexpr auto arity_c = idx_c<sizeof...(T)>;$/;"	m	language:C++	namespace:aetee
+aetee::as_functor	/usr/local/include/aetee/include/aetee/hof/as_functor.h	/^static constexpr auto as_functor = detail::asFunctorFunctor<Predicate>{};$/;"	m	language:C++	namespace:aetee
+aetee::bit_and	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^static constexpr auto bit_and = detail::bitAndFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::bit_or	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^static constexpr auto bit_or = detail::bitOrFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::bit_xor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^static constexpr auto bit_xor = detail::bitXorFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::bool_c	/usr/local/include/aetee/include/aetee/int_c/int_c.h	/^static constexpr auto bool_c = bool_t<B>{};$/;"	m	language:C++	namespace:aetee
+aetee::cast	/usr/local/include/aetee/include/aetee/traits/cast.h	/^static constexpr auto cast = detail::castFunctor<U>{};$/;"	m	language:C++	namespace:aetee
+aetee::clamp	/usr/local/include/aetee/include/aetee/math_sugar/clamp.h	/^static constexpr auto clamp = detail::clampFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::compose	/usr/local/include/aetee/include/aetee/hof/compose.h	/^static constexpr auto compose = detail::composeFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::concat	/usr/local/include/aetee/include/aetee/axioms/concat.h	/^static constexpr auto concat = detail::concatFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::curry	/usr/local/include/aetee/include/aetee/hof/curry.h	/^static constexpr auto curry = detail::curryFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::curryBack	/usr/local/include/aetee/include/aetee/hof/curry.h	/^static constexpr auto curryBack = detail::curryBackFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::decltype_	/usr/local/include/aetee/include/aetee/traits/decltype.h	/^static constexpr auto decltype_ = detail::decltypeFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/axioms/append.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/axioms/concat.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/axioms/drop.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/axioms/flatten.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/axioms/identity.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/axioms/just.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/axioms/nothing.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/axioms/prepend.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/axioms/rebind.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/axioms/replicate.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/axioms/reverse.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/axioms/select.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/axioms/slice.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/axioms/take.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/axioms/to_c.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/axioms/tupify.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/axioms/value.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/axioms/zip.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/hof/apply.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/hof/as_functor.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/hof/compose.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/hof/curry.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/hof/explode.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/hof/filter.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/hof/fold.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/hof/for_each.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/hof/invoke.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/hof/map.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/int_c/int_c_sequence.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/math_sugar/allof.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/math_sugar/anyof.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/math_sugar/clamp.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/math_sugar/noneof.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/math_sugar/operator_c.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/traits/alignof.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/traits/cast.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/traits/decltype.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/traits/is_same.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/traits/is_tuple.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/traits/length.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/traits/offsetof.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/traits/sizeof.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/type/type_at.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail	/usr/local/include/aetee/include/aetee/type/type_idx.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+aetee::detail::alignOfFunctor	/usr/local/include/aetee/include/aetee/traits/alignof.h	/^struct alignOfFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::alignOfFunctor::operator ()	/usr/local/include/aetee/include/aetee/traits/alignof.h	/^    constexpr auto operator()(type_constant_t<T>...) const$/;"	f	language:C++	struct:aetee::detail::alignOfFunctor
+aetee::detail::alignOfFunctor::operator ()	/usr/local/include/aetee/include/aetee/traits/alignof.h	/^    constexpr auto operator()(type_c_sequence_t<T...>) const$/;"	f	language:C++	struct:aetee::detail::alignOfFunctor
+aetee::detail::allOfFunctor	/usr/local/include/aetee/include/aetee/math_sugar/allof.h	/^struct allOfFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::allOfFunctor::operator ()	/usr/local/include/aetee/include/aetee/math_sugar/allof.h	/^    constexpr auto operator()(int_sequence_t<T, V...>) const$/;"	f	language:C++	struct:aetee::detail::allOfFunctor
+aetee::detail::allOfFunctor::operator ()	/usr/local/include/aetee/include/aetee/math_sugar/allof.h	/^    constexpr auto operator()(type_c_sequence_t<X...>) const$/;"	f	language:C++	struct:aetee::detail::allOfFunctor
+aetee::detail::allOfFunctor::operator ()	/usr/local/include/aetee/include/aetee/math_sugar/allof.h	/^    constexpr auto operator()(type_c_sequence_t<X>...) const$/;"	f	language:C++	struct:aetee::detail::allOfFunctor
+aetee::detail::anyOfFunctor	/usr/local/include/aetee/include/aetee/math_sugar/anyof.h	/^struct anyOfFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::anyOfFunctor::operator ()	/usr/local/include/aetee/include/aetee/math_sugar/anyof.h	/^    constexpr auto operator()(type_constant_t<X>...) const$/;"	f	language:C++	struct:aetee::detail::anyOfFunctor
+aetee::detail::anyOfFunctor::operator ()	/usr/local/include/aetee/include/aetee/math_sugar/anyof.h	/^    constexpr auto operator()(type_c_sequence_t<X...>) const$/;"	f	language:C++	struct:aetee::detail::anyOfFunctor
+aetee::detail::anyOfFunctor::operator ()	/usr/local/include/aetee/include/aetee/math_sugar/anyof.h	/^    constexpr auto operator()(X&&... x) const$/;"	f	language:C++	struct:aetee::detail::anyOfFunctor
+aetee::detail::appendFunctor	/usr/local/include/aetee/include/aetee/axioms/append.h	/^struct appendFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::appendFunctor::impl	/usr/local/include/aetee/include/aetee/axioms/append.h	/^    constexpr auto impl(Tup&& tup, idx_sequence_t<I...>, X&&... x) const$/;"	f	language:C++	struct:aetee::detail::appendFunctor
+aetee::detail::appendFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/append.h	/^    constexpr auto operator()(Tup&& tup, X&&... x) const$/;"	f	language:C++	struct:aetee::detail::appendFunctor
+aetee::detail::applyFunctor	/usr/local/include/aetee/include/aetee/hof/apply.h	/^struct applyFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::applyFunctor::impl	/usr/local/include/aetee/include/aetee/hof/apply.h	/^    static constexpr decltype(auto) impl(Arg&& a, F&& f, false_constant_t)$/;"	f	language:C++	struct:aetee::detail::applyFunctor
+aetee::detail::applyFunctor::impl	/usr/local/include/aetee/include/aetee/hof/apply.h	/^    static constexpr decltype(auto) impl(T&& t, F&& f, true_constant_t)$/;"	f	language:C++	struct:aetee::detail::applyFunctor
+aetee::detail::applyFunctor::impl	/usr/local/include/aetee/include/aetee/hof/apply.h	/^    static constexpr decltype(auto) impl(T&& tup, F&& f, idx_sequence_t<I...>)$/;"	f	language:C++	struct:aetee::detail::applyFunctor
+aetee::detail::applyFunctor::operator ()	/usr/local/include/aetee/include/aetee/hof/apply.h	/^    constexpr decltype(auto) operator()(T&& t, F&& f) const$/;"	f	language:C++	struct:aetee::detail::applyFunctor
+aetee::detail::asFunctorFunctor	/usr/local/include/aetee/include/aetee/hof/as_functor.h	/^struct asFunctorFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::asFunctorFunctor::operator ()	/usr/local/include/aetee/include/aetee/hof/as_functor.h	/^    constexpr decltype(auto) operator()(type_c_sequence_t<Args...>) const$/;"	f	language:C++	struct:aetee::detail::asFunctorFunctor
+aetee::detail::asFunctorFunctor::operator ()	/usr/local/include/aetee/include/aetee/hof/as_functor.h	/^    constexpr decltype(auto) operator()(type_c_sequence_t<Args>...) const$/;"	f	language:C++	struct:aetee::detail::asFunctorFunctor
+aetee::detail::bitAndFunctor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct bitAndFunctor { template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs & rhs; } };$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::bitAndFunctor::operator ()	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct bitAndFunctor { template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs & rhs; } };$/;"	f	language:C++	struct:aetee::detail::bitAndFunctor
+aetee::detail::bitOrFunctor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct bitOrFunctor {  template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs | rhs; } };$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::bitOrFunctor::operator ()	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct bitOrFunctor {  template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs | rhs; } };$/;"	f	language:C++	struct:aetee::detail::bitOrFunctor
+aetee::detail::bitXorFunctor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct bitXorFunctor { template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs ^ rhs; } };$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::bitXorFunctor::operator ()	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct bitXorFunctor { template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs ^ rhs; } };$/;"	f	language:C++	struct:aetee::detail::bitXorFunctor
+aetee::detail::castFunctor	/usr/local/include/aetee/include/aetee/traits/cast.h	/^struct castFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::castFunctor::operator ()	/usr/local/include/aetee/include/aetee/traits/cast.h	/^    constexpr auto operator()(int_constant_t<T, V>) const$/;"	f	language:C++	struct:aetee::detail::castFunctor
+aetee::detail::clampFunctor	/usr/local/include/aetee/include/aetee/math_sugar/clamp.h	/^struct clampFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::clampFunctor::operator ()	/usr/local/include/aetee/include/aetee/math_sugar/clamp.h	/^    constexpr auto operator()(L&& lo, H&& hi, C&& clampee) const$/;"	f	language:C++	struct:aetee::detail::clampFunctor
+aetee::detail::composedFunctor	/usr/local/include/aetee/include/aetee/hof/compose.h	/^struct composedFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::composedFunctor::composedFunctor	/usr/local/include/aetee/include/aetee/hof/compose.h	/^    constexpr composedFunctor(F&& f_, G&& g_)$/;"	f	language:C++	struct:aetee::detail::composedFunctor
+aetee::detail::composedFunctor::f	/usr/local/include/aetee/include/aetee/hof/compose.h	/^    F f;$/;"	m	language:C++	struct:aetee::detail::composedFunctor
+aetee::detail::composedFunctor::g	/usr/local/include/aetee/include/aetee/hof/compose.h	/^    G g;$/;"	m	language:C++	struct:aetee::detail::composedFunctor
+aetee::detail::composedFunctor::impl	/usr/local/include/aetee/include/aetee/hof/compose.h	/^    constexpr auto impl(false_constant_t, A&&... a) const$/;"	f	language:C++	struct:aetee::detail::composedFunctor
+aetee::detail::composedFunctor::impl	/usr/local/include/aetee/include/aetee/hof/compose.h	/^    constexpr auto impl(false_constant_t, A&&... a)$/;"	f	language:C++	struct:aetee::detail::composedFunctor
+aetee::detail::composedFunctor::impl	/usr/local/include/aetee/include/aetee/hof/compose.h	/^    constexpr auto impl(true_constant_t, A&&... a) const$/;"	f	language:C++	struct:aetee::detail::composedFunctor
+aetee::detail::composedFunctor::impl	/usr/local/include/aetee/include/aetee/hof/compose.h	/^    constexpr auto impl(true_constant_t, A&&... a)$/;"	f	language:C++	struct:aetee::detail::composedFunctor
+aetee::detail::composedFunctor::operator ()	/usr/local/include/aetee/include/aetee/hof/compose.h	/^    constexpr auto operator()(A&&... a)$/;"	f	language:C++	struct:aetee::detail::composedFunctor
+aetee::detail::composeFunctor	/usr/local/include/aetee/include/aetee/hof/compose.h	/^struct composeFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::composeFunctor::operator ()	/usr/local/include/aetee/include/aetee/hof/compose.h	/^    constexpr auto operator()(F&&... f) const$/;"	f	language:C++	struct:aetee::detail::composeFunctor
+aetee::detail::composeTwo	/usr/local/include/aetee/include/aetee/hof/compose.h	/^struct composeTwo {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::composeTwo::operator ()	/usr/local/include/aetee/include/aetee/hof/compose.h	/^    constexpr auto operator()(F&& f, G&& g, bool_constant_t<E> = {}) const$/;"	f	language:C++	struct:aetee::detail::composeTwo
+aetee::detail::concatFunctor	/usr/local/include/aetee/include/aetee/axioms/concat.h	/^struct concatFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::concatFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/concat.h	/^    constexpr auto operator()(T&&... t) const$/;"	f	language:C++	struct:aetee::detail::concatFunctor
+aetee::detail::concatTwoFunctor	/usr/local/include/aetee/include/aetee/axioms/concat.h	/^struct concatTwoFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::concatTwoFunctor::impl	/usr/local/include/aetee/include/aetee/axioms/concat.h	/^    static constexpr auto impl(A&& a, B&& b, idx_sequence_t<I...>, idx_sequence_t<J...>)$/;"	f	language:C++	struct:aetee::detail::concatTwoFunctor
+aetee::detail::concatTwoFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/concat.h	/^    constexpr auto operator()(A&& a, B&& b) const$/;"	f	language:C++	struct:aetee::detail::concatTwoFunctor
+aetee::detail::curried	/usr/local/include/aetee/include/aetee/hof/curry.h	/^struct curried {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::curried::a	/usr/local/include/aetee/include/aetee/hof/curry.h	/^    std::tuple<A&&...> a;$/;"	m	language:C++	struct:aetee::detail::curried
+aetee::detail::curried::curried	/usr/local/include/aetee/include/aetee/hof/curry.h	/^    constexpr curried(F&& f_, A&&... a_) : f{std::forward<F>(f_)}, a{std::forward<A>(a_)...} {};$/;"	f	language:C++	struct:aetee::detail::curried
+aetee::detail::curried::f	/usr/local/include/aetee/include/aetee/hof/curry.h	/^    F f;$/;"	m	language:C++	struct:aetee::detail::curried
+aetee::detail::curried::impl	/usr/local/include/aetee/include/aetee/hof/curry.h	/^    constexpr decltype(auto) impl(false_constant_t, idx_sequence_t<I...>, B&&... b) const$/;"	f	language:C++	struct:aetee::detail::curried
+aetee::detail::curried::impl	/usr/local/include/aetee/include/aetee/hof/curry.h	/^    constexpr decltype(auto) impl(false_constant_t, idx_sequence_t<I...>, B&&... b)$/;"	f	language:C++	struct:aetee::detail::curried
+aetee::detail::curried::impl	/usr/local/include/aetee/include/aetee/hof/curry.h	/^    constexpr decltype(auto) impl(true_constant_t, idx_sequence_t<I...>, B&&... b) const$/;"	f	language:C++	struct:aetee::detail::curried
+aetee::detail::curried::impl	/usr/local/include/aetee/include/aetee/hof/curry.h	/^    constexpr decltype(auto) impl(true_constant_t, idx_sequence_t<I...>, B&&... b)$/;"	f	language:C++	struct:aetee::detail::curried
+aetee::detail::curried::operator ()	/usr/local/include/aetee/include/aetee/hof/curry.h	/^    constexpr decltype(auto) operator()(B&&... b) const$/;"	f	language:C++	struct:aetee::detail::curried
+aetee::detail::curried::operator ()	/usr/local/include/aetee/include/aetee/hof/curry.h	/^    constexpr decltype(auto) operator()(B&&... b)$/;"	f	language:C++	struct:aetee::detail::curried
+aetee::detail::curryBackFunctor	/usr/local/include/aetee/include/aetee/hof/curry.h	/^struct curryBackFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::curryBackFunctor::operator ()	/usr/local/include/aetee/include/aetee/hof/curry.h	/^    constexpr decltype(auto) operator()(F&& f, A&&... args) const$/;"	f	language:C++	struct:aetee::detail::curryBackFunctor
+aetee::detail::curryFunctor	/usr/local/include/aetee/include/aetee/hof/curry.h	/^struct curryFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::curryFunctor::operator ()	/usr/local/include/aetee/include/aetee/hof/curry.h	/^    constexpr decltype(auto) operator()(F&& f, A&&... args) const$/;"	f	language:C++	struct:aetee::detail::curryFunctor
+aetee::detail::decltypeFunctor	/usr/local/include/aetee/include/aetee/traits/decltype.h	/^struct decltypeFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::decltypeFunctor::operator ()	/usr/local/include/aetee/include/aetee/traits/decltype.h	/^    constexpr auto operator()(T&&) const {$/;"	f	language:C++	struct:aetee::detail::decltypeFunctor
+aetee::detail::decltypeFunctor::operator ()	/usr/local/include/aetee/include/aetee/traits/decltype.h	/^    constexpr auto operator()(type_constant_t<T>) const$/;"	f	language:C++	struct:aetee::detail::decltypeFunctor
+aetee::detail::dividesFunctor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct dividesFunctor {    template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs \/ rhs; } };$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::dividesFunctor::operator ()	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct dividesFunctor {    template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs \/ rhs; } };$/;"	f	language:C++	struct:aetee::detail::dividesFunctor
+aetee::detail::dropBackFunctor	/usr/local/include/aetee/include/aetee/axioms/drop.h	/^struct dropBackFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::dropBackFunctor::impl	/usr/local/include/aetee/include/aetee/axioms/drop.h	/^    static constexpr auto impl(Tup&& tup, idx_sequence_t<I...>)$/;"	f	language:C++	struct:aetee::detail::dropBackFunctor
+aetee::detail::dropBackFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/drop.h	/^    constexpr auto operator()(Tup&& tup, idx_constant_t<N> n) const$/;"	f	language:C++	struct:aetee::detail::dropBackFunctor
+aetee::detail::dropFunctor	/usr/local/include/aetee/include/aetee/axioms/drop.h	/^struct dropFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::dropFunctor::impl	/usr/local/include/aetee/include/aetee/axioms/drop.h	/^    static constexpr auto impl(Tup&& tup, idx_constant_t<L>, idx_sequence_t<I...>)$/;"	f	language:C++	struct:aetee::detail::dropFunctor
+aetee::detail::dropFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/drop.h	/^    constexpr auto operator()(Tup&& tup, idx_constant_t<N> n) const$/;"	f	language:C++	struct:aetee::detail::dropFunctor
+aetee::detail::equalToFunctor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct equalToFunctor {      template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs == rhs; } };$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::equalToFunctor::operator ()	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct equalToFunctor {      template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs == rhs; } };$/;"	f	language:C++	struct:aetee::detail::equalToFunctor
+aetee::detail::explodeFunctor	/usr/local/include/aetee/include/aetee/hof/explode.h	/^struct explodeFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::explodeFunctor::impl	/usr/local/include/aetee/include/aetee/hof/explode.h	/^    static constexpr auto impl(idx_sequence_t<I...>, Tup&& tup, F&&... f)$/;"	f	language:C++	struct:aetee::detail::explodeFunctor
+aetee::detail::explodeFunctor::operator ()	/usr/local/include/aetee/include/aetee/hof/explode.h	/^    constexpr auto operator()(Tup&& tup, F&&... f) const$/;"	f	language:C++	struct:aetee::detail::explodeFunctor
+aetee::detail::filterFunctor	/usr/local/include/aetee/include/aetee/hof/filter.h	/^struct filterFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::filterFunctor::operator ()	/usr/local/include/aetee/include/aetee/hof/filter.h	/^    constexpr auto operator()(Tup&& tup, F&& f) const$/;"	f	language:C++	struct:aetee::detail::filterFunctor
+aetee::detail::filterMapper	/usr/local/include/aetee/include/aetee/hof/filter.h	/^struct filterMapper {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::filterMapper::f	/usr/local/include/aetee/include/aetee/hof/filter.h	/^    F f;$/;"	m	language:C++	struct:aetee::detail::filterMapper
+aetee::detail::filterMapper::filterMapper	/usr/local/include/aetee/include/aetee/hof/filter.h	/^    constexpr filterMapper(F&& fIn) : f{std::forward<F>(fIn)} { }$/;"	f	language:C++	struct:aetee::detail::filterMapper
+aetee::detail::filterMapper::operator ()	/usr/local/include/aetee/include/aetee/hof/filter.h	/^    constexpr auto operator()(A&& a) const$/;"	f	language:C++	struct:aetee::detail::filterMapper
+aetee::detail::filterMapper::operator ()	/usr/local/include/aetee/include/aetee/hof/filter.h	/^    constexpr auto operator()(A&& a)$/;"	f	language:C++	struct:aetee::detail::filterMapper
+aetee::detail::flattenFunctor	/usr/local/include/aetee/include/aetee/axioms/flatten.h	/^struct flattenFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::flattenFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/flatten.h	/^    constexpr auto operator()(T&& t) const$/;"	f	language:C++	struct:aetee::detail::flattenFunctor
+aetee::detail::flattenFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/flatten.h	/^    constexpr auto operator()(T&&... t) const$/;"	f	language:C++	struct:aetee::detail::flattenFunctor
+aetee::detail::flattenFunctor::recursive	/usr/local/include/aetee/include/aetee/axioms/flatten.h	/^    static constexpr auto& recursive = recursiveFlatten;$/;"	m	language:C++	struct:aetee::detail::flattenFunctor
+aetee::detail::flattenRecursivelyFunctor	/usr/local/include/aetee/include/aetee/axioms/flatten.h	/^struct flattenRecursivelyFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::flattenRecursivelyFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/flatten.h	/^    constexpr auto operator()(T&& t) const$/;"	f	language:C++	struct:aetee::detail::flattenRecursivelyFunctor
+aetee::detail::flattenRecursivelyFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/flatten.h	/^    constexpr auto operator()(T&&... t) const$/;"	f	language:C++	struct:aetee::detail::flattenRecursivelyFunctor
+aetee::detail::foldLeftFunctor	/usr/local/include/aetee/include/aetee/hof/fold.h	/^struct foldLeftFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::foldLeftFunctor::impl	/usr/local/include/aetee/include/aetee/hof/fold.h	/^    constexpr decltype(auto) impl(Tup&& tup, I&& init, F&& f, idx_constant_t<0>) const$/;"	f	language:C++	struct:aetee::detail::foldLeftFunctor
+aetee::detail::foldLeftFunctor::impl	/usr/local/include/aetee/include/aetee/hof/fold.h	/^    constexpr decltype(auto) impl(Tup&& tup, I&& init, F&& f, idx_constant_t<X>) const$/;"	f	language:C++	struct:aetee::detail::foldLeftFunctor
+aetee::detail::foldLeftFunctor::operator ()	/usr/local/include/aetee/include/aetee/hof/fold.h	/^    constexpr decltype(auto) operator()(Tup&& tup, F&& f) const$/;"	f	language:C++	struct:aetee::detail::foldLeftFunctor
+aetee::detail::foldLeftFunctor::operator ()	/usr/local/include/aetee/include/aetee/hof/fold.h	/^    constexpr decltype(auto) operator()(Tup&& tup, I&& init, F&& f) const$/;"	f	language:C++	struct:aetee::detail::foldLeftFunctor
+aetee::detail::foldRightFunctor	/usr/local/include/aetee/include/aetee/hof/fold.h	/^struct foldRightFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::foldRightFunctor::impl	/usr/local/include/aetee/include/aetee/hof/fold.h	/^    constexpr decltype(auto) impl(Tup&& tup, I&& init, F&& f, idx_constant_t<0>) const$/;"	f	language:C++	struct:aetee::detail::foldRightFunctor
+aetee::detail::foldRightFunctor::impl	/usr/local/include/aetee/include/aetee/hof/fold.h	/^    constexpr decltype(auto) impl(Tup&& tup, I&& init, F&& f, idx_constant_t<X> x) const$/;"	f	language:C++	struct:aetee::detail::foldRightFunctor
+aetee::detail::foldRightFunctor::operator ()	/usr/local/include/aetee/include/aetee/hof/fold.h	/^    constexpr decltype(auto) operator()(Tup&& tup, F&& f) const$/;"	f	language:C++	struct:aetee::detail::foldRightFunctor
+aetee::detail::foldRightFunctor::operator ()	/usr/local/include/aetee/include/aetee/hof/fold.h	/^    constexpr decltype(auto) operator()(Tup&& tup, I&& init, F&& f) const$/;"	f	language:C++	struct:aetee::detail::foldRightFunctor
+aetee::detail::forEachFunctor	/usr/local/include/aetee/include/aetee/hof/for_each.h	/^struct forEachFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::forEachFunctor::impl	/usr/local/include/aetee/include/aetee/hof/for_each.h	/^    static constexpr auto impl(Tup&& tup, F&& fn, idx_sequence_t<I...>)$/;"	f	language:C++	struct:aetee::detail::forEachFunctor
+aetee::detail::forEachFunctor::operator ()	/usr/local/include/aetee/include/aetee/hof/for_each.h	/^    constexpr auto operator()(Tup&& tup, F&& fn) const$/;"	f	language:C++	struct:aetee::detail::forEachFunctor
+aetee::detail::generateIndexSequence	/usr/local/include/aetee/include/aetee/int_c/int_c_sequence.h	/^constexpr auto generateIndexSequence(idx_t<N>)$/;"	f	language:C++	namespace:aetee::detail
+aetee::detail::generateIndexSequenceImpl	/usr/local/include/aetee/include/aetee/int_c/int_c_sequence.h	/^constexpr auto generateIndexSequenceImpl(std::index_sequence<I...>)$/;"	f	language:C++	namespace:aetee::detail
+aetee::detail::greaterEqualFunctor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct greaterEqualFunctor { template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs >= rhs; } };$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::greaterEqualFunctor::operator ()	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct greaterEqualFunctor { template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs >= rhs; } };$/;"	f	language:C++	struct:aetee::detail::greaterEqualFunctor
+aetee::detail::greaterFunctor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct greaterFunctor {      template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs > rhs; }  };$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::greaterFunctor::operator ()	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct greaterFunctor {      template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs > rhs; }  };$/;"	f	language:C++	struct:aetee::detail::greaterFunctor
+aetee::detail::identityFunctor	/usr/local/include/aetee/include/aetee/axioms/identity.h	/^struct identityFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::identityFunctor::of	/usr/local/include/aetee/include/aetee/axioms/identity.h	/^    static constexpr auto of(T&& t)$/;"	f	language:C++	struct:aetee::detail::identityFunctor
+aetee::detail::identityFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/identity.h	/^    constexpr decltype(auto) operator()(T&& t) const$/;"	f	language:C++	struct:aetee::detail::identityFunctor
+aetee::detail::identityFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/identity.h	/^    constexpr decltype(auto) operator()(T&&... t) const$/;"	f	language:C++	struct:aetee::detail::identityFunctor
+aetee::detail::invokeFunctor	/usr/local/include/aetee/include/aetee/hof/invoke.h	/^struct invokeFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::invokeFunctor::operator ()	/usr/local/include/aetee/include/aetee/hof/invoke.h	/^    constexpr auto operator()(F&& f, A&&... a) const$/;"	f	language:C++	struct:aetee::detail::invokeFunctor
+aetee::detail::isSameTypeFunctor	/usr/local/include/aetee/include/aetee/traits/is_same.h	/^struct isSameTypeFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::isSameTypeFunctor::operator ()	/usr/local/include/aetee/include/aetee/traits/is_same.h	/^    constexpr auto operator()(T&& t, U&& u) const$/;"	f	language:C++	struct:aetee::detail::isSameTypeFunctor
+aetee::detail::isSameTypeFunctor::operator ()	/usr/local/include/aetee/include/aetee/traits/is_same.h	/^    constexpr auto operator()(type_constant_t<T>, type_constant_t<U>)$/;"	f	language:C++	struct:aetee::detail::isSameTypeFunctor
+aetee::detail::isTuple	/usr/local/include/aetee/include/aetee/traits/is_tuple.h	/^struct isTuple : false_constant_t {};$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::isTuple	/usr/local/include/aetee/include/aetee/traits/is_tuple.h	/^struct isTuple<T, std::void_t<typename std::tuple_size<T>::type>> : true_constant_t {};$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::isTupleFunctor	/usr/local/include/aetee/include/aetee/traits/is_tuple.h	/^struct isTupleFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::isTupleFunctor::operator ()	/usr/local/include/aetee/include/aetee/traits/is_tuple.h	/^    constexpr auto operator()(T&& t) const$/;"	f	language:C++	struct:aetee::detail::isTupleFunctor
+aetee::detail::isTupleFunctor::operator ()	/usr/local/include/aetee/include/aetee/traits/is_tuple.h	/^    constexpr auto operator()(type_constant_t<T>) const$/;"	f	language:C++	struct:aetee::detail::isTupleFunctor
+aetee::detail::justFunctor	/usr/local/include/aetee/include/aetee/axioms/just.h	/^struct justFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::justFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/just.h	/^    constexpr auto operator()(T&& t) const$/;"	f	language:C++	struct:aetee::detail::justFunctor
+aetee::detail::justImpl	/usr/local/include/aetee/include/aetee/axioms/just.h	/^struct justImpl {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::justImpl::justImpl	/usr/local/include/aetee/include/aetee/axioms/just.h	/^    constexpr justImpl(T&& t_) : t{std::forward<T>(t_)} {};$/;"	f	language:C++	struct:aetee::detail::justImpl
+aetee::detail::justImpl::operator ()	/usr/local/include/aetee/include/aetee/axioms/just.h	/^    constexpr const T& operator()(...) const$/;"	f	language:C++	struct:aetee::detail::justImpl
+aetee::detail::justImpl::operator ()	/usr/local/include/aetee/include/aetee/axioms/just.h	/^    constexpr T& operator()(...)$/;"	f	language:C++	struct:aetee::detail::justImpl
+aetee::detail::justImpl::operator T	/usr/local/include/aetee/include/aetee/axioms/just.h	/^    constexpr operator T() const$/;"	f	language:C++	struct:aetee::detail::justImpl
+aetee::detail::justImpl::t	/usr/local/include/aetee/include/aetee/axioms/just.h	/^    T t;$/;"	m	language:C++	struct:aetee::detail::justImpl
+aetee::detail::lengthFunctor	/usr/local/include/aetee/include/aetee/traits/length.h	/^struct lengthFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::lengthFunctor::operator ()	/usr/local/include/aetee/include/aetee/traits/length.h	/^    constexpr auto operator()(Tup&& t) const$/;"	f	language:C++	struct:aetee::detail::lengthFunctor
+aetee::detail::lengthFunctor::operator ()	/usr/local/include/aetee/include/aetee/traits/length.h	/^    constexpr auto operator()(type_constant_t<Tup> t) const$/;"	f	language:C++	struct:aetee::detail::lengthFunctor
+aetee::detail::lessEqualFunctor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct lessEqualFunctor {    template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs <= rhs; } };$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::lessEqualFunctor::operator ()	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct lessEqualFunctor {    template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs <= rhs; } };$/;"	f	language:C++	struct:aetee::detail::lessEqualFunctor
+aetee::detail::lessFunctor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct lessFunctor {         template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs < rhs; }  };$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::lessFunctor::operator ()	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct lessFunctor {         template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs < rhs; }  };$/;"	f	language:C++	struct:aetee::detail::lessFunctor
+aetee::detail::logicalAndFunctor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct logicalAndFunctor { template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs && rhs; } };$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::logicalAndFunctor::operator ()	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct logicalAndFunctor { template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs && rhs; } };$/;"	f	language:C++	struct:aetee::detail::logicalAndFunctor
+aetee::detail::logicalNotFunctor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct logicalNotFunctor { template <typename LH>              constexpr auto operator()(LH lhs) const         { return !lhs; }       };$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::logicalNotFunctor::operator ()	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct logicalNotFunctor { template <typename LH>              constexpr auto operator()(LH lhs) const         { return !lhs; }       };$/;"	f	language:C++	struct:aetee::detail::logicalNotFunctor
+aetee::detail::logicalOrFunctor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct logicalOrFunctor {  template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs || rhs; } };$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::logicalOrFunctor::operator ()	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct logicalOrFunctor {  template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs || rhs; } };$/;"	f	language:C++	struct:aetee::detail::logicalOrFunctor
+aetee::detail::mapFunctor	/usr/local/include/aetee/include/aetee/hof/map.h	/^struct mapFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::mapFunctor::impl	/usr/local/include/aetee/include/aetee/hof/map.h	/^    static constexpr auto impl(Tup&& tup, F&& f, idx_sequence_t<I...>)$/;"	f	language:C++	struct:aetee::detail::mapFunctor
+aetee::detail::mapFunctor::operator ()	/usr/local/include/aetee/include/aetee/hof/map.h	/^    constexpr auto operator()(Tup&& tup, F&& f) const$/;"	f	language:C++	struct:aetee::detail::mapFunctor
+aetee::detail::minusFunctor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct minusFunctor {      template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs - rhs; } };$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::minusFunctor::operator ()	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct minusFunctor {      template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs - rhs; } };$/;"	f	language:C++	struct:aetee::detail::minusFunctor
+aetee::detail::modulusFunctor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct modulusFunctor {    template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs % rhs; } };$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::modulusFunctor::operator ()	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct modulusFunctor {    template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs % rhs; } };$/;"	f	language:C++	struct:aetee::detail::modulusFunctor
+aetee::detail::multipliesFunctor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct multipliesFunctor { template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs * rhs; } };$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::multipliesFunctor::operator ()	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct multipliesFunctor { template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs * rhs; } };$/;"	f	language:C++	struct:aetee::detail::multipliesFunctor
+aetee::detail::my_isdigit	/usr/local/include/aetee/include/aetee/math_sugar/operator_c.h	/^static constexpr bool my_isdigit(char c)$/;"	f	language:C++	namespace:aetee::detail
+aetee::detail::my_stoull	/usr/local/include/aetee/include/aetee/math_sugar/operator_c.h	/^static constexpr std::size_t my_stoull(ForwardIt lo, ForwardIt hi)$/;"	f	language:C++	namespace:aetee::detail
+aetee::detail::negateFunctor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct negateFunctor {     template <typename LH>              constexpr auto operator()(LH lhs) const         { return -lhs; }      };$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::negateFunctor::operator ()	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct negateFunctor {     template <typename LH>              constexpr auto operator()(LH lhs) const         { return -lhs; }      };$/;"	f	language:C++	struct:aetee::detail::negateFunctor
+aetee::detail::noneOfFunctor	/usr/local/include/aetee/include/aetee/math_sugar/noneof.h	/^struct noneOfFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::noneOfFunctor::operator ()	/usr/local/include/aetee/include/aetee/math_sugar/noneof.h	/^    constexpr auto operator()(type_constant_t<X>...) const$/;"	f	language:C++	struct:aetee::detail::noneOfFunctor
+aetee::detail::noneOfFunctor::operator ()	/usr/local/include/aetee/include/aetee/math_sugar/noneof.h	/^    constexpr auto operator()(type_c_sequence_t<X...>) const$/;"	f	language:C++	struct:aetee::detail::noneOfFunctor
+aetee::detail::noneOfFunctor::operator ()	/usr/local/include/aetee/include/aetee/math_sugar/noneof.h	/^    constexpr auto operator()(X&&... x) const$/;"	f	language:C++	struct:aetee::detail::noneOfFunctor
+aetee::detail::notEqualToFunctor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct notEqualToFunctor {   template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs != rhs; } };$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::notEqualToFunctor::operator ()	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct notEqualToFunctor {   template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs != rhs; } };$/;"	f	language:C++	struct:aetee::detail::notEqualToFunctor
+aetee::detail::nothingFunctor	/usr/local/include/aetee/include/aetee/axioms/nothing.h	/^struct nothingFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::nothingFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/nothing.h	/^    constexpr auto operator()(...) const$/;"	f	language:C++	struct:aetee::detail::nothingFunctor
+aetee::detail::offsetOfFunctor	/usr/local/include/aetee/include/aetee/traits/offsetof.h	/^struct offsetOfFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::offsetOfFunctor::impl	/usr/local/include/aetee/include/aetee/traits/offsetof.h	/^    static constexpr std::ptrdiff_t impl(type_c_sequence_t<T...>, idx_constant_t<I>)$/;"	f	language:C++	struct:aetee::detail::offsetOfFunctor
+aetee::detail::offsetOfFunctor::operator ()	/usr/local/include/aetee/include/aetee/traits/offsetof.h	/^    constexpr auto operator()(std::tuple<>) const$/;"	f	language:C++	struct:aetee::detail::offsetOfFunctor
+aetee::detail::offsetOfFunctor::operator ()	/usr/local/include/aetee/include/aetee/traits/offsetof.h	/^    constexpr auto operator()(type_c_sequence_t<T...> ts, idx_constant_t<I> i = {}) const$/;"	f	language:C++	struct:aetee::detail::offsetOfFunctor
+aetee::detail::plusFunctor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct plusFunctor {       template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs + rhs; } };$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::plusFunctor::operator ()	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct plusFunctor {       template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs + rhs; } };$/;"	f	language:C++	struct:aetee::detail::plusFunctor
+aetee::detail::prependFunctor	/usr/local/include/aetee/include/aetee/axioms/prepend.h	/^struct prependFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::prependFunctor::impl	/usr/local/include/aetee/include/aetee/axioms/prepend.h	/^    static constexpr auto impl(Tup&& tup, idx_sequence_t<I...>, X&&... x)$/;"	f	language:C++	struct:aetee::detail::prependFunctor
+aetee::detail::prependFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/prepend.h	/^    constexpr auto operator()(Tup&& tup, X&&... x) const$/;"	f	language:C++	struct:aetee::detail::prependFunctor
+aetee::detail::rebindDirectFunctor	/usr/local/include/aetee/include/aetee/axioms/rebind.h	/^struct rebindDirectFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::rebindDirectFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/rebind.h	/^    constexpr auto operator()(std::tuple<type_constant_t<A>...>) const$/;"	f	language:C++	struct:aetee::detail::rebindDirectFunctor
+aetee::detail::rebindFunctor	/usr/local/include/aetee/include/aetee/axioms/rebind.h	/^struct rebindFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::rebindFunctor::direct	/usr/local/include/aetee/include/aetee/axioms/rebind.h	/^    static constexpr auto direct = rebindDirectFunctor<N>{};$/;"	m	language:C++	struct:aetee::detail::rebindFunctor
+aetee::detail::rebindFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/rebind.h	/^    constexpr auto operator()(type_constant_t<O<A...>>) const$/;"	f	language:C++	struct:aetee::detail::rebindFunctor
+aetee::detail::recursiveFlatten	/usr/local/include/aetee/include/aetee/axioms/flatten.h	/^static constexpr auto recursiveFlatten = flattenRecursivelyFunctor{};$/;"	m	language:C++	namespace:aetee::detail
+aetee::detail::replicateFunctor	/usr/local/include/aetee/include/aetee/axioms/replicate.h	/^struct replicateFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::replicateFunctor::impl	/usr/local/include/aetee/include/aetee/axioms/replicate.h	/^    static constexpr auto impl(T&& val, idx_sequence_t<I...>)$/;"	f	language:C++	struct:aetee::detail::replicateFunctor
+aetee::detail::replicateFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/replicate.h	/^    constexpr auto operator()(T&& val, N&& n) const$/;"	f	language:C++	struct:aetee::detail::replicateFunctor
+aetee::detail::reverseFunctor	/usr/local/include/aetee/include/aetee/axioms/reverse.h	/^struct reverseFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::reverseFunctor::impl	/usr/local/include/aetee/include/aetee/axioms/reverse.h	/^    static constexpr auto impl(Tup&& tup, idx_sequence_t<I...> idxes)$/;"	f	language:C++	struct:aetee::detail::reverseFunctor
+aetee::detail::reverseFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/reverse.h	/^    constexpr auto operator()(Tup&& tup) const$/;"	f	language:C++	struct:aetee::detail::reverseFunctor
+aetee::detail::selectFunctor	/usr/local/include/aetee/include/aetee/axioms/select.h	/^struct selectFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::selectFunctor::impl	/usr/local/include/aetee/include/aetee/axioms/select.h	/^    static constexpr decltype(auto) impl(idx_constant_t<0>, H&& head, T&&...)$/;"	f	language:C++	struct:aetee::detail::selectFunctor
+aetee::detail::selectFunctor::impl	/usr/local/include/aetee/include/aetee/axioms/select.h	/^    static constexpr decltype(auto) impl(idx_constant_t<I>, H&&, T&&... tail)$/;"	f	language:C++	struct:aetee::detail::selectFunctor
+aetee::detail::selectFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/select.h	/^    constexpr decltype(auto) operator()(bool_constant_t<C>, A&& a, B&& b) const$/;"	f	language:C++	struct:aetee::detail::selectFunctor
+aetee::detail::selectFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/select.h	/^    constexpr decltype(auto) operator()(idx_constant_t<I> i, A&&... args) const$/;"	f	language:C++	struct:aetee::detail::selectFunctor
+aetee::detail::selectMapFunctor	/usr/local/include/aetee/include/aetee/axioms/select.h	/^struct selectMapFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::selectMapFunctor::impl	/usr/local/include/aetee/include/aetee/axioms/select.h	/^    constexpr decltype(auto) impl(idx_sequence_t<I...>, X&&... x) const$/;"	f	language:C++	struct:aetee::detail::selectMapFunctor
+aetee::detail::selectMapFunctor::impl	/usr/local/include/aetee/include/aetee/axioms/select.h	/^    constexpr decltype(auto) impl(idx_sequence_t<I...>, X&&... x)$/;"	f	language:C++	struct:aetee::detail::selectMapFunctor
+aetee::detail::selectMapFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/select.h	/^    constexpr decltype(auto) operator()(X&&... x) const$/;"	f	language:C++	struct:aetee::detail::selectMapFunctor
+aetee::detail::selectMapFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/select.h	/^    constexpr decltype(auto) operator()(X&&... x)$/;"	f	language:C++	struct:aetee::detail::selectMapFunctor
+aetee::detail::selectMapFunctor::p	/usr/local/include/aetee/include/aetee/axioms/select.h	/^    P p;$/;"	m	language:C++	struct:aetee::detail::selectMapFunctor
+aetee::detail::selectMapFunctor::selectMapFunctor	/usr/local/include/aetee/include/aetee/axioms/select.h	/^    constexpr selectMapFunctor(P&& pIn, A&&... aIn)$/;"	f	language:C++	struct:aetee::detail::selectMapFunctor
+aetee::detail::selectMapFunctor::transformers	/usr/local/include/aetee/include/aetee/axioms/select.h	/^    std::tuple<A...> transformers;$/;"	m	language:C++	struct:aetee::detail::selectMapFunctor
+aetee::detail::selectMapMakerFunctor	/usr/local/include/aetee/include/aetee/axioms/select.h	/^struct selectMapMakerFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::selectMapMakerFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/select.h	/^    constexpr auto operator()(P&& p, A&&... a) const$/;"	f	language:C++	struct:aetee::detail::selectMapMakerFunctor
+aetee::detail::sizeOfFunctor	/usr/local/include/aetee/include/aetee/traits/sizeof.h	/^struct sizeOfFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::sizeOfFunctor::operator ()	/usr/local/include/aetee/include/aetee/traits/sizeof.h	/^    constexpr auto operator()(T&&) const$/;"	f	language:C++	struct:aetee::detail::sizeOfFunctor
+aetee::detail::sizeOfFunctor::operator ()	/usr/local/include/aetee/include/aetee/traits/sizeof.h	/^    constexpr auto operator()(type_constant_t<T>) const$/;"	f	language:C++	struct:aetee::detail::sizeOfFunctor
+aetee::detail::sliceFunctor	/usr/local/include/aetee/include/aetee/axioms/slice.h	/^struct sliceFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::sliceFunctor::impl	/usr/local/include/aetee/include/aetee/axioms/slice.h	/^    static constexpr auto impl(Tup&& tup, idx_sequence_t<I...>)$/;"	f	language:C++	struct:aetee::detail::sliceFunctor
+aetee::detail::sliceFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/slice.h	/^    constexpr auto operator()(Tup&& tup, Lo lo, Hi hi = {}, Step step = {}) const$/;"	f	language:C++	struct:aetee::detail::sliceFunctor
+aetee::detail::stepFilterFunctor	/usr/local/include/aetee/include/aetee/axioms/slice.h	/^struct stepFilterFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::stepFilterFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/slice.h	/^    constexpr auto operator()(T val) const$/;"	f	language:C++	struct:aetee::detail::stepFilterFunctor
+aetee::detail::takeBackFunctor	/usr/local/include/aetee/include/aetee/axioms/take.h	/^struct takeBackFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::takeBackFunctor::impl	/usr/local/include/aetee/include/aetee/axioms/take.h	/^    static constexpr auto impl(Tup&& tup, idx_sequence_t<I...>)$/;"	f	language:C++	struct:aetee::detail::takeBackFunctor
+aetee::detail::takeBackFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/take.h	/^    constexpr auto operator()(Tup&& tup, idx_constant_t<N> n) const$/;"	f	language:C++	struct:aetee::detail::takeBackFunctor
+aetee::detail::takeFrontFunctor	/usr/local/include/aetee/include/aetee/axioms/take.h	/^struct takeFrontFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::takeFrontFunctor::impl	/usr/local/include/aetee/include/aetee/axioms/take.h	/^    static constexpr auto impl(Tup&& tup, idx_sequence_t<I...>)$/;"	f	language:C++	struct:aetee::detail::takeFrontFunctor
+aetee::detail::takeFrontFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/take.h	/^    constexpr auto operator()(Tup&& tup, idx_constant_t<N> n) const$/;"	f	language:C++	struct:aetee::detail::takeFrontFunctor
+aetee::detail::toCFunctor	/usr/local/include/aetee/include/aetee/axioms/to_c.h	/^struct toCFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::toCFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/to_c.h	/^    constexpr auto operator()(T&& val) const$/;"	f	language:C++	struct:aetee::detail::toCFunctor
+aetee::detail::toCResolverFunctor	/usr/local/include/aetee/include/aetee/axioms/to_c.h	/^struct toCResolverFunctor<T, V, std::void_t<std::is_integral<T>>> {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::toCResolverFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/to_c.h	/^    constexpr auto operator()() const$/;"	f	language:C++	struct:aetee::detail::toCResolverFunctor
+aetee::detail::tupifyFunctor	/usr/local/include/aetee/include/aetee/axioms/tupify.h	/^struct tupifyFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::tupifyFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/tupify.h	/^    constexpr auto operator()(nothing_t) const$/;"	f	language:C++	struct:aetee::detail::tupifyFunctor
+aetee::detail::tupifyFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/tupify.h	/^    constexpr auto operator()(T&&... t) const$/;"	f	language:C++	struct:aetee::detail::tupifyFunctor
+aetee::detail::tupifyFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/tupify.h	/^    constexpr auto operator()(Tup&& t) const$/;"	f	language:C++	struct:aetee::detail::tupifyFunctor
+aetee::detail::typeAtResolverFunctor	/usr/local/include/aetee/include/aetee/type/type_at.h	/^struct typeAtResolverFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::typeAtResolverFunctor	/usr/local/include/aetee/include/aetee/type/type_at.h	/^struct typeAtResolverFunctor<0, H, L...> {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::typeIndexResolverFunctor	/usr/local/include/aetee/include/aetee/type/type_idx.h	/^struct typeIndexResolverFunctor<T, T, L...> {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::typeIndexResolverFunctor	/usr/local/include/aetee/include/aetee/type/type_idx.h	/^struct typeIndexResolverFunctor<T, U, L...> {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::typeIndexResolverFunctor	/usr/local/include/aetee/include/aetee/type/type_idx.h	/^struct typeIndexResolverFunctor<T> {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::typeIndexResolverFunctor::value	/usr/local/include/aetee/include/aetee/type/type_idx.h	/^    static constexpr std::size_t value = 0;$/;"	m	language:C++	struct:aetee::detail::typeIndexResolverFunctor
+aetee::detail::typeIndexResolverFunctor::value	/usr/local/include/aetee/include/aetee/type/type_idx.h	/^    static constexpr std::size_t value = 0;$/;"	m	language:C++	struct:aetee::detail::typeIndexResolverFunctor
+aetee::detail::typeIndexResolverFunctor::value	/usr/local/include/aetee/include/aetee/type/type_idx.h	/^    static constexpr std::size_t value = 1 + typeIndexResolverFunctor<T, L...>::value;$/;"	m	language:C++	struct:aetee::detail::typeIndexResolverFunctor
+aetee::detail::valueFunctor	/usr/local/include/aetee/include/aetee/axioms/value.h	/^struct valueFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::valueFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/value.h	/^    constexpr auto operator()(T&& t) const$/;"	f	language:C++	struct:aetee::detail::valueFunctor
+aetee::detail::valueResolvingFunctor	/usr/local/include/aetee/include/aetee/axioms/value.h	/^struct valueResolvingFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::valueResolvingFunctor	/usr/local/include/aetee/include/aetee/axioms/value.h	/^struct valueResolvingFunctor<T, std::void_t<decltype(std::decay_t<T>::value)>> {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::valueResolvingFunctor	/usr/local/include/aetee/include/aetee/axioms/value.h	/^struct valueResolvingFunctor<type_constant_t<T>> {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::valueResolvingFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/value.h	/^    constexpr decltype(auto) operator()(T&& t) const$/;"	f	language:C++	struct:aetee::detail::valueResolvingFunctor
+aetee::detail::valueResolvingFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/value.h	/^    constexpr decltype(auto) operator()(T&& t) const$/;"	f	language:C++	struct:aetee::detail::valueResolvingFunctor
+aetee::detail::valueResolvingFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/value.h	/^    constexpr decltype(auto) operator()(type_constant_t<T>) const$/;"	f	language:C++	struct:aetee::detail::valueResolvingFunctor
+aetee::detail::zipFunctor	/usr/local/include/aetee/include/aetee/axioms/zip.h	/^struct zipFunctor {$/;"	s	language:C++	namespace:aetee::detail
+aetee::detail::zipFunctor::extractElement	/usr/local/include/aetee/include/aetee/axioms/zip.h	/^    constexpr auto extractElement(idx_constant_t<X>, Tup&&... tup) const$/;"	f	language:C++	struct:aetee::detail::zipFunctor
+aetee::detail::zipFunctor::impl	/usr/local/include/aetee/include/aetee/axioms/zip.h	/^    constexpr auto impl(idx_sequence_t<I...>, Tup&&... tup) const$/;"	f	language:C++	struct:aetee::detail::zipFunctor
+aetee::detail::zipFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/zip.h	/^    constexpr auto operator()() const$/;"	f	language:C++	struct:aetee::detail::zipFunctor
+aetee::detail::zipFunctor::operator ()	/usr/local/include/aetee/include/aetee/axioms/zip.h	/^    constexpr auto operator()(Tup&&... tup) const$/;"	f	language:C++	struct:aetee::detail::zipFunctor
+aetee::divides	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^static constexpr auto divides = detail::dividesFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::drop	/usr/local/include/aetee/include/aetee/axioms/drop.h	/^static constexpr auto drop = detail::dropFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::dropBack	/usr/local/include/aetee/include/aetee/axioms/drop.h	/^static constexpr auto dropBack = detail::dropBackFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::dropFront	/usr/local/include/aetee/include/aetee/axioms/drop.h	/^static constexpr auto& dropFront = drop;$/;"	m	language:C++	namespace:aetee
+aetee::equal_to	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^static constexpr auto equal_to = detail::equalToFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::explode	/usr/local/include/aetee/include/aetee/hof/explode.h	/^static constexpr auto explode = detail::explodeFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::false_c	/usr/local/include/aetee/include/aetee/int_c/int_c.h	/^static constexpr auto false_c = bool_c<false>;$/;"	m	language:C++	namespace:aetee
+aetee::filter	/usr/local/include/aetee/include/aetee/hof/filter.h	/^static constexpr auto filter = detail::filterFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::flatten	/usr/local/include/aetee/include/aetee/axioms/flatten.h	/^static constexpr auto flatten = detail::flattenFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::fold	/usr/local/include/aetee/include/aetee/hof/fold.h	/^static constexpr auto fold = detail::foldLeftFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::foldRight	/usr/local/include/aetee/include/aetee/hof/fold.h	/^static constexpr auto foldRight = detail::foldRightFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::for_each	/usr/local/include/aetee/include/aetee/hof/for_each.h	/^static constexpr auto for_each = detail::forEachFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::greater	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^static constexpr auto greater = detail::greaterFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::greater_equal	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^static constexpr auto greater_equal = detail::greaterEqualFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::identity	/usr/local/include/aetee/include/aetee/axioms/identity.h	/^static constexpr auto identity = detail::identityFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::idx_c	/usr/local/include/aetee/include/aetee/int_c/int_c.h	/^static constexpr auto idx_c = idx_t<I>{};$/;"	m	language:C++	namespace:aetee
+aetee::idx_c_sequence	/usr/local/include/aetee/include/aetee/int_c/int_c_sequence.h	/^static constexpr auto idx_c_sequence = idx_c_sequence_t<I...>{};$/;"	m	language:C++	namespace:aetee
+aetee::idx_c_sequence_for	/usr/local/include/aetee/include/aetee/int_c/int_c_sequence.h	/^static constexpr auto idx_c_sequence_for = detail::generateIndexSequence(arity_c<C...>);$/;"	m	language:C++	namespace:aetee
+aetee::idx_c_sequence_of	/usr/local/include/aetee/include/aetee/int_c/int_c_sequence.h	/^static constexpr auto idx_c_sequence_of = detail::generateIndexSequence(len_c<Tup>);$/;"	m	language:C++	namespace:aetee
+aetee::idx_c_sequence_til	/usr/local/include/aetee/include/aetee/int_c/int_c_sequence.h	/^static constexpr auto idx_c_sequence_til = detail::generateIndexSequence(idx_c<N>);$/;"	m	language:C++	namespace:aetee
+aetee::int_c	/usr/local/include/aetee/include/aetee/int_c/int_c.h	/^static constexpr auto int_c = int_t<T, v>{};$/;"	m	language:C++	namespace:aetee
+aetee::invoke	/usr/local/include/aetee/include/aetee/hof/invoke.h	/^static constexpr auto invoke = detail::invokeFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::is_same	/usr/local/include/aetee/include/aetee/traits/is_same.h	/^static constexpr auto is_same = detail::isSameTypeFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::is_tuple	/usr/local/include/aetee/include/aetee/traits/is_tuple.h	/^static constexpr auto is_tuple = detail::isTupleFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::just	/usr/local/include/aetee/include/aetee/axioms/just.h	/^static constexpr auto just = detail::justFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::length	/usr/local/include/aetee/include/aetee/traits/length.h	/^static constexpr auto length = detail::lengthFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::len_c	/usr/local/include/aetee/include/aetee/int_c/int_c.h	/^static constexpr auto len_c = idx_c<std::tuple_size<std::decay_t<Tup>>::value>;$/;"	m	language:C++	namespace:aetee
+aetee::less	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^static constexpr auto less = detail::lessFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::less_equal	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^static constexpr auto less_equal = detail::lessEqualFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::logical_and	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^static constexpr auto logical_and = detail::logicalAndFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::logical_not	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^static constexpr auto logical_not = detail::logicalNotFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::logical_or	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^static constexpr auto logical_or = detail::logicalOrFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::map	/usr/local/include/aetee/include/aetee/hof/map.h	/^static constexpr auto map = detail::mapFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::minus	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^static constexpr auto minus = detail::minusFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::modulus	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^static constexpr auto modulus = detail::modulusFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::multiplies	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^static constexpr auto multiplies = detail::multipliesFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::negate	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^static constexpr auto negate = detail::negateFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::noneof	/usr/local/include/aetee/include/aetee/math_sugar/noneof.h	/^static constexpr auto noneof = detail::noneOfFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::nothing	/usr/local/include/aetee/include/aetee/axioms/nothing.h	/^static constexpr auto nothing = detail::nothingFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::not_equal_to	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^static constexpr auto not_equal_to = detail::notEqualToFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::offsetof_	/usr/local/include/aetee/include/aetee/traits/offsetof.h	/^static constexpr auto offsetof_ = detail::offsetOfFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::operator !	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator!(int_t<T, V>)$/;"	f	language:C++	namespace:aetee
+aetee::operator !=	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator!=(int_t<T, V>, int_t<U, W>)$/;"	f	language:C++	namespace:aetee
+aetee::operator !=	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator!=(int_t<T, V>, U&& w)$/;"	f	language:C++	namespace:aetee
+aetee::operator %	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator%(int_t<T, V>, int_t<U, W>)$/;"	f	language:C++	namespace:aetee
+aetee::operator %	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator%(int_t<T, V>, U&& w)$/;"	f	language:C++	namespace:aetee
+aetee::operator &	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator&(int_t<T, V>, int_t<U, W>)$/;"	f	language:C++	namespace:aetee
+aetee::operator &	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator&(int_t<T, V>, U&& w)$/;"	f	language:C++	namespace:aetee
+aetee::operator &&	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator&&(int_t<T, V>, int_t<U, W>)$/;"	f	language:C++	namespace:aetee
+aetee::operator &&	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator&&(int_t<T, V>, U&& w)$/;"	f	language:C++	namespace:aetee
+aetee::operator *	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator*(int_t<T, V>, int_t<U, W>)$/;"	f	language:C++	namespace:aetee
+aetee::operator *	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator*(int_t<T, V>, U&& w)$/;"	f	language:C++	namespace:aetee
+aetee::operator +	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator+(int_t<T, V>)$/;"	f	language:C++	namespace:aetee
+aetee::operator +	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator+(int_t<T, V>, int_t<U, W>)$/;"	f	language:C++	namespace:aetee
+aetee::operator +	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator+(int_t<T, V>, U&& w)$/;"	f	language:C++	namespace:aetee
+aetee::operator ++	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator++(int_t<T, V>)$/;"	f	language:C++	namespace:aetee
+aetee::operator -	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator-(int_t<T, V>)$/;"	f	language:C++	namespace:aetee
+aetee::operator -	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator-(int_t<T, V>, int_t<U, W>)$/;"	f	language:C++	namespace:aetee
+aetee::operator -	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator-(int_t<T, V>, U&& w)$/;"	f	language:C++	namespace:aetee
+aetee::operator --	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator--(int_t<T, V>)$/;"	f	language:C++	namespace:aetee
+aetee::operator /	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator\/(int_t<T, V>, int_t<U, W>)$/;"	f	language:C++	namespace:aetee
+aetee::operator /	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator\/(int_t<T, V>, U&& w)$/;"	f	language:C++	namespace:aetee
+aetee::operator <	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator<(int_t<T, V>, int_t<U, W>)$/;"	f	language:C++	namespace:aetee
+aetee::operator <	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator<(int_t<T, V>, U&& w)$/;"	f	language:C++	namespace:aetee
+aetee::operator <<	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator<<(int_t<T, V>, int_t<U, W>)$/;"	f	language:C++	namespace:aetee
+aetee::operator <<	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator<<(int_t<T, V>, U&& w)$/;"	f	language:C++	namespace:aetee
+aetee::operator <=	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator<=(int_t<T, V>, int_t<U, W>)$/;"	f	language:C++	namespace:aetee
+aetee::operator <=	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator<=(int_t<T, V>, U&& w)$/;"	f	language:C++	namespace:aetee
+aetee::operator ==	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator==(int_t<T, V>, int_t<U, W>)$/;"	f	language:C++	namespace:aetee
+aetee::operator ==	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator==(int_t<T, V>, U&& w)$/;"	f	language:C++	namespace:aetee
+aetee::operator >	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator>(int_t<T, V>, int_t<U, W>)$/;"	f	language:C++	namespace:aetee
+aetee::operator >	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator>(int_t<T, V>, U&& w)$/;"	f	language:C++	namespace:aetee
+aetee::operator >=	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator>=(int_t<T, V>, int_t<U, W>)$/;"	f	language:C++	namespace:aetee
+aetee::operator >=	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator>=(int_t<T, V>, U&& w)$/;"	f	language:C++	namespace:aetee
+aetee::operator >>	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator>>(int_t<T, V>, int_t<U, W>)$/;"	f	language:C++	namespace:aetee
+aetee::operator >>	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator>>(int_t<T, V>, U&& w)$/;"	f	language:C++	namespace:aetee
+aetee::operator ^	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator^(int_t<T, V>, int_t<U, W>)$/;"	f	language:C++	namespace:aetee
+aetee::operator ^	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator^(int_t<T, V>, U&& w)$/;"	f	language:C++	namespace:aetee
+aetee::operator |	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator|(int_t<T, V>, int_t<U, W>)$/;"	f	language:C++	namespace:aetee
+aetee::operator |	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator|(int_t<T, V>, U&& w)$/;"	f	language:C++	namespace:aetee
+aetee::operator ||	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator||(int_t<T, V>, int_t<U, W>)$/;"	f	language:C++	namespace:aetee
+aetee::operator ||	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator||(int_t<T, V>, U&& w)$/;"	f	language:C++	namespace:aetee
+aetee::operator ~	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator~(int_t<T, V>)$/;"	f	language:C++	namespace:aetee
+aetee::plus	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^static constexpr auto plus = detail::plusFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::prepend	/usr/local/include/aetee/include/aetee/axioms/prepend.h	/^static constexpr auto prepend = detail::prependFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::rebind	/usr/local/include/aetee/include/aetee/axioms/rebind.h	/^static constexpr auto rebind = detail::rebindFunctor<N>{};$/;"	m	language:C++	namespace:aetee
+aetee::replicate	/usr/local/include/aetee/include/aetee/axioms/replicate.h	/^static constexpr auto replicate = detail::replicateFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::reverse	/usr/local/include/aetee/include/aetee/axioms/reverse.h	/^static constexpr auto reverse = detail::reverseFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::select	/usr/local/include/aetee/include/aetee/axioms/select.h	/^static constexpr auto select = detail::selectFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::selectMap	/usr/local/include/aetee/include/aetee/axioms/select.h	/^static constexpr auto selectMap = detail::selectMapMakerFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::sizeof_	/usr/local/include/aetee/include/aetee/traits/sizeof.h	/^static constexpr auto sizeof_ = detail::sizeOfFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::slice	/usr/local/include/aetee/include/aetee/axioms/slice.h	/^static constexpr auto slice = detail::sliceFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::take	/usr/local/include/aetee/include/aetee/axioms/take.h	/^static constexpr auto take = detail::takeFrontFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::takeBack	/usr/local/include/aetee/include/aetee/axioms/take.h	/^static constexpr auto takeBack = detail::takeBackFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::takeFront	/usr/local/include/aetee/include/aetee/axioms/take.h	/^static constexpr auto& takeFront = take;$/;"	m	language:C++	namespace:aetee
+aetee::to_c	/usr/local/include/aetee/include/aetee/axioms/to_c.h	/^static constexpr auto to_c = detail::toCFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::true_c	/usr/local/include/aetee/include/aetee/int_c/int_c.h	/^static constexpr auto true_c = bool_c<true>;$/;"	m	language:C++	namespace:aetee
+aetee::tupify	/usr/local/include/aetee/include/aetee/axioms/tupify.h	/^static constexpr auto tupify = detail::tupifyFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::type_at_c	/usr/local/include/aetee/include/aetee/type/type_at.h	/^template <std::size_t I, typename... L> static constexpr auto type_at_c = type_c<type_at_t<I, L...>>;$/;"	m	language:C++	namespace:aetee
+aetee::type_c	/usr/local/include/aetee/include/aetee/type/type_c.h	/^static constexpr auto type_c = type_constant_t<T>{};$/;"	m	language:C++	namespace:aetee
+aetee::type_constant_t	/usr/local/include/aetee/include/aetee/type/type_c.h	/^struct type_constant_t { using type = T; };$/;"	s	language:C++	namespace:aetee
+aetee::type_c_sequence	/usr/local/include/aetee/include/aetee/type/type_c_sequence.h	/^static constexpr auto type_c_sequence = type_c_sequence_t<T...>{};$/;"	m	language:C++	namespace:aetee
+aetee::type_exists_c	/usr/local/include/aetee/include/aetee/type/type_exists.h	/^static constexpr auto type_exists_c = bool_c<(type_idx_c<T, L...> != arity_c<L...>)>;$/;"	m	language:C++	namespace:aetee
+aetee::type_idx_c	/usr/local/include/aetee/include/aetee/type/type_idx.h	/^static constexpr auto type_idx_c = idx_c<detail::typeIndexResolverFunctor<T, L...>>;$/;"	m	language:C++	namespace:aetee
+aetee::value	/usr/local/include/aetee/include/aetee/axioms/value.h	/^static constexpr auto value = detail::valueFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::zip	/usr/local/include/aetee/include/aetee/axioms/zip.h	/^static constexpr auto zip = detail::zipFunctor{};$/;"	m	language:C++	namespace:aetee
+aetee::_c	/usr/local/include/aetee/include/aetee/math_sugar/operator_c.h	/^constexpr auto operator""_c()$/;"	f	language:C++	namespace:aetee
+aetee_version_major	/usr/local/include/aetee/include/aetee/version.h	/^EXTERNC int aetee_version_major();$/;"	p	language:C++
+aetee_version_minor	/usr/local/include/aetee/include/aetee/version.h	/^EXTERNC int aetee_version_minor();$/;"	p	language:C++
+aetee_version_patch	/usr/local/include/aetee/include/aetee/version.h	/^EXTERNC int aetee_version_patch();$/;"	p	language:C++
+alignOfFunctor	/usr/local/include/aetee/include/aetee/traits/alignof.h	/^struct alignOfFunctor {$/;"	s	language:C++	namespace:aetee::detail
+alignof_	/usr/local/include/aetee/include/aetee/traits/alignof.h	/^static constexpr auto alignof_ = detail::alignOfFunctor{};$/;"	m	language:C++	namespace:aetee
+allof	/usr/local/include/aetee/include/aetee/math_sugar/allof.h	/^static constexpr auto allof = detail::allOfFunctor{};$/;"	m	language:C++	namespace:aetee
+allOfFunctor	/usr/local/include/aetee/include/aetee/math_sugar/allof.h	/^struct allOfFunctor {$/;"	s	language:C++	namespace:aetee::detail
+anyof	/usr/local/include/aetee/include/aetee/math_sugar/anyof.h	/^static constexpr auto anyof = detail::anyOfFunctor{};$/;"	m	language:C++	namespace:aetee
+anyOfFunctor	/usr/local/include/aetee/include/aetee/math_sugar/anyof.h	/^struct anyOfFunctor {$/;"	s	language:C++	namespace:aetee::detail
+append	/usr/local/include/aetee/include/aetee/axioms/append.h	/^static constexpr auto append = detail::appendFunctor{};$/;"	m	language:C++	namespace:aetee
+appendFunctor	/usr/local/include/aetee/include/aetee/axioms/append.h	/^struct appendFunctor {$/;"	s	language:C++	namespace:aetee::detail
+apply	/usr/local/include/aetee/include/aetee/hof/apply.h	/^static constexpr auto apply = detail::applyFunctor{};$/;"	m	language:C++	namespace:aetee
+applyFunctor	/usr/local/include/aetee/include/aetee/hof/apply.h	/^struct applyFunctor {$/;"	s	language:C++	namespace:aetee::detail
+arity_c	/usr/local/include/aetee/include/aetee/int_c/int_c.h	/^static constexpr auto arity_c = idx_c<sizeof...(T)>;$/;"	m	language:C++	namespace:aetee
+asFunctorFunctor	/usr/local/include/aetee/include/aetee/hof/as_functor.h	/^struct asFunctorFunctor {$/;"	s	language:C++	namespace:aetee::detail
+as_functor	/usr/local/include/aetee/include/aetee/hof/as_functor.h	/^static constexpr auto as_functor = detail::asFunctorFunctor<Predicate>{};$/;"	m	language:C++	namespace:aetee
+binaryArith	/usr/local/include/aetee/tools/bin/operator-generator.py	/^binaryArith = ["+", "-", "*", "%", "\/", "&", "|", "^", "<<", ">>"]$/;"	v	language:Python
+bitAndFunctor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct bitAndFunctor { template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs & rhs; } };$/;"	s	language:C++	namespace:aetee::detail
+bitOrFunctor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct bitOrFunctor {  template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs | rhs; } };$/;"	s	language:C++	namespace:aetee::detail
+bitXorFunctor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct bitXorFunctor { template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs ^ rhs; } };$/;"	s	language:C++	namespace:aetee::detail
+bit_and	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^static constexpr auto bit_and = detail::bitAndFunctor{};$/;"	m	language:C++	namespace:aetee
+bit_or	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^static constexpr auto bit_or = detail::bitOrFunctor{};$/;"	m	language:C++	namespace:aetee
+bit_xor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^static constexpr auto bit_xor = detail::bitXorFunctor{};$/;"	m	language:C++	namespace:aetee
+bool_c	/usr/local/include/aetee/include/aetee/int_c/int_c.h	/^static constexpr auto bool_c = bool_t<B>{};$/;"	m	language:C++	namespace:aetee
+cast	/usr/local/include/aetee/include/aetee/traits/cast.h	/^static constexpr auto cast = detail::castFunctor<U>{};$/;"	m	language:C++	namespace:aetee
+castFunctor	/usr/local/include/aetee/include/aetee/traits/cast.h	/^struct castFunctor {$/;"	s	language:C++	namespace:aetee::detail
+clamp	/usr/local/include/aetee/include/aetee/math_sugar/clamp.h	/^static constexpr auto clamp = detail::clampFunctor{};$/;"	m	language:C++	namespace:aetee
+clampFunctor	/usr/local/include/aetee/include/aetee/math_sugar/clamp.h	/^struct clampFunctor {$/;"	s	language:C++	namespace:aetee::detail
+compose	/usr/local/include/aetee/include/aetee/hof/compose.h	/^static constexpr auto compose = detail::composeFunctor{};$/;"	m	language:C++	namespace:aetee
+composedFunctor	/usr/local/include/aetee/include/aetee/hof/compose.h	/^    constexpr composedFunctor(F&& f_, G&& g_)$/;"	f	language:C++	struct:aetee::detail::composedFunctor
+composedFunctor	/usr/local/include/aetee/include/aetee/hof/compose.h	/^struct composedFunctor {$/;"	s	language:C++	namespace:aetee::detail
+composeFunctor	/usr/local/include/aetee/include/aetee/hof/compose.h	/^struct composeFunctor {$/;"	s	language:C++	namespace:aetee::detail
+composeTwo	/usr/local/include/aetee/include/aetee/hof/compose.h	/^struct composeTwo {$/;"	s	language:C++	namespace:aetee::detail
+concat	/usr/local/include/aetee/include/aetee/axioms/concat.h	/^static constexpr auto concat = detail::concatFunctor{};$/;"	m	language:C++	namespace:aetee
+concatFunctor	/usr/local/include/aetee/include/aetee/axioms/concat.h	/^struct concatFunctor {$/;"	s	language:C++	namespace:aetee::detail
+concatTwoFunctor	/usr/local/include/aetee/include/aetee/axioms/concat.h	/^struct concatTwoFunctor {$/;"	s	language:C++	namespace:aetee::detail
+curried	/usr/local/include/aetee/include/aetee/hof/curry.h	/^    constexpr curried(F&& f_, A&&... a_) : f{std::forward<F>(f_)}, a{std::forward<A>(a_)...} {};$/;"	f	language:C++	struct:aetee::detail::curried
+curried	/usr/local/include/aetee/include/aetee/hof/curry.h	/^struct curried {$/;"	s	language:C++	namespace:aetee::detail
+curry	/usr/local/include/aetee/include/aetee/hof/curry.h	/^static constexpr auto curry = detail::curryFunctor{};$/;"	m	language:C++	namespace:aetee
+curryBack	/usr/local/include/aetee/include/aetee/hof/curry.h	/^static constexpr auto curryBack = detail::curryBackFunctor{};$/;"	m	language:C++	namespace:aetee
+curryBackFunctor	/usr/local/include/aetee/include/aetee/hof/curry.h	/^struct curryBackFunctor {$/;"	s	language:C++	namespace:aetee::detail
+curryFunctor	/usr/local/include/aetee/include/aetee/hof/curry.h	/^struct curryFunctor {$/;"	s	language:C++	namespace:aetee::detail
+decltypeFunctor	/usr/local/include/aetee/include/aetee/traits/decltype.h	/^struct decltypeFunctor {$/;"	s	language:C++	namespace:aetee::detail
+decltype_	/usr/local/include/aetee/include/aetee/traits/decltype.h	/^static constexpr auto decltype_ = detail::decltypeFunctor{};$/;"	m	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/axioms/append.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/axioms/concat.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/axioms/drop.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/axioms/flatten.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/axioms/identity.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/axioms/just.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/axioms/nothing.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/axioms/prepend.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/axioms/rebind.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/axioms/replicate.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/axioms/reverse.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/axioms/select.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/axioms/slice.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/axioms/take.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/axioms/to_c.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/axioms/tupify.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/axioms/value.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/axioms/zip.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/hof/apply.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/hof/as_functor.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/hof/compose.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/hof/curry.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/hof/explode.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/hof/filter.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/hof/fold.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/hof/for_each.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/hof/invoke.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/hof/map.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/int_c/int_c_sequence.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/math_sugar/allof.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/math_sugar/anyof.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/math_sugar/clamp.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/math_sugar/noneof.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/math_sugar/operator_c.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/traits/alignof.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/traits/cast.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/traits/decltype.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/traits/is_same.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/traits/is_tuple.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/traits/length.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/traits/offsetof.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/traits/sizeof.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/type/type_at.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+detail	/usr/local/include/aetee/include/aetee/type/type_idx.h	/^namespace detail {$/;"	n	language:C++	namespace:aetee
+direct	/usr/local/include/aetee/include/aetee/axioms/rebind.h	/^    static constexpr auto direct = rebindDirectFunctor<N>{};$/;"	m	language:C++	struct:aetee::detail::rebindFunctor
+divides	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^static constexpr auto divides = detail::dividesFunctor{};$/;"	m	language:C++	namespace:aetee
+dividesFunctor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct dividesFunctor {    template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs \/ rhs; } };$/;"	s	language:C++	namespace:aetee::detail
+drop	/usr/local/include/aetee/include/aetee/axioms/drop.h	/^static constexpr auto drop = detail::dropFunctor{};$/;"	m	language:C++	namespace:aetee
+dropBack	/usr/local/include/aetee/include/aetee/axioms/drop.h	/^static constexpr auto dropBack = detail::dropBackFunctor{};$/;"	m	language:C++	namespace:aetee
+dropBackFunctor	/usr/local/include/aetee/include/aetee/axioms/drop.h	/^struct dropBackFunctor {$/;"	s	language:C++	namespace:aetee::detail
+dropFront	/usr/local/include/aetee/include/aetee/axioms/drop.h	/^static constexpr auto& dropFront = drop;$/;"	m	language:C++	namespace:aetee
+dropFunctor	/usr/local/include/aetee/include/aetee/axioms/drop.h	/^struct dropFunctor {$/;"	s	language:C++	namespace:aetee::detail
+equalToFunctor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct equalToFunctor {      template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs == rhs; } };$/;"	s	language:C++	namespace:aetee::detail
+equal_to	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^static constexpr auto equal_to = detail::equalToFunctor{};$/;"	m	language:C++	namespace:aetee
+explode	/usr/local/include/aetee/include/aetee/hof/explode.h	/^static constexpr auto explode = detail::explodeFunctor{};$/;"	m	language:C++	namespace:aetee
+explodeFunctor	/usr/local/include/aetee/include/aetee/hof/explode.h	/^struct explodeFunctor {$/;"	s	language:C++	namespace:aetee::detail
+EXTERNC	/usr/local/include/aetee/include/aetee/version.h	6;"	d	language:C++
+EXTERNC	/usr/local/include/aetee/include/aetee/version.h	8;"	d	language:C++
+extractElement	/usr/local/include/aetee/include/aetee/axioms/zip.h	/^    constexpr auto extractElement(idx_constant_t<X>, Tup&&... tup) const$/;"	f	language:C++	struct:aetee::detail::zipFunctor
+f	/usr/local/include/aetee/include/aetee/hof/compose.h	/^    F f;$/;"	m	language:C++	struct:aetee::detail::composedFunctor
+f	/usr/local/include/aetee/include/aetee/hof/curry.h	/^    F f;$/;"	m	language:C++	struct:aetee::detail::curried
+f	/usr/local/include/aetee/include/aetee/hof/filter.h	/^    F f;$/;"	m	language:C++	struct:aetee::detail::filterMapper
+false_c	/usr/local/include/aetee/include/aetee/int_c/int_c.h	/^static constexpr auto false_c = bool_c<false>;$/;"	m	language:C++	namespace:aetee
+filter	/usr/local/include/aetee/include/aetee/hof/filter.h	/^static constexpr auto filter = detail::filterFunctor{};$/;"	m	language:C++	namespace:aetee
+filterFunctor	/usr/local/include/aetee/include/aetee/hof/filter.h	/^struct filterFunctor {$/;"	s	language:C++	namespace:aetee::detail
+filterMapper	/usr/local/include/aetee/include/aetee/hof/filter.h	/^    constexpr filterMapper(F&& fIn) : f{std::forward<F>(fIn)} { }$/;"	f	language:C++	struct:aetee::detail::filterMapper
+filterMapper	/usr/local/include/aetee/include/aetee/hof/filter.h	/^struct filterMapper {$/;"	s	language:C++	namespace:aetee::detail
+flatten	/usr/local/include/aetee/include/aetee/axioms/flatten.h	/^static constexpr auto flatten = detail::flattenFunctor{};$/;"	m	language:C++	namespace:aetee
+flattenFunctor	/usr/local/include/aetee/include/aetee/axioms/flatten.h	/^struct flattenFunctor {$/;"	s	language:C++	namespace:aetee::detail
+flattenRecursivelyFunctor	/usr/local/include/aetee/include/aetee/axioms/flatten.h	/^struct flattenRecursivelyFunctor {$/;"	s	language:C++	namespace:aetee::detail
+fold	/usr/local/include/aetee/include/aetee/hof/fold.h	/^static constexpr auto fold = detail::foldLeftFunctor{};$/;"	m	language:C++	namespace:aetee
+foldLeftFunctor	/usr/local/include/aetee/include/aetee/hof/fold.h	/^struct foldLeftFunctor {$/;"	s	language:C++	namespace:aetee::detail
+foldRight	/usr/local/include/aetee/include/aetee/hof/fold.h	/^static constexpr auto foldRight = detail::foldRightFunctor{};$/;"	m	language:C++	namespace:aetee
+foldRightFunctor	/usr/local/include/aetee/include/aetee/hof/fold.h	/^struct foldRightFunctor {$/;"	s	language:C++	namespace:aetee::detail
+forEachFunctor	/usr/local/include/aetee/include/aetee/hof/for_each.h	/^struct forEachFunctor {$/;"	s	language:C++	namespace:aetee::detail
+for_each	/usr/local/include/aetee/include/aetee/hof/for_each.h	/^static constexpr auto for_each = detail::forEachFunctor{};$/;"	m	language:C++	namespace:aetee
+g	/usr/local/include/aetee/include/aetee/hof/compose.h	/^    G g;$/;"	m	language:C++	struct:aetee::detail::composedFunctor
+generateIndexSequence	/usr/local/include/aetee/include/aetee/int_c/int_c_sequence.h	/^constexpr auto generateIndexSequence(idx_t<N>)$/;"	f	language:C++	namespace:aetee::detail
+generateIndexSequenceImpl	/usr/local/include/aetee/include/aetee/int_c/int_c_sequence.h	/^constexpr auto generateIndexSequenceImpl(std::index_sequence<I...>)$/;"	f	language:C++	namespace:aetee::detail
+greater	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^static constexpr auto greater = detail::greaterFunctor{};$/;"	m	language:C++	namespace:aetee
+greaterEqualFunctor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct greaterEqualFunctor { template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs >= rhs; } };$/;"	s	language:C++	namespace:aetee::detail
+greaterFunctor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct greaterFunctor {      template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs > rhs; }  };$/;"	s	language:C++	namespace:aetee::detail
+greater_equal	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^static constexpr auto greater_equal = detail::greaterEqualFunctor{};$/;"	m	language:C++	namespace:aetee
+HEADER_AETEE_AXIOMS_APPEND_H_INCLUDED	/usr/local/include/aetee/include/aetee/axioms/append.h	2;"	d	language:C++
+HEADER_AETEE_AXIOMS_CONCAT_H_INCLUDED	/usr/local/include/aetee/include/aetee/axioms/concat.h	2;"	d	language:C++
+HEADER_AETEE_AXIOMS_DROP_H_INCLUDED	/usr/local/include/aetee/include/aetee/axioms/drop.h	2;"	d	language:C++
+HEADER_AETEE_AXIOMS_FLATTEN_H_INCLUDED	/usr/local/include/aetee/include/aetee/axioms/flatten.h	2;"	d	language:C++
+HEADER_AETEE_AXIOMS_FOR_EACH_H_INCLUDED	/usr/local/include/aetee/include/aetee/hof/for_each.h	2;"	d	language:C++
+HEADER_AETEE_AXIOMS_JUST_H_INCLUDED	/usr/local/include/aetee/include/aetee/axioms/just.h	2;"	d	language:C++
+HEADER_AETEE_AXIOMS_NOTHING_H_INCLUDED	/usr/local/include/aetee/include/aetee/axioms/nothing.h	2;"	d	language:C++
+HEADER_AETEE_AXIOMS_OBJECTS_H_INCLUDED	/usr/local/include/aetee/include/aetee/axioms/identity.h	2;"	d	language:C++
+HEADER_AETEE_AXIOMS_PREPEND_H_INCLUDED	/usr/local/include/aetee/include/aetee/axioms/prepend.h	2;"	d	language:C++
+HEADER_AETEE_AXIOMS_REBIND_H_INCLUDED	/usr/local/include/aetee/include/aetee/axioms/rebind.h	2;"	d	language:C++
+HEADER_AETEE_AXIOMS_REPLICATE_H_INCLUDED	/usr/local/include/aetee/include/aetee/axioms/replicate.h	2;"	d	language:C++
+HEADER_AETEE_AXIOMS_REVERSE_H_INCLUDED	/usr/local/include/aetee/include/aetee/axioms/reverse.h	2;"	d	language:C++
+HEADER_AETEE_AXIOMS_SELECT_H_INCLUDED	/usr/local/include/aetee/include/aetee/axioms/select.h	2;"	d	language:C++
+HEADER_AETEE_AXIOMS_SIZEOF_H_INCLUDED	/usr/local/include/aetee/include/aetee/traits/sizeof.h	2;"	d	language:C++
+HEADER_AETEE_AXIOMS_SLICE_H_INCLUDED	/usr/local/include/aetee/include/aetee/axioms/slice.h	2;"	d	language:C++
+HEADER_AETEE_AXIOMS_TAKE_H_INCLUDED	/usr/local/include/aetee/include/aetee/axioms/take.h	2;"	d	language:C++
+HEADER_AETEE_AXIOMS_TUPIFY_H_INCLUDED	/usr/local/include/aetee/include/aetee/axioms/tupify.h	2;"	d	language:C++
+HEADER_AETEE_AXIOMS_VALUE_H_INCLUDED	/usr/local/include/aetee/include/aetee/axioms/value.h	2;"	d	language:C++
+HEADER_AETEE_HOF_APPLY_H_INCLUDED	/usr/local/include/aetee/include/aetee/hof/apply.h	2;"	d	language:C++
+HEADER_AETEE_HOF_AS_FUNCTOR_H_INCLUDED	/usr/local/include/aetee/include/aetee/hof/as_functor.h	2;"	d	language:C++
+HEADER_AETEE_HOF_COMPOSE_H_INCLUDED	/usr/local/include/aetee/include/aetee/hof/compose.h	2;"	d	language:C++
+HEADER_AETEE_HOF_CURRY_H_INCLUDED	/usr/local/include/aetee/include/aetee/hof/curry.h	2;"	d	language:C++
+HEADER_AETEE_HOF_EXPLODE_H_INCLUDED	/usr/local/include/aetee/include/aetee/hof/explode.h	2;"	d	language:C++
+HEADER_AETEE_HOF_FILTER_H_INCLUDED	/usr/local/include/aetee/include/aetee/hof/filter.h	2;"	d	language:C++
+HEADER_AETEE_HOF_FOLD_H_INCLUDED	/usr/local/include/aetee/include/aetee/hof/fold.h	2;"	d	language:C++
+HEADER_AETEE_HOF_INVOKE_H_INCLUDED	/usr/local/include/aetee/include/aetee/hof/invoke.h	2;"	d	language:C++
+HEADER_AETEE_HOF_MAP_H_INCLUDED	/usr/local/include/aetee/include/aetee/hof/map.h	2;"	d	language:C++
+HEADER_AETEE_HOF_ZIP_H_INCLUDED	/usr/local/include/aetee/include/aetee/axioms/zip.h	2;"	d	language:C++
+HEADER_AETEE_INCLUDE_TO_C_H_INCLUDED	/usr/local/include/aetee/include/aetee/axioms/to_c.h	2;"	d	language:C++
+HEADER_AETEE_INTEGER_C_H_INCLUDED	/usr/local/include/aetee/include/aetee/int_c.h	2;"	d	language:C++
+HEADER_AETEE_INT_C_INT_C_H_INCLUDED	/usr/local/include/aetee/include/aetee/int_c/int_c.h	2;"	d	language:C++
+HEADER_AETEE_INT_C_INT_C_OPERATORS_H_INCLUDED	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	2;"	d	language:C++
+HEADER_AETEE_INT_C_INT_C_SEQUENCE_H_INCLUDED	/usr/local/include/aetee/include/aetee/int_c/int_c_sequence.h	2;"	d	language:C++
+HEADER_AETEE_MATHSUGAR_CLAMP_H_INCLUDED	/usr/local/include/aetee/include/aetee/math_sugar/clamp.h	2;"	d	language:C++
+HEADER_AETEE_MATH_SUGAR_ALLOF_H_INCLUDED	/usr/local/include/aetee/include/aetee/math_sugar/allof.h	2;"	d	language:C++
+HEADER_AETEE_MATH_SUGAR_ANYOF_H_INCLUDED	/usr/local/include/aetee/include/aetee/math_sugar/anyof.h	2;"	d	language:C++
+HEADER_AETEE_MATH_SUGAR_NONEOF_H_INCLUDED	/usr/local/include/aetee/include/aetee/math_sugar/noneof.h	2;"	d	language:C++
+HEADER_AETEE_MATH_SUGAR_OPERATOR_C_INCLUDED	/usr/local/include/aetee/include/aetee/math_sugar/operator_c.h	2;"	d	language:C++
+HEADER_AETEE_MATH_SUGAR_OP_ALIAS_H_INCLUDED	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	2;"	d	language:C++
+HEADER_AETEE_TRAITS_ALIGNOF_H_INCLUDED	/usr/local/include/aetee/include/aetee/traits/alignof.h	2;"	d	language:C++
+HEADER_AETEE_TRAITS_CAST_H_INCLUDED	/usr/local/include/aetee/include/aetee/traits/cast.h	2;"	d	language:C++
+HEADER_AETEE_TRAITS_DECLTYPE_H_INCLUDED	/usr/local/include/aetee/include/aetee/traits/decltype.h	2;"	d	language:C++
+HEADER_AETEE_TRAITS_IS_SAME_H_INCLUDED	/usr/local/include/aetee/include/aetee/traits/is_same.h	2;"	d	language:C++
+HEADER_AETEE_TRAITS_IS_TUPLE_H_INCLUDED	/usr/local/include/aetee/include/aetee/traits/is_tuple.h	2;"	d	language:C++
+HEADER_AETEE_TRAITS_LENGTH_H_INCLUDED	/usr/local/include/aetee/include/aetee/traits/length.h	2;"	d	language:C++
+HEADER_AETEE_TRAITS_OFFSETOF_H_INCLUDED	/usr/local/include/aetee/include/aetee/traits/offsetof.h	2;"	d	language:C++
+HEADER_AETEE_TYPE_AT_H_INCLUDED	/usr/local/include/aetee/include/aetee/type/type_idx.h	2;"	d	language:C++
+HEADER_AETEE_TYPE_CONSTANT_H_INCLUDED	/usr/local/include/aetee/include/aetee/type/type_c.h	2;"	d	language:C++
+HEADER_AETEE_TYPE_C_SEQUENCE_H_INCLUDED	/usr/local/include/aetee/include/aetee/type/type_c_sequence.h	2;"	d	language:C++
+HEADER_AETEE_TYPE_TYPE_AT_H_INCLUDED	/usr/local/include/aetee/include/aetee/type/type_at.h	2;"	d	language:C++
+HEADER_AETEE_TYPE_TYPE_EXISTS_H_INCLUDED	/usr/local/include/aetee/include/aetee/type/type_exists.h	2;"	d	language:C++
+HEADER_AETEE_VERSION_H_INCLUDED	/usr/local/include/aetee/include/aetee/version.h	3;"	d	language:C++
+identity	/usr/local/include/aetee/include/aetee/axioms/identity.h	/^static constexpr auto identity = detail::identityFunctor{};$/;"	m	language:C++	namespace:aetee
+identityFunctor	/usr/local/include/aetee/include/aetee/axioms/identity.h	/^struct identityFunctor {$/;"	s	language:C++	namespace:aetee::detail
+idx_c	/usr/local/include/aetee/include/aetee/int_c/int_c.h	/^static constexpr auto idx_c = idx_t<I>{};$/;"	m	language:C++	namespace:aetee
+idx_c_sequence	/usr/local/include/aetee/include/aetee/int_c/int_c_sequence.h	/^static constexpr auto idx_c_sequence = idx_c_sequence_t<I...>{};$/;"	m	language:C++	namespace:aetee
+idx_c_sequence_for	/usr/local/include/aetee/include/aetee/int_c/int_c_sequence.h	/^static constexpr auto idx_c_sequence_for = detail::generateIndexSequence(arity_c<C...>);$/;"	m	language:C++	namespace:aetee
+idx_c_sequence_of	/usr/local/include/aetee/include/aetee/int_c/int_c_sequence.h	/^static constexpr auto idx_c_sequence_of = detail::generateIndexSequence(len_c<Tup>);$/;"	m	language:C++	namespace:aetee
+idx_c_sequence_til	/usr/local/include/aetee/include/aetee/int_c/int_c_sequence.h	/^static constexpr auto idx_c_sequence_til = detail::generateIndexSequence(idx_c<N>);$/;"	m	language:C++	namespace:aetee
+impl	/usr/local/include/aetee/include/aetee/axioms/append.h	/^    constexpr auto impl(Tup&& tup, idx_sequence_t<I...>, X&&... x) const$/;"	f	language:C++	struct:aetee::detail::appendFunctor
+impl	/usr/local/include/aetee/include/aetee/axioms/concat.h	/^    static constexpr auto impl(A&& a, B&& b, idx_sequence_t<I...>, idx_sequence_t<J...>)$/;"	f	language:C++	struct:aetee::detail::concatTwoFunctor
+impl	/usr/local/include/aetee/include/aetee/axioms/drop.h	/^    static constexpr auto impl(Tup&& tup, idx_constant_t<L>, idx_sequence_t<I...>)$/;"	f	language:C++	struct:aetee::detail::dropFunctor
+impl	/usr/local/include/aetee/include/aetee/axioms/drop.h	/^    static constexpr auto impl(Tup&& tup, idx_sequence_t<I...>)$/;"	f	language:C++	struct:aetee::detail::dropBackFunctor
+impl	/usr/local/include/aetee/include/aetee/axioms/prepend.h	/^    static constexpr auto impl(Tup&& tup, idx_sequence_t<I...>, X&&... x)$/;"	f	language:C++	struct:aetee::detail::prependFunctor
+impl	/usr/local/include/aetee/include/aetee/axioms/replicate.h	/^    static constexpr auto impl(T&& val, idx_sequence_t<I...>)$/;"	f	language:C++	struct:aetee::detail::replicateFunctor
+impl	/usr/local/include/aetee/include/aetee/axioms/reverse.h	/^    static constexpr auto impl(Tup&& tup, idx_sequence_t<I...> idxes)$/;"	f	language:C++	struct:aetee::detail::reverseFunctor
+impl	/usr/local/include/aetee/include/aetee/axioms/select.h	/^    constexpr decltype(auto) impl(idx_sequence_t<I...>, X&&... x) const$/;"	f	language:C++	struct:aetee::detail::selectMapFunctor
+impl	/usr/local/include/aetee/include/aetee/axioms/select.h	/^    constexpr decltype(auto) impl(idx_sequence_t<I...>, X&&... x)$/;"	f	language:C++	struct:aetee::detail::selectMapFunctor
+impl	/usr/local/include/aetee/include/aetee/axioms/select.h	/^    static constexpr decltype(auto) impl(idx_constant_t<0>, H&& head, T&&...)$/;"	f	language:C++	struct:aetee::detail::selectFunctor
+impl	/usr/local/include/aetee/include/aetee/axioms/select.h	/^    static constexpr decltype(auto) impl(idx_constant_t<I>, H&&, T&&... tail)$/;"	f	language:C++	struct:aetee::detail::selectFunctor
+impl	/usr/local/include/aetee/include/aetee/axioms/slice.h	/^    static constexpr auto impl(Tup&& tup, idx_sequence_t<I...>)$/;"	f	language:C++	struct:aetee::detail::sliceFunctor
+impl	/usr/local/include/aetee/include/aetee/axioms/take.h	/^    static constexpr auto impl(Tup&& tup, idx_sequence_t<I...>)$/;"	f	language:C++	struct:aetee::detail::takeBackFunctor
+impl	/usr/local/include/aetee/include/aetee/axioms/take.h	/^    static constexpr auto impl(Tup&& tup, idx_sequence_t<I...>)$/;"	f	language:C++	struct:aetee::detail::takeFrontFunctor
+impl	/usr/local/include/aetee/include/aetee/axioms/zip.h	/^    constexpr auto impl(idx_sequence_t<I...>, Tup&&... tup) const$/;"	f	language:C++	struct:aetee::detail::zipFunctor
+impl	/usr/local/include/aetee/include/aetee/hof/apply.h	/^    static constexpr decltype(auto) impl(Arg&& a, F&& f, false_constant_t)$/;"	f	language:C++	struct:aetee::detail::applyFunctor
+impl	/usr/local/include/aetee/include/aetee/hof/apply.h	/^    static constexpr decltype(auto) impl(T&& t, F&& f, true_constant_t)$/;"	f	language:C++	struct:aetee::detail::applyFunctor
+impl	/usr/local/include/aetee/include/aetee/hof/apply.h	/^    static constexpr decltype(auto) impl(T&& tup, F&& f, idx_sequence_t<I...>)$/;"	f	language:C++	struct:aetee::detail::applyFunctor
+impl	/usr/local/include/aetee/include/aetee/hof/compose.h	/^    constexpr auto impl(false_constant_t, A&&... a) const$/;"	f	language:C++	struct:aetee::detail::composedFunctor
+impl	/usr/local/include/aetee/include/aetee/hof/compose.h	/^    constexpr auto impl(false_constant_t, A&&... a)$/;"	f	language:C++	struct:aetee::detail::composedFunctor
+impl	/usr/local/include/aetee/include/aetee/hof/compose.h	/^    constexpr auto impl(true_constant_t, A&&... a) const$/;"	f	language:C++	struct:aetee::detail::composedFunctor
+impl	/usr/local/include/aetee/include/aetee/hof/compose.h	/^    constexpr auto impl(true_constant_t, A&&... a)$/;"	f	language:C++	struct:aetee::detail::composedFunctor
+impl	/usr/local/include/aetee/include/aetee/hof/curry.h	/^    constexpr decltype(auto) impl(false_constant_t, idx_sequence_t<I...>, B&&... b) const$/;"	f	language:C++	struct:aetee::detail::curried
+impl	/usr/local/include/aetee/include/aetee/hof/curry.h	/^    constexpr decltype(auto) impl(false_constant_t, idx_sequence_t<I...>, B&&... b)$/;"	f	language:C++	struct:aetee::detail::curried
+impl	/usr/local/include/aetee/include/aetee/hof/curry.h	/^    constexpr decltype(auto) impl(true_constant_t, idx_sequence_t<I...>, B&&... b) const$/;"	f	language:C++	struct:aetee::detail::curried
+impl	/usr/local/include/aetee/include/aetee/hof/curry.h	/^    constexpr decltype(auto) impl(true_constant_t, idx_sequence_t<I...>, B&&... b)$/;"	f	language:C++	struct:aetee::detail::curried
+impl	/usr/local/include/aetee/include/aetee/hof/explode.h	/^    static constexpr auto impl(idx_sequence_t<I...>, Tup&& tup, F&&... f)$/;"	f	language:C++	struct:aetee::detail::explodeFunctor
+impl	/usr/local/include/aetee/include/aetee/hof/fold.h	/^    constexpr decltype(auto) impl(Tup&& tup, I&& init, F&& f, idx_constant_t<0>) const$/;"	f	language:C++	struct:aetee::detail::foldLeftFunctor
+impl	/usr/local/include/aetee/include/aetee/hof/fold.h	/^    constexpr decltype(auto) impl(Tup&& tup, I&& init, F&& f, idx_constant_t<0>) const$/;"	f	language:C++	struct:aetee::detail::foldRightFunctor
+impl	/usr/local/include/aetee/include/aetee/hof/fold.h	/^    constexpr decltype(auto) impl(Tup&& tup, I&& init, F&& f, idx_constant_t<X> x) const$/;"	f	language:C++	struct:aetee::detail::foldRightFunctor
+impl	/usr/local/include/aetee/include/aetee/hof/fold.h	/^    constexpr decltype(auto) impl(Tup&& tup, I&& init, F&& f, idx_constant_t<X>) const$/;"	f	language:C++	struct:aetee::detail::foldLeftFunctor
+impl	/usr/local/include/aetee/include/aetee/hof/for_each.h	/^    static constexpr auto impl(Tup&& tup, F&& fn, idx_sequence_t<I...>)$/;"	f	language:C++	struct:aetee::detail::forEachFunctor
+impl	/usr/local/include/aetee/include/aetee/hof/map.h	/^    static constexpr auto impl(Tup&& tup, F&& f, idx_sequence_t<I...>)$/;"	f	language:C++	struct:aetee::detail::mapFunctor
+impl	/usr/local/include/aetee/include/aetee/traits/offsetof.h	/^    static constexpr std::ptrdiff_t impl(type_c_sequence_t<T...>, idx_constant_t<I>)$/;"	f	language:C++	struct:aetee::detail::offsetOfFunctor
+int_c	/usr/local/include/aetee/include/aetee/int_c/int_c.h	/^static constexpr auto int_c = int_t<T, v>{};$/;"	m	language:C++	namespace:aetee
+invoke	/usr/local/include/aetee/include/aetee/hof/invoke.h	/^static constexpr auto invoke = detail::invokeFunctor{};$/;"	m	language:C++	namespace:aetee
+invokeFunctor	/usr/local/include/aetee/include/aetee/hof/invoke.h	/^struct invokeFunctor {$/;"	s	language:C++	namespace:aetee::detail
+isSameTypeFunctor	/usr/local/include/aetee/include/aetee/traits/is_same.h	/^struct isSameTypeFunctor {$/;"	s	language:C++	namespace:aetee::detail
+isTuple	/usr/local/include/aetee/include/aetee/traits/is_tuple.h	/^struct isTuple : false_constant_t {};$/;"	s	language:C++	namespace:aetee::detail
+isTuple	/usr/local/include/aetee/include/aetee/traits/is_tuple.h	/^struct isTuple<T, std::void_t<typename std::tuple_size<T>::type>> : true_constant_t {};$/;"	s	language:C++	namespace:aetee::detail
+isTupleFunctor	/usr/local/include/aetee/include/aetee/traits/is_tuple.h	/^struct isTupleFunctor {$/;"	s	language:C++	namespace:aetee::detail
+is_same	/usr/local/include/aetee/include/aetee/traits/is_same.h	/^static constexpr auto is_same = detail::isSameTypeFunctor{};$/;"	m	language:C++	namespace:aetee
+is_tuple	/usr/local/include/aetee/include/aetee/traits/is_tuple.h	/^static constexpr auto is_tuple = detail::isTupleFunctor{};$/;"	m	language:C++	namespace:aetee
+just	/usr/local/include/aetee/include/aetee/axioms/just.h	/^static constexpr auto just = detail::justFunctor{};$/;"	m	language:C++	namespace:aetee
+justFunctor	/usr/local/include/aetee/include/aetee/axioms/just.h	/^struct justFunctor {$/;"	s	language:C++	namespace:aetee::detail
+justImpl	/usr/local/include/aetee/include/aetee/axioms/just.h	/^    constexpr justImpl(T&& t_) : t{std::forward<T>(t_)} {};$/;"	f	language:C++	struct:aetee::detail::justImpl
+justImpl	/usr/local/include/aetee/include/aetee/axioms/just.h	/^struct justImpl {$/;"	s	language:C++	namespace:aetee::detail
+length	/usr/local/include/aetee/include/aetee/traits/length.h	/^static constexpr auto length = detail::lengthFunctor{};$/;"	m	language:C++	namespace:aetee
+lengthFunctor	/usr/local/include/aetee/include/aetee/traits/length.h	/^struct lengthFunctor {$/;"	s	language:C++	namespace:aetee::detail
+len_c	/usr/local/include/aetee/include/aetee/int_c/int_c.h	/^static constexpr auto len_c = idx_c<std::tuple_size<std::decay_t<Tup>>::value>;$/;"	m	language:C++	namespace:aetee
+less	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^static constexpr auto less = detail::lessFunctor{};$/;"	m	language:C++	namespace:aetee
+lessEqualFunctor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct lessEqualFunctor {    template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs <= rhs; } };$/;"	s	language:C++	namespace:aetee::detail
+lessFunctor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct lessFunctor {         template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs < rhs; }  };$/;"	s	language:C++	namespace:aetee::detail
+less_equal	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^static constexpr auto less_equal = detail::lessEqualFunctor{};$/;"	m	language:C++	namespace:aetee
+logicalAndFunctor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct logicalAndFunctor { template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs && rhs; } };$/;"	s	language:C++	namespace:aetee::detail
+logicalNotFunctor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct logicalNotFunctor { template <typename LH>              constexpr auto operator()(LH lhs) const         { return !lhs; }       };$/;"	s	language:C++	namespace:aetee::detail
+logicalOrFunctor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct logicalOrFunctor {  template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs || rhs; } };$/;"	s	language:C++	namespace:aetee::detail
+logical_and	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^static constexpr auto logical_and = detail::logicalAndFunctor{};$/;"	m	language:C++	namespace:aetee
+logical_not	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^static constexpr auto logical_not = detail::logicalNotFunctor{};$/;"	m	language:C++	namespace:aetee
+logical_or	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^static constexpr auto logical_or = detail::logicalOrFunctor{};$/;"	m	language:C++	namespace:aetee
+map	/usr/local/include/aetee/include/aetee/hof/map.h	/^static constexpr auto map = detail::mapFunctor{};$/;"	m	language:C++	namespace:aetee
+mapFunctor	/usr/local/include/aetee/include/aetee/hof/map.h	/^struct mapFunctor {$/;"	s	language:C++	namespace:aetee::detail
+minus	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^static constexpr auto minus = detail::minusFunctor{};$/;"	m	language:C++	namespace:aetee
+minusFunctor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct minusFunctor {      template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs - rhs; } };$/;"	s	language:C++	namespace:aetee::detail
+modulus	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^static constexpr auto modulus = detail::modulusFunctor{};$/;"	m	language:C++	namespace:aetee
+modulusFunctor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct modulusFunctor {    template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs % rhs; } };$/;"	s	language:C++	namespace:aetee::detail
+multiplies	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^static constexpr auto multiplies = detail::multipliesFunctor{};$/;"	m	language:C++	namespace:aetee
+multipliesFunctor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct multipliesFunctor { template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs * rhs; } };$/;"	s	language:C++	namespace:aetee::detail
+my_isdigit	/usr/local/include/aetee/include/aetee/math_sugar/operator_c.h	/^static constexpr bool my_isdigit(char c)$/;"	f	language:C++	namespace:aetee::detail
+my_stoull	/usr/local/include/aetee/include/aetee/math_sugar/operator_c.h	/^static constexpr std::size_t my_stoull(ForwardIt lo, ForwardIt hi)$/;"	f	language:C++	namespace:aetee::detail
+negate	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^static constexpr auto negate = detail::negateFunctor{};$/;"	m	language:C++	namespace:aetee
+negateFunctor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct negateFunctor {     template <typename LH>              constexpr auto operator()(LH lhs) const         { return -lhs; }      };$/;"	s	language:C++	namespace:aetee::detail
+noneof	/usr/local/include/aetee/include/aetee/math_sugar/noneof.h	/^static constexpr auto noneof = detail::noneOfFunctor{};$/;"	m	language:C++	namespace:aetee
+noneOfFunctor	/usr/local/include/aetee/include/aetee/math_sugar/noneof.h	/^struct noneOfFunctor {$/;"	s	language:C++	namespace:aetee::detail
+notEqualToFunctor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct notEqualToFunctor {   template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs != rhs; } };$/;"	s	language:C++	namespace:aetee::detail
+nothing	/usr/local/include/aetee/include/aetee/axioms/nothing.h	/^static constexpr auto nothing = detail::nothingFunctor{};$/;"	m	language:C++	namespace:aetee
+nothingFunctor	/usr/local/include/aetee/include/aetee/axioms/nothing.h	/^struct nothingFunctor {$/;"	s	language:C++	namespace:aetee::detail
+not_equal_to	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^static constexpr auto not_equal_to = detail::notEqualToFunctor{};$/;"	m	language:C++	namespace:aetee
+of	/usr/local/include/aetee/include/aetee/axioms/identity.h	/^    static constexpr auto of(T&& t)$/;"	f	language:C++	struct:aetee::detail::identityFunctor
+offsetOfFunctor	/usr/local/include/aetee/include/aetee/traits/offsetof.h	/^struct offsetOfFunctor {$/;"	s	language:C++	namespace:aetee::detail
+offsetof_	/usr/local/include/aetee/include/aetee/traits/offsetof.h	/^static constexpr auto offsetof_ = detail::offsetOfFunctor{};$/;"	m	language:C++	namespace:aetee
+operator !	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator!(int_t<T, V>)$/;"	f	language:C++	namespace:aetee
+operator !=	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator!=(int_t<T, V>, int_t<U, W>)$/;"	f	language:C++	namespace:aetee
+operator !=	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator!=(int_t<T, V>, U&& w)$/;"	f	language:C++	namespace:aetee
+operator %	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator%(int_t<T, V>, int_t<U, W>)$/;"	f	language:C++	namespace:aetee
+operator %	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator%(int_t<T, V>, U&& w)$/;"	f	language:C++	namespace:aetee
+operator &	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator&(int_t<T, V>, int_t<U, W>)$/;"	f	language:C++	namespace:aetee
+operator &	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator&(int_t<T, V>, U&& w)$/;"	f	language:C++	namespace:aetee
+operator &&	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator&&(int_t<T, V>, int_t<U, W>)$/;"	f	language:C++	namespace:aetee
+operator &&	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator&&(int_t<T, V>, U&& w)$/;"	f	language:C++	namespace:aetee
+operator ()	/usr/local/include/aetee/include/aetee/axioms/append.h	/^    constexpr auto operator()(Tup&& tup, X&&... x) const$/;"	f	language:C++	struct:aetee::detail::appendFunctor
+operator ()	/usr/local/include/aetee/include/aetee/axioms/concat.h	/^    constexpr auto operator()(A&& a, B&& b) const$/;"	f	language:C++	struct:aetee::detail::concatTwoFunctor
+operator ()	/usr/local/include/aetee/include/aetee/axioms/concat.h	/^    constexpr auto operator()(T&&... t) const$/;"	f	language:C++	struct:aetee::detail::concatFunctor
+operator ()	/usr/local/include/aetee/include/aetee/axioms/drop.h	/^    constexpr auto operator()(Tup&& tup, idx_constant_t<N> n) const$/;"	f	language:C++	struct:aetee::detail::dropBackFunctor
+operator ()	/usr/local/include/aetee/include/aetee/axioms/drop.h	/^    constexpr auto operator()(Tup&& tup, idx_constant_t<N> n) const$/;"	f	language:C++	struct:aetee::detail::dropFunctor
+operator ()	/usr/local/include/aetee/include/aetee/axioms/flatten.h	/^    constexpr auto operator()(T&& t) const$/;"	f	language:C++	struct:aetee::detail::flattenFunctor
+operator ()	/usr/local/include/aetee/include/aetee/axioms/flatten.h	/^    constexpr auto operator()(T&& t) const$/;"	f	language:C++	struct:aetee::detail::flattenRecursivelyFunctor
+operator ()	/usr/local/include/aetee/include/aetee/axioms/flatten.h	/^    constexpr auto operator()(T&&... t) const$/;"	f	language:C++	struct:aetee::detail::flattenFunctor
+operator ()	/usr/local/include/aetee/include/aetee/axioms/flatten.h	/^    constexpr auto operator()(T&&... t) const$/;"	f	language:C++	struct:aetee::detail::flattenRecursivelyFunctor
+operator ()	/usr/local/include/aetee/include/aetee/axioms/identity.h	/^    constexpr decltype(auto) operator()(T&& t) const$/;"	f	language:C++	struct:aetee::detail::identityFunctor
+operator ()	/usr/local/include/aetee/include/aetee/axioms/identity.h	/^    constexpr decltype(auto) operator()(T&&... t) const$/;"	f	language:C++	struct:aetee::detail::identityFunctor
+operator ()	/usr/local/include/aetee/include/aetee/axioms/just.h	/^    constexpr auto operator()(T&& t) const$/;"	f	language:C++	struct:aetee::detail::justFunctor
+operator ()	/usr/local/include/aetee/include/aetee/axioms/just.h	/^    constexpr const T& operator()(...) const$/;"	f	language:C++	struct:aetee::detail::justImpl
+operator ()	/usr/local/include/aetee/include/aetee/axioms/just.h	/^    constexpr T& operator()(...)$/;"	f	language:C++	struct:aetee::detail::justImpl
+operator ()	/usr/local/include/aetee/include/aetee/axioms/nothing.h	/^    constexpr auto operator()(...) const$/;"	f	language:C++	struct:aetee::detail::nothingFunctor
+operator ()	/usr/local/include/aetee/include/aetee/axioms/prepend.h	/^    constexpr auto operator()(Tup&& tup, X&&... x) const$/;"	f	language:C++	struct:aetee::detail::prependFunctor
+operator ()	/usr/local/include/aetee/include/aetee/axioms/rebind.h	/^    constexpr auto operator()(std::tuple<type_constant_t<A>...>) const$/;"	f	language:C++	struct:aetee::detail::rebindDirectFunctor
+operator ()	/usr/local/include/aetee/include/aetee/axioms/rebind.h	/^    constexpr auto operator()(type_constant_t<O<A...>>) const$/;"	f	language:C++	struct:aetee::detail::rebindFunctor
+operator ()	/usr/local/include/aetee/include/aetee/axioms/replicate.h	/^    constexpr auto operator()(T&& val, N&& n) const$/;"	f	language:C++	struct:aetee::detail::replicateFunctor
+operator ()	/usr/local/include/aetee/include/aetee/axioms/reverse.h	/^    constexpr auto operator()(Tup&& tup) const$/;"	f	language:C++	struct:aetee::detail::reverseFunctor
+operator ()	/usr/local/include/aetee/include/aetee/axioms/select.h	/^    constexpr auto operator()(P&& p, A&&... a) const$/;"	f	language:C++	struct:aetee::detail::selectMapMakerFunctor
+operator ()	/usr/local/include/aetee/include/aetee/axioms/select.h	/^    constexpr decltype(auto) operator()(bool_constant_t<C>, A&& a, B&& b) const$/;"	f	language:C++	struct:aetee::detail::selectFunctor
+operator ()	/usr/local/include/aetee/include/aetee/axioms/select.h	/^    constexpr decltype(auto) operator()(idx_constant_t<I> i, A&&... args) const$/;"	f	language:C++	struct:aetee::detail::selectFunctor
+operator ()	/usr/local/include/aetee/include/aetee/axioms/select.h	/^    constexpr decltype(auto) operator()(X&&... x) const$/;"	f	language:C++	struct:aetee::detail::selectMapFunctor
+operator ()	/usr/local/include/aetee/include/aetee/axioms/select.h	/^    constexpr decltype(auto) operator()(X&&... x)$/;"	f	language:C++	struct:aetee::detail::selectMapFunctor
+operator ()	/usr/local/include/aetee/include/aetee/axioms/slice.h	/^    constexpr auto operator()(T val) const$/;"	f	language:C++	struct:aetee::detail::stepFilterFunctor
+operator ()	/usr/local/include/aetee/include/aetee/axioms/slice.h	/^    constexpr auto operator()(Tup&& tup, Lo lo, Hi hi = {}, Step step = {}) const$/;"	f	language:C++	struct:aetee::detail::sliceFunctor
+operator ()	/usr/local/include/aetee/include/aetee/axioms/take.h	/^    constexpr auto operator()(Tup&& tup, idx_constant_t<N> n) const$/;"	f	language:C++	struct:aetee::detail::takeBackFunctor
+operator ()	/usr/local/include/aetee/include/aetee/axioms/take.h	/^    constexpr auto operator()(Tup&& tup, idx_constant_t<N> n) const$/;"	f	language:C++	struct:aetee::detail::takeFrontFunctor
+operator ()	/usr/local/include/aetee/include/aetee/axioms/to_c.h	/^    constexpr auto operator()() const$/;"	f	language:C++	struct:aetee::detail::toCResolverFunctor
+operator ()	/usr/local/include/aetee/include/aetee/axioms/to_c.h	/^    constexpr auto operator()(T&& val) const$/;"	f	language:C++	struct:aetee::detail::toCFunctor
+operator ()	/usr/local/include/aetee/include/aetee/axioms/tupify.h	/^    constexpr auto operator()(nothing_t) const$/;"	f	language:C++	struct:aetee::detail::tupifyFunctor
+operator ()	/usr/local/include/aetee/include/aetee/axioms/tupify.h	/^    constexpr auto operator()(T&&... t) const$/;"	f	language:C++	struct:aetee::detail::tupifyFunctor
+operator ()	/usr/local/include/aetee/include/aetee/axioms/tupify.h	/^    constexpr auto operator()(Tup&& t) const$/;"	f	language:C++	struct:aetee::detail::tupifyFunctor
+operator ()	/usr/local/include/aetee/include/aetee/axioms/value.h	/^    constexpr auto operator()(T&& t) const$/;"	f	language:C++	struct:aetee::detail::valueFunctor
+operator ()	/usr/local/include/aetee/include/aetee/axioms/value.h	/^    constexpr decltype(auto) operator()(T&& t) const$/;"	f	language:C++	struct:aetee::detail::valueResolvingFunctor
+operator ()	/usr/local/include/aetee/include/aetee/axioms/value.h	/^    constexpr decltype(auto) operator()(T&& t) const$/;"	f	language:C++	struct:aetee::detail::valueResolvingFunctor
+operator ()	/usr/local/include/aetee/include/aetee/axioms/value.h	/^    constexpr decltype(auto) operator()(type_constant_t<T>) const$/;"	f	language:C++	struct:aetee::detail::valueResolvingFunctor
+operator ()	/usr/local/include/aetee/include/aetee/axioms/zip.h	/^    constexpr auto operator()() const$/;"	f	language:C++	struct:aetee::detail::zipFunctor
+operator ()	/usr/local/include/aetee/include/aetee/axioms/zip.h	/^    constexpr auto operator()(Tup&&... tup) const$/;"	f	language:C++	struct:aetee::detail::zipFunctor
+operator ()	/usr/local/include/aetee/include/aetee/hof/apply.h	/^    constexpr decltype(auto) operator()(T&& t, F&& f) const$/;"	f	language:C++	struct:aetee::detail::applyFunctor
+operator ()	/usr/local/include/aetee/include/aetee/hof/as_functor.h	/^    constexpr decltype(auto) operator()(type_c_sequence_t<Args...>) const$/;"	f	language:C++	struct:aetee::detail::asFunctorFunctor
+operator ()	/usr/local/include/aetee/include/aetee/hof/as_functor.h	/^    constexpr decltype(auto) operator()(type_c_sequence_t<Args>...) const$/;"	f	language:C++	struct:aetee::detail::asFunctorFunctor
+operator ()	/usr/local/include/aetee/include/aetee/hof/compose.h	/^    constexpr auto operator()(A&&... a)$/;"	f	language:C++	struct:aetee::detail::composedFunctor
+operator ()	/usr/local/include/aetee/include/aetee/hof/compose.h	/^    constexpr auto operator()(F&& f, G&& g, bool_constant_t<E> = {}) const$/;"	f	language:C++	struct:aetee::detail::composeTwo
+operator ()	/usr/local/include/aetee/include/aetee/hof/compose.h	/^    constexpr auto operator()(F&&... f) const$/;"	f	language:C++	struct:aetee::detail::composeFunctor
+operator ()	/usr/local/include/aetee/include/aetee/hof/curry.h	/^    constexpr decltype(auto) operator()(B&&... b) const$/;"	f	language:C++	struct:aetee::detail::curried
+operator ()	/usr/local/include/aetee/include/aetee/hof/curry.h	/^    constexpr decltype(auto) operator()(B&&... b)$/;"	f	language:C++	struct:aetee::detail::curried
+operator ()	/usr/local/include/aetee/include/aetee/hof/curry.h	/^    constexpr decltype(auto) operator()(F&& f, A&&... args) const$/;"	f	language:C++	struct:aetee::detail::curryBackFunctor
+operator ()	/usr/local/include/aetee/include/aetee/hof/curry.h	/^    constexpr decltype(auto) operator()(F&& f, A&&... args) const$/;"	f	language:C++	struct:aetee::detail::curryFunctor
+operator ()	/usr/local/include/aetee/include/aetee/hof/explode.h	/^    constexpr auto operator()(Tup&& tup, F&&... f) const$/;"	f	language:C++	struct:aetee::detail::explodeFunctor
+operator ()	/usr/local/include/aetee/include/aetee/hof/filter.h	/^    constexpr auto operator()(A&& a) const$/;"	f	language:C++	struct:aetee::detail::filterMapper
+operator ()	/usr/local/include/aetee/include/aetee/hof/filter.h	/^    constexpr auto operator()(A&& a)$/;"	f	language:C++	struct:aetee::detail::filterMapper
+operator ()	/usr/local/include/aetee/include/aetee/hof/filter.h	/^    constexpr auto operator()(Tup&& tup, F&& f) const$/;"	f	language:C++	struct:aetee::detail::filterFunctor
+operator ()	/usr/local/include/aetee/include/aetee/hof/fold.h	/^    constexpr decltype(auto) operator()(Tup&& tup, F&& f) const$/;"	f	language:C++	struct:aetee::detail::foldLeftFunctor
+operator ()	/usr/local/include/aetee/include/aetee/hof/fold.h	/^    constexpr decltype(auto) operator()(Tup&& tup, F&& f) const$/;"	f	language:C++	struct:aetee::detail::foldRightFunctor
+operator ()	/usr/local/include/aetee/include/aetee/hof/fold.h	/^    constexpr decltype(auto) operator()(Tup&& tup, I&& init, F&& f) const$/;"	f	language:C++	struct:aetee::detail::foldLeftFunctor
+operator ()	/usr/local/include/aetee/include/aetee/hof/fold.h	/^    constexpr decltype(auto) operator()(Tup&& tup, I&& init, F&& f) const$/;"	f	language:C++	struct:aetee::detail::foldRightFunctor
+operator ()	/usr/local/include/aetee/include/aetee/hof/for_each.h	/^    constexpr auto operator()(Tup&& tup, F&& fn) const$/;"	f	language:C++	struct:aetee::detail::forEachFunctor
+operator ()	/usr/local/include/aetee/include/aetee/hof/invoke.h	/^    constexpr auto operator()(F&& f, A&&... a) const$/;"	f	language:C++	struct:aetee::detail::invokeFunctor
+operator ()	/usr/local/include/aetee/include/aetee/hof/map.h	/^    constexpr auto operator()(Tup&& tup, F&& f) const$/;"	f	language:C++	struct:aetee::detail::mapFunctor
+operator ()	/usr/local/include/aetee/include/aetee/math_sugar/allof.h	/^    constexpr auto operator()(int_sequence_t<T, V...>) const$/;"	f	language:C++	struct:aetee::detail::allOfFunctor
+operator ()	/usr/local/include/aetee/include/aetee/math_sugar/allof.h	/^    constexpr auto operator()(type_c_sequence_t<X...>) const$/;"	f	language:C++	struct:aetee::detail::allOfFunctor
+operator ()	/usr/local/include/aetee/include/aetee/math_sugar/allof.h	/^    constexpr auto operator()(type_c_sequence_t<X>...) const$/;"	f	language:C++	struct:aetee::detail::allOfFunctor
+operator ()	/usr/local/include/aetee/include/aetee/math_sugar/anyof.h	/^    constexpr auto operator()(type_constant_t<X>...) const$/;"	f	language:C++	struct:aetee::detail::anyOfFunctor
+operator ()	/usr/local/include/aetee/include/aetee/math_sugar/anyof.h	/^    constexpr auto operator()(type_c_sequence_t<X...>) const$/;"	f	language:C++	struct:aetee::detail::anyOfFunctor
+operator ()	/usr/local/include/aetee/include/aetee/math_sugar/anyof.h	/^    constexpr auto operator()(X&&... x) const$/;"	f	language:C++	struct:aetee::detail::anyOfFunctor
+operator ()	/usr/local/include/aetee/include/aetee/math_sugar/clamp.h	/^    constexpr auto operator()(L&& lo, H&& hi, C&& clampee) const$/;"	f	language:C++	struct:aetee::detail::clampFunctor
+operator ()	/usr/local/include/aetee/include/aetee/math_sugar/noneof.h	/^    constexpr auto operator()(type_constant_t<X>...) const$/;"	f	language:C++	struct:aetee::detail::noneOfFunctor
+operator ()	/usr/local/include/aetee/include/aetee/math_sugar/noneof.h	/^    constexpr auto operator()(type_c_sequence_t<X...>) const$/;"	f	language:C++	struct:aetee::detail::noneOfFunctor
+operator ()	/usr/local/include/aetee/include/aetee/math_sugar/noneof.h	/^    constexpr auto operator()(X&&... x) const$/;"	f	language:C++	struct:aetee::detail::noneOfFunctor
+operator ()	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct bitAndFunctor { template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs & rhs; } };$/;"	f	language:C++	struct:aetee::detail::bitAndFunctor
+operator ()	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct bitOrFunctor {  template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs | rhs; } };$/;"	f	language:C++	struct:aetee::detail::bitOrFunctor
+operator ()	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct bitXorFunctor { template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs ^ rhs; } };$/;"	f	language:C++	struct:aetee::detail::bitXorFunctor
+operator ()	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct dividesFunctor {    template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs \/ rhs; } };$/;"	f	language:C++	struct:aetee::detail::dividesFunctor
+operator ()	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct equalToFunctor {      template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs == rhs; } };$/;"	f	language:C++	struct:aetee::detail::equalToFunctor
+operator ()	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct greaterEqualFunctor { template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs >= rhs; } };$/;"	f	language:C++	struct:aetee::detail::greaterEqualFunctor
+operator ()	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct greaterFunctor {      template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs > rhs; }  };$/;"	f	language:C++	struct:aetee::detail::greaterFunctor
+operator ()	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct lessEqualFunctor {    template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs <= rhs; } };$/;"	f	language:C++	struct:aetee::detail::lessEqualFunctor
+operator ()	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct lessFunctor {         template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs < rhs; }  };$/;"	f	language:C++	struct:aetee::detail::lessFunctor
+operator ()	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct logicalAndFunctor { template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs && rhs; } };$/;"	f	language:C++	struct:aetee::detail::logicalAndFunctor
+operator ()	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct logicalNotFunctor { template <typename LH>              constexpr auto operator()(LH lhs) const         { return !lhs; }       };$/;"	f	language:C++	struct:aetee::detail::logicalNotFunctor
+operator ()	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct logicalOrFunctor {  template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs || rhs; } };$/;"	f	language:C++	struct:aetee::detail::logicalOrFunctor
+operator ()	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct minusFunctor {      template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs - rhs; } };$/;"	f	language:C++	struct:aetee::detail::minusFunctor
+operator ()	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct modulusFunctor {    template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs % rhs; } };$/;"	f	language:C++	struct:aetee::detail::modulusFunctor
+operator ()	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct multipliesFunctor { template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs * rhs; } };$/;"	f	language:C++	struct:aetee::detail::multipliesFunctor
+operator ()	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct negateFunctor {     template <typename LH>              constexpr auto operator()(LH lhs) const         { return -lhs; }      };$/;"	f	language:C++	struct:aetee::detail::negateFunctor
+operator ()	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct notEqualToFunctor {   template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs != rhs; } };$/;"	f	language:C++	struct:aetee::detail::notEqualToFunctor
+operator ()	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct plusFunctor {       template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs + rhs; } };$/;"	f	language:C++	struct:aetee::detail::plusFunctor
+operator ()	/usr/local/include/aetee/include/aetee/traits/alignof.h	/^    constexpr auto operator()(type_constant_t<T>...) const$/;"	f	language:C++	struct:aetee::detail::alignOfFunctor
+operator ()	/usr/local/include/aetee/include/aetee/traits/alignof.h	/^    constexpr auto operator()(type_c_sequence_t<T...>) const$/;"	f	language:C++	struct:aetee::detail::alignOfFunctor
+operator ()	/usr/local/include/aetee/include/aetee/traits/cast.h	/^    constexpr auto operator()(int_constant_t<T, V>) const$/;"	f	language:C++	struct:aetee::detail::castFunctor
+operator ()	/usr/local/include/aetee/include/aetee/traits/decltype.h	/^    constexpr auto operator()(T&&) const {$/;"	f	language:C++	struct:aetee::detail::decltypeFunctor
+operator ()	/usr/local/include/aetee/include/aetee/traits/decltype.h	/^    constexpr auto operator()(type_constant_t<T>) const$/;"	f	language:C++	struct:aetee::detail::decltypeFunctor
+operator ()	/usr/local/include/aetee/include/aetee/traits/is_same.h	/^    constexpr auto operator()(T&& t, U&& u) const$/;"	f	language:C++	struct:aetee::detail::isSameTypeFunctor
+operator ()	/usr/local/include/aetee/include/aetee/traits/is_same.h	/^    constexpr auto operator()(type_constant_t<T>, type_constant_t<U>)$/;"	f	language:C++	struct:aetee::detail::isSameTypeFunctor
+operator ()	/usr/local/include/aetee/include/aetee/traits/is_tuple.h	/^    constexpr auto operator()(T&& t) const$/;"	f	language:C++	struct:aetee::detail::isTupleFunctor
+operator ()	/usr/local/include/aetee/include/aetee/traits/is_tuple.h	/^    constexpr auto operator()(type_constant_t<T>) const$/;"	f	language:C++	struct:aetee::detail::isTupleFunctor
+operator ()	/usr/local/include/aetee/include/aetee/traits/length.h	/^    constexpr auto operator()(Tup&& t) const$/;"	f	language:C++	struct:aetee::detail::lengthFunctor
+operator ()	/usr/local/include/aetee/include/aetee/traits/length.h	/^    constexpr auto operator()(type_constant_t<Tup> t) const$/;"	f	language:C++	struct:aetee::detail::lengthFunctor
+operator ()	/usr/local/include/aetee/include/aetee/traits/offsetof.h	/^    constexpr auto operator()(std::tuple<>) const$/;"	f	language:C++	struct:aetee::detail::offsetOfFunctor
+operator ()	/usr/local/include/aetee/include/aetee/traits/offsetof.h	/^    constexpr auto operator()(type_c_sequence_t<T...> ts, idx_constant_t<I> i = {}) const$/;"	f	language:C++	struct:aetee::detail::offsetOfFunctor
+operator ()	/usr/local/include/aetee/include/aetee/traits/sizeof.h	/^    constexpr auto operator()(T&&) const$/;"	f	language:C++	struct:aetee::detail::sizeOfFunctor
+operator ()	/usr/local/include/aetee/include/aetee/traits/sizeof.h	/^    constexpr auto operator()(type_constant_t<T>) const$/;"	f	language:C++	struct:aetee::detail::sizeOfFunctor
+operator *	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator*(int_t<T, V>, int_t<U, W>)$/;"	f	language:C++	namespace:aetee
+operator *	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator*(int_t<T, V>, U&& w)$/;"	f	language:C++	namespace:aetee
+operator +	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator+(int_t<T, V>)$/;"	f	language:C++	namespace:aetee
+operator +	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator+(int_t<T, V>, int_t<U, W>)$/;"	f	language:C++	namespace:aetee
+operator +	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator+(int_t<T, V>, U&& w)$/;"	f	language:C++	namespace:aetee
+operator ++	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator++(int_t<T, V>)$/;"	f	language:C++	namespace:aetee
+operator -	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator-(int_t<T, V>)$/;"	f	language:C++	namespace:aetee
+operator -	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator-(int_t<T, V>, int_t<U, W>)$/;"	f	language:C++	namespace:aetee
+operator -	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator-(int_t<T, V>, U&& w)$/;"	f	language:C++	namespace:aetee
+operator --	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator--(int_t<T, V>)$/;"	f	language:C++	namespace:aetee
+operator /	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator\/(int_t<T, V>, int_t<U, W>)$/;"	f	language:C++	namespace:aetee
+operator /	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator\/(int_t<T, V>, U&& w)$/;"	f	language:C++	namespace:aetee
+operator <	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator<(int_t<T, V>, int_t<U, W>)$/;"	f	language:C++	namespace:aetee
+operator <	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator<(int_t<T, V>, U&& w)$/;"	f	language:C++	namespace:aetee
+operator <<	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator<<(int_t<T, V>, int_t<U, W>)$/;"	f	language:C++	namespace:aetee
+operator <<	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator<<(int_t<T, V>, U&& w)$/;"	f	language:C++	namespace:aetee
+operator <=	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator<=(int_t<T, V>, int_t<U, W>)$/;"	f	language:C++	namespace:aetee
+operator <=	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator<=(int_t<T, V>, U&& w)$/;"	f	language:C++	namespace:aetee
+operator ==	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator==(int_t<T, V>, int_t<U, W>)$/;"	f	language:C++	namespace:aetee
+operator ==	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator==(int_t<T, V>, U&& w)$/;"	f	language:C++	namespace:aetee
+operator >	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator>(int_t<T, V>, int_t<U, W>)$/;"	f	language:C++	namespace:aetee
+operator >	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator>(int_t<T, V>, U&& w)$/;"	f	language:C++	namespace:aetee
+operator >=	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator>=(int_t<T, V>, int_t<U, W>)$/;"	f	language:C++	namespace:aetee
+operator >=	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator>=(int_t<T, V>, U&& w)$/;"	f	language:C++	namespace:aetee
+operator >>	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator>>(int_t<T, V>, int_t<U, W>)$/;"	f	language:C++	namespace:aetee
+operator >>	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator>>(int_t<T, V>, U&& w)$/;"	f	language:C++	namespace:aetee
+operator T	/usr/local/include/aetee/include/aetee/axioms/just.h	/^    constexpr operator T() const$/;"	f	language:C++	struct:aetee::detail::justImpl
+operator ^	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator^(int_t<T, V>, int_t<U, W>)$/;"	f	language:C++	namespace:aetee
+operator ^	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator^(int_t<T, V>, U&& w)$/;"	f	language:C++	namespace:aetee
+operator |	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator|(int_t<T, V>, int_t<U, W>)$/;"	f	language:C++	namespace:aetee
+operator |	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator|(int_t<T, V>, U&& w)$/;"	f	language:C++	namespace:aetee
+operator ||	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator||(int_t<T, V>, int_t<U, W>)$/;"	f	language:C++	namespace:aetee
+operator ||	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator||(int_t<T, V>, U&& w)$/;"	f	language:C++	namespace:aetee
+operator ~	/usr/local/include/aetee/include/aetee/int_c/int_c_operators.h	/^constexpr auto operator~(int_t<T, V>)$/;"	f	language:C++	namespace:aetee
+p	/usr/local/include/aetee/include/aetee/axioms/select.h	/^    P p;$/;"	m	language:C++	struct:aetee::detail::selectMapFunctor
+plus	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^static constexpr auto plus = detail::plusFunctor{};$/;"	m	language:C++	namespace:aetee
+plusFunctor	/usr/local/include/aetee/include/aetee/math_sugar/op_alias.h	/^struct plusFunctor {       template <typename LH, typename RH> constexpr auto operator()(LH lhs, RH rhs) const { return lhs + rhs; } };$/;"	s	language:C++	namespace:aetee::detail
+prepend	/usr/local/include/aetee/include/aetee/axioms/prepend.h	/^static constexpr auto prepend = detail::prependFunctor{};$/;"	m	language:C++	namespace:aetee
+prependFunctor	/usr/local/include/aetee/include/aetee/axioms/prepend.h	/^struct prependFunctor {$/;"	s	language:C++	namespace:aetee::detail
+product	/usr/local/include/aetee/tools/bin/operator-generator.py	/^product = sys.stdout if len(sys.argv) == 1 else open(sys.argv[1], "w")$/;"	v	language:Python
+rebind	/usr/local/include/aetee/include/aetee/axioms/rebind.h	/^static constexpr auto rebind = detail::rebindFunctor<N>{};$/;"	m	language:C++	namespace:aetee
+rebindDirectFunctor	/usr/local/include/aetee/include/aetee/axioms/rebind.h	/^struct rebindDirectFunctor {$/;"	s	language:C++	namespace:aetee::detail
+rebindFunctor	/usr/local/include/aetee/include/aetee/axioms/rebind.h	/^struct rebindFunctor {$/;"	s	language:C++	namespace:aetee::detail
+recursive	/usr/local/include/aetee/include/aetee/axioms/flatten.h	/^    static constexpr auto& recursive = recursiveFlatten;$/;"	m	language:C++	struct:aetee::detail::flattenFunctor
+recursiveFlatten	/usr/local/include/aetee/include/aetee/axioms/flatten.h	/^static constexpr auto recursiveFlatten = flattenRecursivelyFunctor{};$/;"	m	language:C++	namespace:aetee::detail
+replicate	/usr/local/include/aetee/include/aetee/axioms/replicate.h	/^static constexpr auto replicate = detail::replicateFunctor{};$/;"	m	language:C++	namespace:aetee
+replicateFunctor	/usr/local/include/aetee/include/aetee/axioms/replicate.h	/^struct replicateFunctor {$/;"	s	language:C++	namespace:aetee::detail
+reverse	/usr/local/include/aetee/include/aetee/axioms/reverse.h	/^static constexpr auto reverse = detail::reverseFunctor{};$/;"	m	language:C++	namespace:aetee
+reverseFunctor	/usr/local/include/aetee/include/aetee/axioms/reverse.h	/^struct reverseFunctor {$/;"	s	language:C++	namespace:aetee::detail
+select	/usr/local/include/aetee/include/aetee/axioms/select.h	/^static constexpr auto select = detail::selectFunctor{};$/;"	m	language:C++	namespace:aetee
+selectFunctor	/usr/local/include/aetee/include/aetee/axioms/select.h	/^struct selectFunctor {$/;"	s	language:C++	namespace:aetee::detail
+selectMap	/usr/local/include/aetee/include/aetee/axioms/select.h	/^static constexpr auto selectMap = detail::selectMapMakerFunctor{};$/;"	m	language:C++	namespace:aetee
+selectMapFunctor	/usr/local/include/aetee/include/aetee/axioms/select.h	/^    constexpr selectMapFunctor(P&& pIn, A&&... aIn)$/;"	f	language:C++	struct:aetee::detail::selectMapFunctor
+selectMapFunctor	/usr/local/include/aetee/include/aetee/axioms/select.h	/^struct selectMapFunctor {$/;"	s	language:C++	namespace:aetee::detail
+selectMapMakerFunctor	/usr/local/include/aetee/include/aetee/axioms/select.h	/^struct selectMapMakerFunctor {$/;"	s	language:C++	namespace:aetee::detail
+sizeOfFunctor	/usr/local/include/aetee/include/aetee/traits/sizeof.h	/^struct sizeOfFunctor {$/;"	s	language:C++	namespace:aetee::detail
+sizeof_	/usr/local/include/aetee/include/aetee/traits/sizeof.h	/^static constexpr auto sizeof_ = detail::sizeOfFunctor{};$/;"	m	language:C++	namespace:aetee
+slice	/usr/local/include/aetee/include/aetee/axioms/slice.h	/^static constexpr auto slice = detail::sliceFunctor{};$/;"	m	language:C++	namespace:aetee
+sliceFunctor	/usr/local/include/aetee/include/aetee/axioms/slice.h	/^struct sliceFunctor {$/;"	s	language:C++	namespace:aetee::detail
+stepFilterFunctor	/usr/local/include/aetee/include/aetee/axioms/slice.h	/^struct stepFilterFunctor {$/;"	s	language:C++	namespace:aetee::detail
+SumFinder	/usr/local/include/aetee/test/aetee-tests.cc	/^template <typename... A> struct SumFinder {$/;"	s	language:C++	file:
+SumFinder::value	/usr/local/include/aetee/test/aetee-tests.cc	/^    static constexpr auto value = (A::value + ...);$/;"	m	language:C++	struct:SumFinder	file:
+sys	/usr/local/include/aetee/tools/bin/operator-generator.py	/^import sys$/;"	i	language:Python
+t	/usr/local/include/aetee/include/aetee/axioms/just.h	/^    T t;$/;"	m	language:C++	struct:aetee::detail::justImpl
+take	/usr/local/include/aetee/include/aetee/axioms/take.h	/^static constexpr auto take = detail::takeFrontFunctor{};$/;"	m	language:C++	namespace:aetee
+takeBack	/usr/local/include/aetee/include/aetee/axioms/take.h	/^static constexpr auto takeBack = detail::takeBackFunctor{};$/;"	m	language:C++	namespace:aetee
+takeBackFunctor	/usr/local/include/aetee/include/aetee/axioms/take.h	/^struct takeBackFunctor {$/;"	s	language:C++	namespace:aetee::detail
+takeFront	/usr/local/include/aetee/include/aetee/axioms/take.h	/^static constexpr auto& takeFront = take;$/;"	m	language:C++	namespace:aetee
+takeFrontFunctor	/usr/local/include/aetee/include/aetee/axioms/take.h	/^struct takeFrontFunctor {$/;"	s	language:C++	namespace:aetee::detail
+TEST	/usr/local/include/aetee/test/aetee-tests.cc	/^TEST(Aetee, Append)$/;"	f	language:C++
+TEST	/usr/local/include/aetee/test/aetee-tests.cc	/^TEST(Aetee, Clamp)$/;"	f	language:C++
+TEST	/usr/local/include/aetee/test/aetee-tests.cc	/^TEST(Aetee, Compose)$/;"	f	language:C++
+TEST	/usr/local/include/aetee/test/aetee-tests.cc	/^TEST(Aetee, Drop)$/;"	f	language:C++
+TEST	/usr/local/include/aetee/test/aetee-tests.cc	/^TEST(Aetee, Flatten)$/;"	f	language:C++
+TEST	/usr/local/include/aetee/test/aetee-tests.cc	/^TEST(Aetee, FlattenRecursive)$/;"	f	language:C++
+TEST	/usr/local/include/aetee/test/aetee-tests.cc	/^TEST(Aetee, Fold)$/;"	f	language:C++
+TEST	/usr/local/include/aetee/test/aetee-tests.cc	/^TEST(Aetee, Prepend)$/;"	f	language:C++
+TEST	/usr/local/include/aetee/test/aetee-tests.cc	/^TEST(Aetee, Rename)$/;"	f	language:C++
+TEST	/usr/local/include/aetee/test/aetee-tests.cc	/^TEST(Aetee, Reverse)$/;"	f	language:C++
+TEST	/usr/local/include/aetee/test/aetee-tests.cc	/^TEST(Aetee, Slice)$/;"	f	language:C++
+TEST	/usr/local/include/aetee/test/aetee-tests.cc	/^TEST(Aetee, Take)$/;"	f	language:C++
+TEST	/usr/local/include/aetee/test/aetee-tests.cc	/^TEST(Aetee, TypeConstant)$/;"	f	language:C++
+TEST	/usr/local/include/aetee/test/aetee-tests.cc	/^TEST(Aetee, TypeSequence)$/;"	f	language:C++
+TEST	/usr/local/include/aetee/test/aetee-tests.cc	/^TEST(Aetee, Value)$/;"	f	language:C++
+TEST	/usr/local/include/aetee/test/aetee-tests.cc	/^TEST(Aetee, Zip)$/;"	f	language:C++
+toCFunctor	/usr/local/include/aetee/include/aetee/axioms/to_c.h	/^struct toCFunctor {$/;"	s	language:C++	namespace:aetee::detail
+toCResolverFunctor	/usr/local/include/aetee/include/aetee/axioms/to_c.h	/^struct toCResolverFunctor<T, V, std::void_t<std::is_integral<T>>> {$/;"	s	language:C++	namespace:aetee::detail
+to_c	/usr/local/include/aetee/include/aetee/axioms/to_c.h	/^static constexpr auto to_c = detail::toCFunctor{};$/;"	m	language:C++	namespace:aetee
+transformers	/usr/local/include/aetee/include/aetee/axioms/select.h	/^    std::tuple<A...> transformers;$/;"	m	language:C++	struct:aetee::detail::selectMapFunctor
+true_c	/usr/local/include/aetee/include/aetee/int_c/int_c.h	/^static constexpr auto true_c = bool_c<true>;$/;"	m	language:C++	namespace:aetee
+tupify	/usr/local/include/aetee/include/aetee/axioms/tupify.h	/^static constexpr auto tupify = detail::tupifyFunctor{};$/;"	m	language:C++	namespace:aetee
+tupifyFunctor	/usr/local/include/aetee/include/aetee/axioms/tupify.h	/^struct tupifyFunctor {$/;"	s	language:C++	namespace:aetee::detail
+typeAtResolverFunctor	/usr/local/include/aetee/include/aetee/type/type_at.h	/^struct typeAtResolverFunctor {$/;"	s	language:C++	namespace:aetee::detail
+typeAtResolverFunctor	/usr/local/include/aetee/include/aetee/type/type_at.h	/^struct typeAtResolverFunctor<0, H, L...> {$/;"	s	language:C++	namespace:aetee::detail
+typeIndexResolverFunctor	/usr/local/include/aetee/include/aetee/type/type_idx.h	/^struct typeIndexResolverFunctor<T, T, L...> {$/;"	s	language:C++	namespace:aetee::detail
+typeIndexResolverFunctor	/usr/local/include/aetee/include/aetee/type/type_idx.h	/^struct typeIndexResolverFunctor<T, U, L...> {$/;"	s	language:C++	namespace:aetee::detail
+typeIndexResolverFunctor	/usr/local/include/aetee/include/aetee/type/type_idx.h	/^struct typeIndexResolverFunctor<T> {$/;"	s	language:C++	namespace:aetee::detail
+type_at_c	/usr/local/include/aetee/include/aetee/type/type_at.h	/^template <std::size_t I, typename... L> static constexpr auto type_at_c = type_c<type_at_t<I, L...>>;$/;"	m	language:C++	namespace:aetee
+type_c	/usr/local/include/aetee/include/aetee/type/type_c.h	/^static constexpr auto type_c = type_constant_t<T>{};$/;"	m	language:C++	namespace:aetee
+type_constant_t	/usr/local/include/aetee/include/aetee/type/type_c.h	/^struct type_constant_t { using type = T; };$/;"	s	language:C++	namespace:aetee
+type_c_sequence	/usr/local/include/aetee/include/aetee/type/type_c_sequence.h	/^static constexpr auto type_c_sequence = type_c_sequence_t<T...>{};$/;"	m	language:C++	namespace:aetee
+type_exists_c	/usr/local/include/aetee/include/aetee/type/type_exists.h	/^static constexpr auto type_exists_c = bool_c<(type_idx_c<T, L...> != arity_c<L...>)>;$/;"	m	language:C++	namespace:aetee
+type_idx_c	/usr/local/include/aetee/include/aetee/type/type_idx.h	/^static constexpr auto type_idx_c = idx_c<detail::typeIndexResolverFunctor<T, L...>>;$/;"	m	language:C++	namespace:aetee
+unaryArith	/usr/local/include/aetee/tools/bin/operator-generator.py	/^unaryArith = ["++", "--", "+", "-", "~", "!"]$/;"	v	language:Python
+value	/usr/local/include/aetee/include/aetee/axioms/value.h	/^static constexpr auto value = detail::valueFunctor{};$/;"	m	language:C++	namespace:aetee
+value	/usr/local/include/aetee/include/aetee/type/type_idx.h	/^    static constexpr std::size_t value = 0;$/;"	m	language:C++	struct:aetee::detail::typeIndexResolverFunctor
+value	/usr/local/include/aetee/include/aetee/type/type_idx.h	/^    static constexpr std::size_t value = 0;$/;"	m	language:C++	struct:aetee::detail::typeIndexResolverFunctor
+value	/usr/local/include/aetee/include/aetee/type/type_idx.h	/^    static constexpr std::size_t value = 1 + typeIndexResolverFunctor<T, L...>::value;$/;"	m	language:C++	struct:aetee::detail::typeIndexResolverFunctor
+value	/usr/local/include/aetee/test/aetee-tests.cc	/^    static constexpr auto value = (A::value + ...);$/;"	m	language:C++	struct:SumFinder	file:
+valueFunctor	/usr/local/include/aetee/include/aetee/axioms/value.h	/^struct valueFunctor {$/;"	s	language:C++	namespace:aetee::detail
+valueResolvingFunctor	/usr/local/include/aetee/include/aetee/axioms/value.h	/^struct valueResolvingFunctor {$/;"	s	language:C++	namespace:aetee::detail
+valueResolvingFunctor	/usr/local/include/aetee/include/aetee/axioms/value.h	/^struct valueResolvingFunctor<T, std::void_t<decltype(std::decay_t<T>::value)>> {$/;"	s	language:C++	namespace:aetee::detail
+valueResolvingFunctor	/usr/local/include/aetee/include/aetee/axioms/value.h	/^struct valueResolvingFunctor<type_constant_t<T>> {$/;"	s	language:C++	namespace:aetee::detail
+zip	/usr/local/include/aetee/include/aetee/axioms/zip.h	/^static constexpr auto zip = detail::zipFunctor{};$/;"	m	language:C++	namespace:aetee
+zipFunctor	/usr/local/include/aetee/include/aetee/axioms/zip.h	/^struct zipFunctor {$/;"	s	language:C++	namespace:aetee::detail
+_c	/usr/local/include/aetee/include/aetee/math_sugar/operator_c.h	/^constexpr auto operator""_c()$/;"	f	language:C++	namespace:aetee

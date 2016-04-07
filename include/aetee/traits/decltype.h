@@ -15,7 +15,7 @@ struct decltypeFunctor {
     }
 
     template <typename T>
-    constexpr auto operator()(type_constant_t<T>) const
+    constexpr auto operator()(type_t<T>) const
     {
         return type_c<T>;
     }

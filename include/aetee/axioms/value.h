@@ -17,9 +17,9 @@ struct valueResolvingFunctor {
 } /*struct valueResolvingFunctor*/;
 
 template <typename T>
-struct valueResolvingFunctor<type_constant_t<T>> {
+struct valueResolvingFunctor<type_t<T>> {
 
-    constexpr decltype(auto) operator()(type_constant_t<T>) const
+    constexpr decltype(auto) operator()(type_t<T>) const
     {
         return T::value;
     }

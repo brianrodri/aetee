@@ -19,7 +19,7 @@ struct mapFunctor {
 private:
 
     template <typename Tup, typename F, size_t... I>
-    static constexpr auto impl(Tup&& tup, F&& f, idx_sequence_t<I...>)
+    static constexpr auto impl(Tup&& tup, F&& f, idx_c_sequence_t<I...>)
     {
         return std::make_tuple(f(std::get<I>(std::forward<Tup>(tup)))...);
     }

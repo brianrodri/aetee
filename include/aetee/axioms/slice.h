@@ -42,7 +42,7 @@ struct sliceFunctor {
 private:
 
     template <typename Tup, size_t... I>
-    static constexpr auto impl(Tup&& tup, idx_sequence_t<I...>)
+    static constexpr auto impl(Tup&& tup, idx_c_sequence_t<I...>)
     {
         return std::make_tuple(std::get<I>(std::forward<Tup>(tup))...);
     }

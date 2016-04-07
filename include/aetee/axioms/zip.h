@@ -25,7 +25,7 @@ struct zipFunctor {
 private:
 
     template <size_t... I, typename... Tup>
-    constexpr auto impl(idx_sequence_t<I...>, Tup&&... tup) const
+    constexpr auto impl(idx_c_sequence_t<I...>, Tup&&... tup) const
     {
         return std::make_tuple(
             extractElement(idx_c<I>, std::forward<Tup>(tup)...)...
@@ -33,7 +33,7 @@ private:
     }
 
     template <size_t X, typename... Tup>
-    constexpr auto extractElement(idx_constant_t<X>, Tup&&... tup) const
+    constexpr auto extractElement(idx_t<X>, Tup&&... tup) const
     {
         return std::make_tuple(std::get<X>(std::forward<Tup>(tup))...);
     }

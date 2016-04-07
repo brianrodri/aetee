@@ -19,7 +19,7 @@ struct forEachFunctor {
 private:
 
     template <typename Tup, size_t... I, typename F>
-    static constexpr auto impl(Tup&& tup, F&& fn, idx_sequence_t<I...>)
+    static constexpr auto impl(Tup&& tup, F&& fn, idx_c_sequence_t<I...>)
     {
         (fn(std::get<I>(std::forward<Tup>(tup))), ...);
         return fn;
